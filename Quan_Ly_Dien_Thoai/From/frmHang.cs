@@ -16,5 +16,10 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             InitializeComponent();
         }
+
+        private void frmHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
