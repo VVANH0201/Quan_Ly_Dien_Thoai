@@ -19,6 +19,14 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void frmHang_Load(object sender, EventArgs e)
         {
+            
+            huhu
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
