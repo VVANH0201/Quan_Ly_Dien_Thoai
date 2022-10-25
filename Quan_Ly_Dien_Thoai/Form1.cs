@@ -18,5 +18,10 @@ namespace Quan_Ly_Dien_Thoai
             //dcm thg thuong
             // pro player, pride of Vietnam
         }
+
+        private void print()
+        {
+
+        }
     }
 }
