@@ -102,6 +102,12 @@
     <Compile Include="From\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\HangThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\HangThem.Designer.cs">
+      <DependentUpon>HangThem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="From\frmHang.resx">
