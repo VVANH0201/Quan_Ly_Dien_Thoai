@@ -114,6 +114,12 @@
     <Compile Include="From\HangThem.Designer.cs">
       <DependentUpon>HangThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\KHsua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\KHsua.Designer.cs">
+      <DependentUpon>KHsua.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="From\frmHang.resx">
