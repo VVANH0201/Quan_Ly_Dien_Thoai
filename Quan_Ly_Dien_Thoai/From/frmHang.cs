@@ -28,6 +28,8 @@ namespace Quan_Ly_Dien_Thoai.From
         private void label1_Click(object sender, EventArgs e)
         {
 
+            //ok roi nhe
+
         }
     }
 }
