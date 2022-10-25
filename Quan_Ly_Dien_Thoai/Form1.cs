@@ -15,6 +15,8 @@ namespace Quan_Ly_Dien_Thoai
         public Form1()
         {
             InitializeComponent();
+            //dcm thg thuong
+            // pro player, pride of Vietnam
         }
     }
 }
