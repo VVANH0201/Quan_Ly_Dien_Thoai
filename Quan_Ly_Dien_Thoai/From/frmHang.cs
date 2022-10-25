@@ -29,6 +29,9 @@ namespace Quan_Ly_Dien_Thoai.From
         {
 
             //ok roi nhe
+            //chac co the dc
+
+            //co the
 
         }
     }
