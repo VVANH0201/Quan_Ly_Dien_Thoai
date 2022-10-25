@@ -102,6 +102,12 @@
     <Compile Include="From\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\HangSua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\HangSua.Designer.cs">
+      <DependentUpon>HangSua.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\HangThem.cs">
       <SubType>Form</SubType>
     </Compile>
