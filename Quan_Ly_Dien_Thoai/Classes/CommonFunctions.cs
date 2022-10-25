@@ -8,5 +8,7 @@ namespace Quan_Ly_Dien_Thoai.Classes
 {
     internal class CommonFunctions
     {
+        //hhh
+        // aoloalaoall
     }
 }
