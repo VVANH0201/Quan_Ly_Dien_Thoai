@@ -22,6 +22,7 @@ namespace Quan_Ly_Dien_Thoai
         private void print()
         {
             //học với chả hành
+            // 500 proplayer
         }
     }
 }
