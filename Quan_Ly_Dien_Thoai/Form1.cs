@@ -23,6 +23,7 @@ namespace Quan_Ly_Dien_Thoai
         {
             //học với chả hành
             // 500 proplayer
+            // I'm proplayer
         }
     }
 }
