@@ -19,7 +19,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void frmSignUp_Load(object sender, EventArgs e)
         {
-            //anh
+            //anh doi nay
         }
     }
 }
