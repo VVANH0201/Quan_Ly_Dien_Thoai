@@ -15,15 +15,48 @@ namespace Quan_Ly_Dien_Thoai
         public Form1()
         {
             InitializeComponent();
-            //dcm thg thuong
-            // pro player, pride of Vietnam
+            customizeSidebar();
         }
 
-        private void print()
+        private void customizeSidebar()
         {
-            //học với chả hành
-            // 500 proplayer
-            // I'm proplayer
+            panelHoaDon.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if(panelHoaDon.Visible == true)
+            {
+                panelHoaDon.Visible = false;
+            }
+        }
+
+        private void showSubMenu(Panel submenu)
+        {
+            if(submenu.Visible == false)
+            {
+                hideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+        private void buttonQLHD_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelHoaDon);
+        }
+
+        private void buttonHDBan_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void buttonHDNhap_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }

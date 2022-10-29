@@ -19,8 +19,6 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void frmHang_Load(object sender, EventArgs e)
         {
-            
-            huhufff
 
 
         }
