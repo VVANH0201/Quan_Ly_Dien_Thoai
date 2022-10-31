@@ -1,4 +1,4 @@
-﻿namespace Quan_Ly_Dien_Thoai.From
+﻿nn namespace Quan_Ly_Dien_Thoai.From
 {
     partial class frmHDBan
     {
@@ -44,6 +44,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +53,16 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 60);
+            this.label1.Size = new System.Drawing.Size(797, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Location = new System.Drawing.Point(594, 60);
+            this.label2.Location = new System.Drawing.Point(591, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 390);
+            this.label2.Size = new System.Drawing.Size(206, 445);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
@@ -70,7 +71,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(0, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(594, 390);
+            this.label3.Size = new System.Drawing.Size(591, 445);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             // 
@@ -123,9 +124,9 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(468, 3);
+            this.comboBox1.Location = new System.Drawing.Point(686, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 54);
+            this.comboBox1.Size = new System.Drawing.Size(21, 54);
             this.comboBox1.TabIndex = 8;
             // 
             // button6
@@ -151,7 +152,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(594, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(591, 445);
             this.dataGridView1.TabIndex = 10;
             // 
             // Column1
@@ -189,11 +190,19 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(563, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 11;
+            // 
             // frmHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(797, 505);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.comboBox1);
@@ -209,6 +218,7 @@
             this.Text = "frmHDBan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -230,5 +240,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
