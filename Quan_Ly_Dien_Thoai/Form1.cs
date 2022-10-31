@@ -56,7 +56,35 @@ namespace Quan_Ly_Dien_Thoai
 
         private void buttonHDNhap_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            hideSubMenu(); 
+        }
+
+        // Kiểm tra sự tồn tại form con
+        bool CheckExistForm(string formName)
+        {
+            bool check = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm.Name == formName)
+                {
+                    check = true;
+                    break;
+                }
+            }
+            return check;
+        }
+
+        // Active form con
+        void ActiveChildForm(string formName)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm.Name == formName)
+                {
+                    frm.Activate();
+                    break;
+                }
+            }
         }
     }
 }

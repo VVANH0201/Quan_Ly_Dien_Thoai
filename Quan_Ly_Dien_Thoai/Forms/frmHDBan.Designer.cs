@@ -1,4 +1,4 @@
-﻿nn namespace Quan_Ly_Dien_Thoai.From
+﻿namespace Quan_Ly_Dien_Thoai.From
 {
     partial class frmHDBan
     {

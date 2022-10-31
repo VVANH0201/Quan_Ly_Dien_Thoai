@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panelHoaDon = new System.Windows.Forms.Panel();
@@ -39,17 +40,21 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pBoxAvatar = new System.Windows.Forms.PictureBox();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureMenu = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelHoaDon.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAvatar)).BeginInit();
+            this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelSideMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSideMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panelSideMenu.Controls.Add(this.button6);
             this.panelSideMenu.Controls.Add(this.panelHoaDon);
             this.panelSideMenu.Controls.Add(this.buttonQLHD);
@@ -72,7 +77,7 @@
             this.button6.Location = new System.Drawing.Point(0, 485);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(277, 72);
+            this.button6.Size = new System.Drawing.Size(279, 72);
             this.button6.TabIndex = 5;
             this.button6.Text = "Quản lý nhân sự";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,7 +90,7 @@
             this.panelHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHoaDon.Location = new System.Drawing.Point(0, 338);
             this.panelHoaDon.Name = "panelHoaDon";
-            this.panelHoaDon.Size = new System.Drawing.Size(277, 147);
+            this.panelHoaDon.Size = new System.Drawing.Size(279, 147);
             this.panelHoaDon.TabIndex = 4;
             // 
             // buttonHDNhap
@@ -99,7 +104,7 @@
             this.buttonHDNhap.Location = new System.Drawing.Point(0, 72);
             this.buttonHDNhap.Name = "buttonHDNhap";
             this.buttonHDNhap.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonHDNhap.Size = new System.Drawing.Size(277, 72);
+            this.buttonHDNhap.Size = new System.Drawing.Size(279, 72);
             this.buttonHDNhap.TabIndex = 5;
             this.buttonHDNhap.Text = "Quản lý hóa đơn nhập";
             this.buttonHDNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,7 +122,7 @@
             this.buttonHDBan.Location = new System.Drawing.Point(0, 0);
             this.buttonHDBan.Name = "buttonHDBan";
             this.buttonHDBan.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonHDBan.Size = new System.Drawing.Size(277, 72);
+            this.buttonHDBan.Size = new System.Drawing.Size(279, 72);
             this.buttonHDBan.TabIndex = 4;
             this.buttonHDBan.Text = "Quản lý hóa đơn bán";
             this.buttonHDBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +139,7 @@
             this.buttonQLHD.Location = new System.Drawing.Point(0, 266);
             this.buttonQLHD.Name = "buttonQLHD";
             this.buttonQLHD.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonQLHD.Size = new System.Drawing.Size(277, 72);
+            this.buttonQLHD.Size = new System.Drawing.Size(279, 72);
             this.buttonQLHD.TabIndex = 3;
             this.buttonQLHD.Text = "Quản lý hóa đơn";
             this.buttonQLHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +156,7 @@
             this.buttonQLKH.Location = new System.Drawing.Point(0, 194);
             this.buttonQLKH.Name = "buttonQLKH";
             this.buttonQLKH.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonQLKH.Size = new System.Drawing.Size(277, 72);
+            this.buttonQLKH.Size = new System.Drawing.Size(279, 72);
             this.buttonQLKH.TabIndex = 2;
             this.buttonQLKH.Text = "Quản lý khách hàng";
             this.buttonQLKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,7 +172,7 @@
             this.buttonQLSP.Location = new System.Drawing.Point(0, 122);
             this.buttonQLSP.Name = "buttonQLSP";
             this.buttonQLSP.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonQLSP.Size = new System.Drawing.Size(277, 72);
+            this.buttonQLSP.Size = new System.Drawing.Size(279, 72);
             this.buttonQLSP.TabIndex = 1;
             this.buttonQLSP.Text = "Quản lý sản phẩm";
             this.buttonQLSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,13 +185,15 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(277, 122);
+            this.panelLogo.Size = new System.Drawing.Size(279, 122);
             this.panelLogo.TabIndex = 0;
             // 
             // pBoxAvatar
             // 
             this.pBoxAvatar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pBoxAvatar.Location = new System.Drawing.Point(12, 12);
+            this.pBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBoxAvatar.ErrorImage = null;
+            this.pBoxAvatar.Location = new System.Drawing.Point(12, 11);
             this.pBoxAvatar.Name = "pBoxAvatar";
             this.pBoxAvatar.Size = new System.Drawing.Size(102, 104);
             this.pBoxAvatar.TabIndex = 1;
@@ -203,12 +210,47 @@
             this.labelUsername.TabIndex = 0;
             this.labelUsername.Text = "Username";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(279, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(917, 123);
+            this.panel1.TabIndex = 1;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Controls.Add(this.pictureMenu);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(279, 123);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(917, 536);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // pictureMenu
+            // 
+            this.pictureMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureMenu.Image")));
+            this.pictureMenu.Location = new System.Drawing.Point(0, 0);
+            this.pictureMenu.Name = "pictureMenu";
+            this.pictureMenu.Size = new System.Drawing.Size(917, 536);
+            this.pictureMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMenu.TabIndex = 0;
+            this.pictureMenu.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(1196, 659);
+            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -217,6 +259,8 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAvatar)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,6 +278,9 @@
         private System.Windows.Forms.Button buttonQLKH;
         private System.Windows.Forms.Button buttonQLSP;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.PictureBox pictureMenu;
     }
 }
 
