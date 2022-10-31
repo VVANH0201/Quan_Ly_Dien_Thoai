@@ -21,5 +21,18 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             //anh doi nay
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            From.frmLogin frmLogin = new From.frmLogin();
+            frmLogin.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
     }
 }
