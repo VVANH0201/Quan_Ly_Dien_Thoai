@@ -1,6 +1,6 @@
-﻿namespace Quan_Ly_Dien_Thoai.From
+﻿namespace Quan_Ly_Dien_Thoai.Forms
 {
-    partial class frmHang
+    partial class frmSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmHang
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmHang";
-            this.Text = "frmHang";
-            this.Load += new System.EventHandler(this.frmHang_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "frmSanPham";
         }
 
         #endregion
