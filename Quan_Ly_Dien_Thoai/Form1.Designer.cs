@@ -47,9 +47,9 @@
             this.panelSupport = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelTitle = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panelSideBar.SuspendLayout();
@@ -296,10 +296,12 @@
             // pictureBoxAccount
             // 
             this.pictureBoxAccount.BorderRadius = 20;
+            this.pictureBoxAccount.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAccount.Image")));
             this.pictureBoxAccount.ImageRotate = 0F;
             this.pictureBoxAccount.Location = new System.Drawing.Point(6, 3);
             this.pictureBoxAccount.Name = "pictureBoxAccount";
             this.pictureBoxAccount.Size = new System.Drawing.Size(80, 80);
+            this.pictureBoxAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAccount.TabIndex = 0;
             this.pictureBoxAccount.TabStop = false;
             // 
@@ -334,6 +336,18 @@
             this.panelTitle.Size = new System.Drawing.Size(998, 103);
             this.panelTitle.TabIndex = 0;
             // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(129)))), ((int)(((byte)(189)))));
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(104, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(755, 45);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Quản lý Cửa hàng bán Điện thoại di động TEAM04";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panelChildForm);
@@ -354,18 +368,6 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(998, 545);
             this.panelChildForm.TabIndex = 0;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(129)))), ((int)(((byte)(189)))));
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(104, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(771, 46);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Quản lý Cửa hàng bán Điện thoại di động TEAM04";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox1
             // 
@@ -389,7 +391,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
