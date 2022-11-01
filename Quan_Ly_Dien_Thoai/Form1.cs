@@ -105,6 +105,7 @@ namespace Quan_Ly_Dien_Thoai
             openChildForm(new frmHang());
             hideSubMenu();
             labelTitle.Text = "Thông tin Sản phẩm";
+            //
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
         }
 
