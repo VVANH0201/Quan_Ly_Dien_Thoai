@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quan_Ly_Dien_Thoai.From;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Quan_Ly_Dien_Thoai
         private void customizeSidebar()
         {
             panelHoaDon.Visible = false;
+            panelSanPham.Visible = false;
         }
 
         private void hideSubMenu()
@@ -28,6 +30,10 @@ namespace Quan_Ly_Dien_Thoai
             if(panelHoaDon.Visible == true)
             {
                 panelHoaDon.Visible = false;
+            }
+            if(panelSanPham.Visible == true)
+            {
+                panelSanPham.Visible = false;
             }
         }
 
@@ -44,19 +50,21 @@ namespace Quan_Ly_Dien_Thoai
             }
         }
 
-        private void buttonQLHD_Click(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void openChildForm(Form formChild)
         {
-            showSubMenu(panelHoaDon);
-        }
-
-        private void buttonHDBan_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void buttonHDNhap_Click(object sender, EventArgs e)
-        {
-            hideSubMenu(); 
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = formChild;
+            formChild.TopLevel = false;
+            formChild.FormBorderStyle = FormBorderStyle.None;
+            formChild.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(formChild);
+            panelChildForm.Tag = formChild;
+            formChild.BringToFront();
+            formChild.Show();           
         }
 
         // Kiểm tra sự tồn tại form con
@@ -85,6 +93,57 @@ namespace Quan_Ly_Dien_Thoai
                     break;
                 }
             }
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSanPham);
+        }
+
+        private void btnTTSanPham_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmHang());
+            hideSubMenu();
+            labelTitle.Text = "Thông tin Sản phẩm";
+            labelTitle.TextAlign = ContentAlignment.MiddleCenter;
+        }
+
+        private void btnTTHang_Click(object sender, EventArgs e)
+        {
+            labelTitle.Text = "Thông tin Hãng";
+        }
+
+        private void buttonKhachHang_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmKhachHang());
+            hideSubMenu();
+            labelTitle.Text = "Thông tin Khách hàng";
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelHoaDon);
+        }
+
+        private void btnHDNhap_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmHDNhap());
+            hideSubMenu();
+            labelTitle.Text = "Thông tin Hóa đơn nhập";
+        }
+
+        private void btnHDBan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmHDBan());
+            hideSubMenu();
+            labelTitle.Text = "Thông tin Hóa đơn bán";
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhanVien());
+            hideSubMenu();
+            labelTitle.Text = "Thông tin Nhân viên";
         }
     }
 }
