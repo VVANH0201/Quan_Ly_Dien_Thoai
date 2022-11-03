@@ -192,9 +192,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(563, 23);
+            this.textBox1.Location = new System.Drawing.Point(468, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(212, 22);
             this.textBox1.TabIndex = 11;
             // 
             // frmHDBan
