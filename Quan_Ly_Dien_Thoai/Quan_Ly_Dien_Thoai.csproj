@@ -153,6 +153,9 @@
     <EmbeddedResource Include="Forms\frmHDBan.resx">
       <DependentUpon>frmHDBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHDNhap.resx">
+      <DependentUpon>frmHDNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
