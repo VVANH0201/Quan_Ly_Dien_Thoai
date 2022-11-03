@@ -26,5 +26,12 @@ namespace Quan_Ly_Dien_Thoai.From
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                this.Close();
+        }
     }
 }
