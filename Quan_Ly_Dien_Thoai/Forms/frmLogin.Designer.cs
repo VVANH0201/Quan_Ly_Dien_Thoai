@@ -30,18 +30,18 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lb2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.pictureBoxView = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lb1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxView = new System.Windows.Forms.PictureBox();
-            this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +77,26 @@
             this.panel2.Size = new System.Drawing.Size(545, 543);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.lock1;
+            this.pictureBox2.Location = new System.Drawing.Point(45, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.user1;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 143);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -108,6 +128,29 @@
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // pictureBoxView
+            // 
+            this.pictureBoxView.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.view;
+            this.pictureBoxView.Location = new System.Drawing.Point(420, 235);
+            this.pictureBoxView.Name = "pictureBoxView";
+            this.pictureBoxView.Size = new System.Drawing.Size(28, 26);
+            this.pictureBoxView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxView.TabIndex = 17;
+            this.pictureBoxView.TabStop = false;
+            this.pictureBoxView.Click += new System.EventHandler(this.pictureBoxView_Click);
+            // 
+            // pictureBoxHide
+            // 
+            this.pictureBoxHide.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.hide;
+            this.pictureBoxHide.Location = new System.Drawing.Point(420, 235);
+            this.pictureBoxHide.Name = "pictureBoxHide";
+            this.pictureBoxHide.Size = new System.Drawing.Size(28, 26);
+            this.pictureBoxHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxHide.TabIndex = 16;
+            this.pictureBoxHide.TabStop = false;
+            this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
             // 
             // panel4
             // 
@@ -166,48 +209,6 @@
             this.lb1.Size = new System.Drawing.Size(85, 31);
             this.lb1.TabIndex = 12;
             this.lb1.Text = "Login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.lock1;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 235);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.user1;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 143);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxView
-            // 
-            this.pictureBoxView.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.view;
-            this.pictureBoxView.Location = new System.Drawing.Point(420, 235);
-            this.pictureBoxView.Name = "pictureBoxView";
-            this.pictureBoxView.Size = new System.Drawing.Size(28, 26);
-            this.pictureBoxView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxView.TabIndex = 17;
-            this.pictureBoxView.TabStop = false;
-            this.pictureBoxView.Click += new System.EventHandler(this.pictureBoxView_Click);
-            // 
-            // pictureBoxHide
-            // 
-            this.pictureBoxHide.Image = global::Quan_Ly_Dien_Thoai.Properties.Resources.hide;
-            this.pictureBoxHide.Location = new System.Drawing.Point(420, 235);
-            this.pictureBoxHide.Name = "pictureBoxHide";
-            this.pictureBoxHide.Size = new System.Drawing.Size(28, 26);
-            this.pictureBoxHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxHide.TabIndex = 16;
-            this.pictureBoxHide.TabStop = false;
-            this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
             // 
             // frmLogin
             // 

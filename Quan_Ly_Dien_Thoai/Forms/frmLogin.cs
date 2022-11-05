@@ -12,6 +12,7 @@ namespace Quan_Ly_Dien_Thoai.From
 {
     public partial class frmLogin : Form
     {
+        Classes.ConnectData data = new Classes.ConnectData();
         public frmLogin()
         {
             InitializeComponent();
@@ -97,6 +98,50 @@ namespace Quan_Ly_Dien_Thoai.From
                 txtPass.Text = "Mật khẩu";
                 txtPass.PasswordChar = '\0';
             }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text == "" || txtUserName.Text == "Nhập tên tài khoản")
+            {
+                MessageBox.Show("Bạn hãy nhập tên tài khoản");
+                return;
+            }
+            if(txtPass.Text== "" || txtPass.Text == "Mật khẩu")
+            {
+                MessageBox.Show("Bạn hãy nhập mật khẩu");
+                return;
+            }
+            DataTable dataTablecheckmk = new DataTable();
+            dataTablecheckmk = data.ReadData("Select * from Login where PassWord = N'" + txtPass.Text + "'");
+            if(dataTablecheckmk.Rows.Count == 0)
+            {
+                MessageBox.Show("Nhập mật khẩu sai");
+                return;
+            }
+
+            DataTable dataTable = new DataTable();
+            dataTable = data.ReadData("Select * from Login where UserName = N'" + txtUserName.Text + "' and PassWord = N'" + txtPass.Text + "'");
+
+            if(dataTable.Rows.Count > 0)
+            {
+                Form1 form = new Form1();
+                form.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                if (MessageBox.Show("Chưa có tài khoản. Bạn có muốn đăng ký không?", "Thông báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    frmSignUp frmSignUp = new frmSignUp();
+
+                    frmSignUp.ShowDialog();
+                    this.Hide();
+                }
+                
+            }
+
         }
     }
 }
