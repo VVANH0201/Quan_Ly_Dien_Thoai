@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quan_Ly_Dien_Thoai.From;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Quan_Ly_Dien_Thoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new From.frmLogin());
+            Application.Run(new frmLogin());
         }
     }
 }
