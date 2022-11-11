@@ -19,7 +19,9 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                this.Close();
         }
     }
 }

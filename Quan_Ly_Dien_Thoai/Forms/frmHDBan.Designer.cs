@@ -28,219 +28,244 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CbxSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dgvHDB = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDB)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panel1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(797, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.panel1.Controls.Add(this.CbxSearch);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1102, 82);
+            this.panel1.TabIndex = 0;
             // 
-            // label2
+            // panel2
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Location = new System.Drawing.Point(591, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 445);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnPrint);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 487);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1102, 100);
+            this.panel2.TabIndex = 1;
             // 
-            // label3
+            // panel3
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(0, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(591, 445);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.panel3.Controls.Add(this.dgvHDB);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 82);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1102, 405);
+            this.panel3.TabIndex = 2;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(3, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 60);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.BorderRadius = 10;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(414, 19);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(111, 45);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Search";
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.Location = new System.Drawing.Point(96, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 60);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPrint.BorderRadius = 10;
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(12, 32);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(111, 45);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "Print";
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.Location = new System.Drawing.Point(189, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 60);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExit.BorderRadius = 10;
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(148, 32);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(111, 45);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button4
+            // btnAdd
             // 
-            this.button4.Location = new System.Drawing.Point(282, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 60);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(561, 32);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(111, 45);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "ADD";
             // 
-            // button5
+            // btnEdit
             // 
-            this.button5.Location = new System.Drawing.Point(713, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 60);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEdit.BorderRadius = 10;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(703, 32);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(111, 45);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
             // 
-            // comboBox1
+            // btnDelete
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(686, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(21, 54);
-            this.comboBox1.TabIndex = 8;
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(837, 32);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 45);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
             // 
-            // button6
+            // btnCancel
             // 
-            this.button6.Location = new System.Drawing.Point(375, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 60);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(967, 32);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(111, 45);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
             // 
-            // dataGridView1
+            // txtSearch
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 445);
-            this.dataGridView1.TabIndex = 10;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "Type here...";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(148, 24);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(245, 36);
+            this.txtSearch.TabIndex = 1;
             // 
-            // Column1
+            // CbxSearch
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.CbxSearch.BackColor = System.Drawing.Color.Transparent;
+            this.CbxSearch.BorderRadius = 10;
+            this.CbxSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbxSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CbxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CbxSearch.ItemHeight = 30;
+            this.CbxSearch.Location = new System.Drawing.Point(12, 24);
+            this.CbxSearch.Name = "CbxSearch";
+            this.CbxSearch.Size = new System.Drawing.Size(130, 36);
+            this.CbxSearch.TabIndex = 2;
             // 
-            // Column2
+            // dgvHDB
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(468, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 22);
-            this.textBox1.TabIndex = 11;
+            this.dgvHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHDB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHDB.Location = new System.Drawing.Point(0, 0);
+            this.dgvHDB.Name = "dgvHDB";
+            this.dgvHDB.RowHeadersWidth = 51;
+            this.dgvHDB.RowTemplate.Height = 24;
+            this.dgvHDB.Size = new System.Drawing.Size(1102, 405);
+            this.dgvHDB.TabIndex = 0;
             // 
             // frmHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 505);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1102, 587);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmHDBan";
             this.Text = "frmHDBan";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDB)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox CbxSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2Button btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvHDB;
     }
 }
