@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CbxBSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtBSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBExit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.CbxSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvHDB = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,28 +49,170 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CbxSearch);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.CbxBSearch);
+            this.panel1.Controls.Add(this.txtBSearch);
+            this.panel1.Controls.Add(this.btnBSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1102, 82);
             this.panel1.TabIndex = 0;
             // 
+            // CbxBSearch
+            // 
+            this.CbxBSearch.BackColor = System.Drawing.Color.Transparent;
+            this.CbxBSearch.BorderRadius = 10;
+            this.CbxBSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbxBSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxBSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbxBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbxBSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CbxBSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CbxBSearch.ItemHeight = 30;
+            this.CbxBSearch.Location = new System.Drawing.Point(12, 24);
+            this.CbxBSearch.Name = "CbxBSearch";
+            this.CbxBSearch.Size = new System.Drawing.Size(130, 36);
+            this.CbxBSearch.TabIndex = 2;
+            // 
+            // txtBSearch
+            // 
+            this.txtBSearch.BorderRadius = 10;
+            this.txtBSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBSearch.DefaultText = "Type here...";
+            this.txtBSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBSearch.Location = new System.Drawing.Point(148, 24);
+            this.txtBSearch.Name = "txtBSearch";
+            this.txtBSearch.PasswordChar = '\0';
+            this.txtBSearch.PlaceholderText = "";
+            this.txtBSearch.SelectedText = "";
+            this.txtBSearch.Size = new System.Drawing.Size(245, 40);
+            this.txtBSearch.TabIndex = 1;
+            // 
+            // btnBSearch
+            // 
+            this.btnBSearch.BorderRadius = 10;
+            this.btnBSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBSearch.ForeColor = System.Drawing.Color.White;
+            this.btnBSearch.Location = new System.Drawing.Point(414, 19);
+            this.btnBSearch.Name = "btnBSearch";
+            this.btnBSearch.Size = new System.Drawing.Size(111, 45);
+            this.btnBSearch.TabIndex = 0;
+            this.btnBSearch.Text = "Search";
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.btnPrint);
+            this.panel2.Controls.Add(this.btnBCancel);
+            this.panel2.Controls.Add(this.btnBExit);
+            this.panel2.Controls.Add(this.btnBDelete);
+            this.panel2.Controls.Add(this.btnBEdit);
+            this.panel2.Controls.Add(this.btnBAdd);
+            this.panel2.Controls.Add(this.btnBPrint);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 487);
+            this.panel2.Location = new System.Drawing.Point(0, 493);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1102, 100);
+            this.panel2.Size = new System.Drawing.Size(1102, 94);
             this.panel2.TabIndex = 1;
+            // 
+            // btnBCancel
+            // 
+            this.btnBCancel.BorderRadius = 10;
+            this.btnBCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBCancel.ForeColor = System.Drawing.Color.White;
+            this.btnBCancel.Location = new System.Drawing.Point(979, 25);
+            this.btnBCancel.Name = "btnBCancel";
+            this.btnBCancel.Size = new System.Drawing.Size(111, 45);
+            this.btnBCancel.TabIndex = 5;
+            this.btnBCancel.Text = "Cancel";
+            // 
+            // btnBExit
+            // 
+            this.btnBExit.BorderRadius = 10;
+            this.btnBExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBExit.ForeColor = System.Drawing.Color.White;
+            this.btnBExit.Location = new System.Drawing.Point(160, 25);
+            this.btnBExit.Name = "btnBExit";
+            this.btnBExit.Size = new System.Drawing.Size(111, 45);
+            this.btnBExit.TabIndex = 1;
+            this.btnBExit.Text = "Exit";
+            this.btnBExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnBDelete
+            // 
+            this.btnBDelete.BorderRadius = 10;
+            this.btnBDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBDelete.ForeColor = System.Drawing.Color.White;
+            this.btnBDelete.Location = new System.Drawing.Point(849, 25);
+            this.btnBDelete.Name = "btnBDelete";
+            this.btnBDelete.Size = new System.Drawing.Size(111, 45);
+            this.btnBDelete.TabIndex = 4;
+            this.btnBDelete.Text = "Delete";
+            // 
+            // btnBEdit
+            // 
+            this.btnBEdit.BorderRadius = 10;
+            this.btnBEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBEdit.ForeColor = System.Drawing.Color.White;
+            this.btnBEdit.Location = new System.Drawing.Point(715, 25);
+            this.btnBEdit.Name = "btnBEdit";
+            this.btnBEdit.Size = new System.Drawing.Size(111, 45);
+            this.btnBEdit.TabIndex = 3;
+            this.btnBEdit.Text = "Edit";
+            // 
+            // btnBAdd
+            // 
+            this.btnBAdd.BorderRadius = 10;
+            this.btnBAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBAdd.ForeColor = System.Drawing.Color.White;
+            this.btnBAdd.Location = new System.Drawing.Point(573, 25);
+            this.btnBAdd.Name = "btnBAdd";
+            this.btnBAdd.Size = new System.Drawing.Size(111, 45);
+            this.btnBAdd.TabIndex = 2;
+            this.btnBAdd.Text = "ADD";
+            // 
+            // btnBPrint
+            // 
+            this.btnBPrint.BorderRadius = 10;
+            this.btnBPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBPrint.ForeColor = System.Drawing.Color.White;
+            this.btnBPrint.Location = new System.Drawing.Point(24, 25);
+            this.btnBPrint.Name = "btnBPrint";
+            this.btnBPrint.Size = new System.Drawing.Size(111, 45);
+            this.btnBPrint.TabIndex = 0;
+            this.btnBPrint.Text = "Print";
             // 
             // panel3
             // 
@@ -78,150 +220,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1102, 405);
+            this.panel3.Size = new System.Drawing.Size(1102, 411);
             this.panel3.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 10;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(414, 19);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(111, 45);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search";
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BorderRadius = 10;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(12, 32);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(111, 45);
-            this.btnPrint.TabIndex = 0;
-            this.btnPrint.Text = "Print";
-            // 
-            // btnExit
-            // 
-            this.btnExit.BorderRadius = 10;
-            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(148, 32);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(111, 45);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BorderRadius = 10;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(561, 32);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(111, 45);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "ADD";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(703, 32);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(111, 45);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "Edit";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BorderRadius = 10;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(837, 32);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(111, 45);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(967, 32);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(111, 45);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderRadius = 10;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "Type here...";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(148, 24);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(245, 36);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // CbxSearch
-            // 
-            this.CbxSearch.BackColor = System.Drawing.Color.Transparent;
-            this.CbxSearch.BorderRadius = 10;
-            this.CbxSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CbxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CbxSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CbxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CbxSearch.ItemHeight = 30;
-            this.CbxSearch.Location = new System.Drawing.Point(12, 24);
-            this.CbxSearch.Name = "CbxSearch";
-            this.CbxSearch.Size = new System.Drawing.Size(130, 36);
-            this.CbxSearch.TabIndex = 2;
             // 
             // dgvHDB
             // 
@@ -231,7 +231,7 @@
             this.dgvHDB.Name = "dgvHDB";
             this.dgvHDB.RowHeadersWidth = 51;
             this.dgvHDB.RowTemplate.Height = 24;
-            this.dgvHDB.Size = new System.Drawing.Size(1102, 405);
+            this.dgvHDB.Size = new System.Drawing.Size(1102, 411);
             this.dgvHDB.TabIndex = 0;
             // 
             // frmHDBan
@@ -255,16 +255,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox CbxSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2ComboBox CbxBSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtBSearch;
+        private Guna.UI2.WinForms.Guna2Button btnBSearch;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2Button btnExit;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnEdit;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private Guna.UI2.WinForms.Guna2Button btnBCancel;
+        private Guna.UI2.WinForms.Guna2Button btnBExit;
+        private Guna.UI2.WinForms.Guna2Button btnBDelete;
+        private Guna.UI2.WinForms.Guna2Button btnBEdit;
+        private Guna.UI2.WinForms.Guna2Button btnBAdd;
+        private Guna.UI2.WinForms.Guna2Button btnBPrint;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvHDB;
     }
