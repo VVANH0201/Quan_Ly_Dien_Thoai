@@ -1,4 +1,5 @@
-﻿using Quan_Ly_Dien_Thoai.From;
+﻿using Quan_Ly_Dien_Thoai.Forms;
+using Quan_Ly_Dien_Thoai.From;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,15 +103,16 @@ namespace Quan_Ly_Dien_Thoai
 
         private void btnTTSanPham_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmHang());
-            hideSubMenu();
+            openChildForm(new frmSanPham());
+            //hideSubMenu();
             labelTitle.Text = "Thông tin Sản phẩm";
-            //
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         private void btnTTHang_Click(object sender, EventArgs e)
         {
+            openChildForm(new frmHang());
+            //hideSubMenu();
             labelTitle.Text = "Thông tin Hãng";
         }
 
@@ -129,14 +131,14 @@ namespace Quan_Ly_Dien_Thoai
         private void btnHDNhap_Click(object sender, EventArgs e)
         {
             openChildForm(new frmHDNhap());
-            hideSubMenu();
+            //hideSubMenu();
             labelTitle.Text = "Thông tin Hóa đơn nhập";
         }
 
         private void btnHDBan_Click(object sender, EventArgs e)
         {
             openChildForm(new frmHDBan());
-            hideSubMenu();
+            //hideSubMenu();
             labelTitle.Text = "Thông tin Hóa đơn bán";
         }
 
