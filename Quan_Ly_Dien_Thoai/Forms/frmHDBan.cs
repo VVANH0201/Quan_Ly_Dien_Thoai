@@ -12,6 +12,8 @@ namespace Quan_Ly_Dien_Thoai.From
 {
     public partial class frmHDBan : Form
     {
+        Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
+        Classes.ConnectData connectData = new Classes.ConnectData();
         public frmHDBan()
         {
             InitializeComponent();
@@ -21,6 +23,17 @@ namespace Quan_Ly_Dien_Thoai.From
             if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
+        }
+
+        private void btnBAdd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmHDBan_Load(object sender, EventArgs e)
+        {
+            DataTable dataTable = connectData.ReadData("select MaHDB, TenNV, TenKH, NgayBan, TongTienBan from HoaDonBan, NhanVien, KhachHang where HoaDonBan");
+            dgvHDB.DataSource = dataTable;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CbxBSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,6 +42,11 @@
             this.btnBPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvHDB = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -198,6 +204,7 @@
             this.btnBAdd.Size = new System.Drawing.Size(111, 45);
             this.btnBAdd.TabIndex = 2;
             this.btnBAdd.Text = "ADD";
+            this.btnBAdd.Click += new System.EventHandler(this.btnBAdd_Click);
             // 
             // btnBPrint
             // 
@@ -225,7 +232,22 @@
             // 
             // dgvHDB
             // 
-            this.dgvHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHDB.ColumnHeadersHeight = 30;
+            this.dgvHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvHDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvHDB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHDB.Location = new System.Drawing.Point(0, 0);
             this.dgvHDB.Name = "dgvHDB";
@@ -233,6 +255,46 @@
             this.dgvHDB.RowTemplate.Height = 24;
             this.dgvHDB.Size = new System.Drawing.Size(1102, 411);
             this.dgvHDB.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDB";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 65;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenKH";
+            this.Column2.HeaderText = "Customer";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 180;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TenNV";
+            this.Column3.HeaderText = "Employee";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 180;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "NgayBan";
+            this.Column4.HeaderText = "Date";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 180;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TongTienBan";
+            this.Column5.HeaderText = "Total";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 180;
             // 
             // frmHDBan
             // 
@@ -244,6 +306,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmHDBan";
             this.Text = "frmHDBan";
+            this.Load += new System.EventHandler(this.frmHDBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -267,5 +330,10 @@
         private Guna.UI2.WinForms.Guna2Button btnBPrint;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvHDB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
