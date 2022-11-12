@@ -32,7 +32,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void frmHDBan_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = connectData.ReadData("select MaHDB, TenNV, TenKH, NgayBan, TongTienBan from HoaDonBan, NhanVien, KhachHang where HoaDonBan");
+            DataTable dataTable = connectData.ReadData("select HoaDonBan.MaHDB, TenKH, TenNV,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKH = KhachHang.MaKH and  HoaDonBan.MaNV = NhanVien.MaNV");
             dgvHDB.DataSource = dataTable;
         }
     }

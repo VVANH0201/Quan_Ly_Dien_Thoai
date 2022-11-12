@@ -290,7 +290,7 @@
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "TongTienBan";
+            this.Column5.DataPropertyName = "TongTien";
             this.Column5.HeaderText = "Total";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
