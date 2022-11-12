@@ -14,10 +14,24 @@ namespace Quan_Ly_Dien_Thoai
 {
     public partial class Form1 : Form
     {
+        Classes.TaiKhoan tk = new Classes.TaiKhoan();
         public Form1()
         {
             InitializeComponent();
             customizeSidebar();
+            tk = Classes.StaticClass._tk;
+            labelUsername.Text = tk.Tentk1;
+        }
+        private void PhanQuyen()
+        {
+            if(tk.Quyen == "1")
+            {
+                //bn
+            }
+            else
+            {
+                //pq
+            }
         }
 
         private void customizeSidebar()

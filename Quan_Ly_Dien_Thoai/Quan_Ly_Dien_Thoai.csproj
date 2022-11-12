@@ -67,6 +67,8 @@
   <ItemGroup>
     <Compile Include="Classes\CommonFunctions.cs" />
     <Compile Include="Classes\ConnectData.cs" />
+    <Compile Include="Classes\StaticClass.cs" />
+    <Compile Include="Classes\TaiKhoan.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

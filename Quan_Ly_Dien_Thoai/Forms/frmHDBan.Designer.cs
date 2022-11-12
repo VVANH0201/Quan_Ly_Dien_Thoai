@@ -266,7 +266,7 @@
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "TenKH";
+            this.Column2.DataPropertyName = "TenKhachHang";
             this.Column2.HeaderText = "Customer";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -274,7 +274,7 @@
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "TenNV";
+            this.Column3.DataPropertyName = "TenNhanVien";
             this.Column3.HeaderText = "Employee";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";

@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.panelHoaDon = new System.Windows.Forms.Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnHDNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.panelSanPham = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnTTHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelUsername = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTop = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.controlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBoxMain = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pictureBoxMain = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideBar.SuspendLayout();
             this.panelHoaDon.SuspendLayout();
             this.panelSanPham.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideBar
@@ -87,6 +87,20 @@
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.ShadowDecoration.BorderRadius = 0;
             this.panelSideBar.ShadowDecoration.Color = System.Drawing.Color.DimGray;
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnNhanVien, "btnNhanVien");
+            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
+            this.btnNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // panelHoaDon
             // 
@@ -122,6 +136,34 @@
             this.btnHDNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHDNhap.Click += new System.EventHandler(this.btnHDNhap_Click);
             // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnHoaDon, "btnHoaDon");
+            this.btnHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
+            this.btnHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+            // 
+            // btnKhachhang
+            // 
+            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnKhachhang, "btnKhachhang");
+            this.btnKhachhang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachhang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachhang.Image")));
+            this.btnKhachhang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhachhang.Name = "btnKhachhang";
+            this.btnKhachhang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhachhang.Click += new System.EventHandler(this.buttonKhachHang_Click);
+            // 
             // panelSanPham
             // 
             this.panelSanPham.BackColor = System.Drawing.Color.DimGray;
@@ -156,6 +198,20 @@
             this.btnTTHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTTHang.Click += new System.EventHandler(this.btnTTHang_Click);
             // 
+            // btnSanPham
+            // 
+            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnSanPham, "btnSanPham");
+            this.btnSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
+            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.labelUsername);
@@ -171,6 +227,12 @@
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // panelTop
             // 
@@ -235,6 +297,14 @@
             resources.ApplyResources(this.panelChildForm, "panelChildForm");
             this.panelChildForm.Name = "panelChildForm";
             // 
+            // pictureBoxMain
+            // 
+            resources.ApplyResources(this.pictureBoxMain, "pictureBoxMain");
+            this.pictureBoxMain.ImageRotate = 0F;
+            this.pictureBoxMain.Name = "pictureBoxMain";
+            this.pictureBoxMain.TabStop = false;
+            this.pictureBoxMain.Click += new System.EventHandler(this.pictureBoxMain_Click);
+            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockForm = true;
@@ -259,76 +329,6 @@
             this.guna2Elipse1.BorderRadius = 28;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // pictureBoxMain
-            // 
-            resources.ApplyResources(this.pictureBoxMain, "pictureBoxMain");
-            this.pictureBoxMain.ImageRotate = 0F;
-            this.pictureBoxMain.Name = "pictureBoxMain";
-            this.pictureBoxMain.TabStop = false;
-            this.pictureBoxMain.Click += new System.EventHandler(this.pictureBoxMain_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnNhanVien, "btnNhanVien");
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
-            // 
-            // btnHoaDon
-            // 
-            this.btnHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnHoaDon, "btnHoaDon");
-            this.btnHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
-            this.btnHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
-            // 
-            // btnKhachhang
-            // 
-            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnKhachhang, "btnKhachhang");
-            this.btnKhachhang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachhang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachhang.Image")));
-            this.btnKhachhang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhachhang.Name = "btnKhachhang";
-            this.btnKhachhang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhachhang.Click += new System.EventHandler(this.buttonKhachHang_Click);
-            // 
-            // btnSanPham
-            // 
-            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnSanPham, "btnSanPham");
-            this.btnSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -347,11 +347,11 @@
             this.panelSanPham.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

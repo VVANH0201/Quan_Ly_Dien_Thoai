@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace Quan_Ly_Dien_Thoai.From
 {
     public partial class frmLogin : Form
+        
     {
+        Classes.TaiKhoan tk = new Classes.TaiKhoan();
         Classes.ConnectData data = new Classes.ConnectData();
         public frmLogin()
         {
@@ -125,6 +127,10 @@ namespace Quan_Ly_Dien_Thoai.From
 
             if(dataTable.Rows.Count > 0)
             {
+                tk.Tentk1 = dataTable.Rows[0][0].ToString();
+                tk.Mk = dataTable.Rows[0][1].ToString();
+                tk.Quyen = dataTable.Rows[0][2].ToString();
+                Classes.StaticClass._tk = new Classes.TaiKhoan(tk.Tentk1,tk.Mk,tk.Quyen);
                 Form1 form = new Form1();
                 form.ShowDialog();
                 this.Hide();
