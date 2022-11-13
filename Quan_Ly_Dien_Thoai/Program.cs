@@ -18,6 +18,7 @@ namespace Quan_Ly_Dien_Thoai
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+            //Application.Run(new Form1());
         }
     }
 }

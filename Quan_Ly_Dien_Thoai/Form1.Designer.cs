@@ -38,7 +38,8 @@
             this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.panelSanPham = new System.Windows.Forms.Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTTNhaCungCap = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTTSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnTTHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -55,6 +56,7 @@
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.panelSideBar.SuspendLayout();
             this.panelHoaDon.SuspendLayout();
             this.panelSanPham.SuspendLayout();
@@ -69,7 +71,7 @@
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.Transparent;
             this.panelSideBar.BorderColor = System.Drawing.Color.Transparent;
-            this.panelSideBar.BorderRadius = 16;
+            this.panelSideBar.Controls.Add(this.btnLogOut);
             this.panelSideBar.Controls.Add(this.btnNhanVien);
             this.panelSideBar.Controls.Add(this.panelHoaDon);
             this.panelSideBar.Controls.Add(this.btnHoaDon);
@@ -167,23 +169,37 @@
             // panelSanPham
             // 
             this.panelSanPham.BackColor = System.Drawing.Color.DimGray;
-            this.panelSanPham.Controls.Add(this.guna2Button4);
+            this.panelSanPham.Controls.Add(this.btnTTNhaCungCap);
+            this.panelSanPham.Controls.Add(this.btnTTSanPham);
             this.panelSanPham.Controls.Add(this.btnTTHang);
             resources.ApplyResources(this.panelSanPham, "panelSanPham");
             this.panelSanPham.Name = "panelSanPham";
             // 
-            // guna2Button4
+            // btnTTNhaCungCap
             // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.guna2Button4, "guna2Button4");
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(167)))), ((int)(((byte)(219)))));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Click += new System.EventHandler(this.btnTTSanPham_Click);
+            this.btnTTNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTTNhaCungCap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTTNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTTNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnTTNhaCungCap, "btnTTNhaCungCap");
+            this.btnTTNhaCungCap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(167)))), ((int)(((byte)(219)))));
+            this.btnTTNhaCungCap.ForeColor = System.Drawing.Color.White;
+            this.btnTTNhaCungCap.Name = "btnTTNhaCungCap";
+            this.btnTTNhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTTNhaCungCap.Click += new System.EventHandler(this.btnTTNhaCungCap_Click);
+            // 
+            // btnTTSanPham
+            // 
+            this.btnTTSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTTSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTTSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTTSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnTTSanPham, "btnTTSanPham");
+            this.btnTTSanPham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(167)))), ((int)(((byte)(219)))));
+            this.btnTTSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnTTSanPham.Name = "btnTTSanPham";
+            this.btnTTSanPham.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTTSanPham.Click += new System.EventHandler(this.btnTTSanPham_Click);
             // 
             // btnTTHang
             // 
@@ -221,12 +237,11 @@
             // 
             // labelUsername
             // 
-            this.labelUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(229)))), ((int)(((byte)(237)))));
+            this.labelUsername.BackColor = System.Drawing.Color.Transparent;
             this.labelUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.labelUsername, "labelUsername");
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
             // 
             // pictureBox1
             // 
@@ -238,7 +253,6 @@
             // 
             this.panelTop.BackColor = System.Drawing.Color.Transparent;
             this.panelTop.BorderColor = System.Drawing.Color.Transparent;
-            this.panelTop.BorderRadius = 16;
             this.panelTop.Controls.Add(this.labelTitle);
             this.panelTop.Controls.Add(this.controlBoxMin);
             this.panelTop.Controls.Add(this.controlBoxMax);
@@ -253,7 +267,6 @@
             this.panelTop.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(229)))), ((int)(((byte)(237)))));
             this.panelTop.Name = "panelTop";
             this.panelTop.ShadowDecoration.BorderRadius = 0;
-            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // labelTitle
             // 
@@ -303,7 +316,6 @@
             this.pictureBoxMain.ImageRotate = 0F;
             this.pictureBoxMain.Name = "pictureBoxMain";
             this.pictureBoxMain.TabStop = false;
-            this.pictureBoxMain.Click += new System.EventHandler(this.pictureBoxMain_Click);
             // 
             // guna2DragControl1
             // 
@@ -328,6 +340,19 @@
             // 
             this.guna2Elipse1.BorderRadius = 28;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnLogOut, "btnLogOut");
+            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(229)))), ((int)(((byte)(237)))));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnLogOut.Name = "btnLogOut";
             // 
             // Form1
             // 
@@ -379,10 +404,12 @@
         private System.Windows.Forms.Panel panelHoaDon;
         private Guna.UI2.WinForms.Guna2Button btnHoaDon;
         private Guna.UI2.WinForms.Guna2Button btnKhachhang;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnTTSanPham;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button btnHDNhap;
         private Guna.UI2.WinForms.Guna2Button btnTTHang;
+        private Guna.UI2.WinForms.Guna2Button btnTTNhaCungCap;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
     }
 }
 

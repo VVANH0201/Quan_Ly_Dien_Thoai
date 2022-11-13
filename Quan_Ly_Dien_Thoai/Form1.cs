@@ -163,17 +163,7 @@ namespace Quan_Ly_Dien_Thoai
             labelTitle.Text = "Thông tin Nhân viên";
         }
 
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxMain_Click(object sender, EventArgs e)
+        private void btnTTNhaCungCap_Click(object sender, EventArgs e)
         {
 
         }
