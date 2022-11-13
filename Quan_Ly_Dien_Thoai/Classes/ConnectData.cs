@@ -10,8 +10,8 @@ namespace Quan_Ly_Dien_Thoai.Classes
 {
     internal class ConnectData
     {
-        //string strConnect = "Data Source=DESKTOP-HVO99UR\\VANH;Initial Catalog=CuaHangDT;Integrated Security=True"; // Máy vanh nha :)))
-        string strConnect = "Data Source=DESKTOP-HVO99UR\\VANH;Initial Catalog=BTL_C#;Integrated Security=True";//máy của vanh nha ae :)))
+        string strConnect = "Data Source=TOMMYWIN002\\SQLEXPRESS;Initial Catalog=BTL_C#;Integrated Security=True"; // Máy Thuong nha :)))
+        //string strConnect = "Data Source=DESKTOP-HVO99UR\\VANH;Initial Catalog=BTL_C#;Integrated Security=True";//máy của vanh nha ae :)))
         SqlConnection sqlConn = null;
 
         // opening connect method
