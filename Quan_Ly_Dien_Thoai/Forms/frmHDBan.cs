@@ -35,5 +35,7 @@ namespace Quan_Ly_Dien_Thoai.From
             DataTable dataTable = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien");
             dgvHDB.DataSource = dataTable;
         }
+
+        
     }
 }
