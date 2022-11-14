@@ -61,6 +61,7 @@
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBNew = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBNew);
             this.panel1.Controls.Add(this.CbxBSearch);
             this.panel1.Controls.Add(this.txtBSearch);
             this.panel1.Controls.Add(this.btnBSearch);
@@ -159,6 +161,7 @@
             this.btnBCancel.Size = new System.Drawing.Size(111, 45);
             this.btnBCancel.TabIndex = 5;
             this.btnBCancel.Text = "Cancel";
+            this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
             // 
             // btnBExit
             // 
@@ -190,6 +193,7 @@
             this.btnBDelete.Size = new System.Drawing.Size(111, 45);
             this.btnBDelete.TabIndex = 4;
             this.btnBDelete.Text = "Delete";
+            this.btnBDelete.Click += new System.EventHandler(this.btnBDelete_Click);
             // 
             // btnBEdit
             // 
@@ -281,6 +285,7 @@
             this.dgvHDB.RowTemplate.Height = 24;
             this.dgvHDB.Size = new System.Drawing.Size(1113, 211);
             this.dgvHDB.TabIndex = 24;
+            this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentClick);
             // 
             // Column1
             // 
@@ -288,7 +293,7 @@
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 65;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
@@ -429,9 +434,11 @@
             this.cbMaKH.Name = "cbMaKH";
             this.cbMaKH.Size = new System.Drawing.Size(200, 36);
             this.cbMaKH.TabIndex = 27;
+            this.cbMaKH.SelectedIndexChanged += new System.EventHandler(this.cbMaKH_SelectedIndexChanged);
             // 
             // cbMaNV
             // 
+            this.cbMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMaNV.BackColor = System.Drawing.Color.Transparent;
             this.cbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -444,6 +451,7 @@
             this.cbMaNV.Name = "cbMaNV";
             this.cbMaNV.Size = new System.Drawing.Size(200, 36);
             this.cbMaNV.TabIndex = 26;
+            this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged_1);
             // 
             // txtTenNV
             // 
@@ -502,6 +510,22 @@
             this.txtMaHD.Size = new System.Drawing.Size(200, 36);
             this.txtMaHD.TabIndex = 23;
             // 
+            // btnBNew
+            // 
+            this.btnBNew.BorderRadius = 10;
+            this.btnBNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBNew.ForeColor = System.Drawing.Color.White;
+            this.btnBNew.Location = new System.Drawing.Point(543, 19);
+            this.btnBNew.Name = "btnBNew";
+            this.btnBNew.Size = new System.Drawing.Size(111, 45);
+            this.btnBNew.TabIndex = 3;
+            this.btnBNew.Text = "New";
+            this.btnBNew.Click += new System.EventHandler(this.btnBNew_Click);
+            // 
             // frmHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,11 +564,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvHDB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -558,5 +577,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
         private Guna.UI2.WinForms.Guna2TextBox txtTenKH;
         private Guna.UI2.WinForms.Guna2TextBox txtMaHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Guna.UI2.WinForms.Guna2Button btnBNew;
     }
 }
