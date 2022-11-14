@@ -165,7 +165,9 @@ namespace Quan_Ly_Dien_Thoai
 
         private void btnTTNhaCungCap_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmNhaCungCap());
+            //hideSubMenu();
+            labelTitle.Text = "Thông tin Nhà cung cấp";
         }
     }
 }
