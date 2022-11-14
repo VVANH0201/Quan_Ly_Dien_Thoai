@@ -67,7 +67,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 txtMaHD.Focus();
                 return;
             }
-            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"')"/*+ String.Format("{0:yyyy-MM-dd}", dtpHDB) + "')"*/;
+            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"','"+ String.Format("{0:yyyy-MM-dd}", dtpHDB) + "')";
             connectData.UpdateData(Insert);
             load();
             ResetValue();
