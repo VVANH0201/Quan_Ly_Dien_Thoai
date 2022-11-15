@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Quan_Ly_Dien_Thoai.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Quan_Ly_Dien_Thoai.From
 {
@@ -14,6 +17,13 @@ namespace Quan_Ly_Dien_Thoai.From
     {
         Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
         Classes.ConnectData connectData = new Classes.ConnectData();
+        public static string MaHDB="" ;
+        public static string MaKH = "";
+        public static string MaNV = "";
+        public static string TenKH = "";
+        public static string TenNV = "";
+        public static string Ngay = "";
+        DateTime dateTime;
         public frmHDBan()
         {
             InitializeComponent();
@@ -21,6 +31,38 @@ namespace Quan_Ly_Dien_Thoai.From
             CommonFunctions.FillComboBox(cbMaNV, dtnv, "MaNhanVien", "MaNhanVien");
             DataTable dtkh = connectData.ReadData("select * from KhachHang");
             CommonFunctions.FillComboBox(cbMaKH, dtkh, "MaKhachHang", "MaKhachHang");
+        }
+
+        private void AddComboBox()
+        {
+            CbxBSearch.Items.Add("ID");
+            CbxBSearch.Items.Add("Customer");
+            CbxBSearch.Items.Add("Employee");
+            
+
+
+        }
+        //load
+        void load()
+        {
+            DataTable dataTable = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien");
+            dgvHDB.DataSource = dataTable;
+            txtMaHD.Enabled = false;
+            cbMaKH.Enabled = false;
+            txtTenKH.Enabled = false;
+            cbMaNV.Enabled = false;
+            txtTenNV.Enabled = false;
+            dtpHDB.Enabled = false;
+            btnBAdd.Enabled = false;
+            btnBEdit.Enabled = false;
+            btnBPrint.Enabled = false;
+            btnBDelete.Enabled = false;
+        }
+        private void frmHDBan_Load(object sender, EventArgs e)
+        {
+            load();
+            AddComboBox();
+
         }
         //reset
         void ResetValue()
@@ -39,6 +81,7 @@ namespace Quan_Ly_Dien_Thoai.From
             cbMaNV.Enabled = false;
             txtTenNV.Enabled = false;
             dtpHDB.Enabled = false;
+            btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
             btnBPrint.Enabled = false;
             btnBDelete.Enabled = false;
@@ -51,13 +94,20 @@ namespace Quan_Ly_Dien_Thoai.From
         //add
         private void btnBAdd_Click(object sender, EventArgs e)
         {
+            if(txtMaHD.Text == "")
+            {
+                MessageBox.Show("Nhập mã hóa đơn");
+                return;
+            }
             if(txtTenKH.Text == "")
             {
                 MessageBox.Show("Nhập đủ tên khách hàng");
+                return;
             }
             if (txtTenNV.Text == "")
             {
                 MessageBox.Show("Nhập đủ tên nhân viên");
+                return;
             }
             DataTable checkHDB = connectData.ReadData("select * from HoaDonBan where MaHDB='"+txtMaHD.Text+"'");
             DataTable checkKH = connectData.ReadData("select * from KhachHang where MaKhachHang='"+cbMaKH.Text+"'");
@@ -67,46 +117,41 @@ namespace Quan_Ly_Dien_Thoai.From
                 txtMaHD.Focus();
                 return;
             }
-            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"','"+ String.Format("{0:yyyy-MM-dd}", dtpHDB) + "')";
+            dateTime = Convert.ToDateTime(dtpHDB.Value.ToLongDateString());
+            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang, NgayBan) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"','"+ String.Format("{0:MM/dd/yyyy}", dateTime) + "')";
             connectData.UpdateData(Insert);
             load();
             ResetValue();
         }
-        //load
-        void load()
-        {
-            DataTable dataTable = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien");
-            dgvHDB.DataSource = dataTable;
-            txtMaHD.Enabled = false;
-            cbMaKH.Enabled = false;
-            txtTenKH.Enabled = false;
-            cbMaNV.Enabled = false;
-            txtTenNV.Enabled = false;
-            dtpHDB.Enabled = false;
-            btnBEdit.Enabled = false;
-            btnBPrint.Enabled = false;
-            btnBDelete.Enabled = false;
-        }
-        private void frmHDBan_Load(object sender, EventArgs e)
-        {
-            load();
-            
-        }
-        //a new one
         
         //click data
         private void dgvHDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string MaHD = dgvHDB.CurrentRow.Cells[0].Value.ToString();
+            DataTable HD = connectData.ReadData("select * from HoaDonBan where MaHDB = '"+ MaHD +"'");
+            cbMaKH.SelectedValue = HD.Rows[0]["MaKhachHang"].ToString() ;
+            cbMaNV.SelectedValue = HD.Rows[0]["MaNhanVien"].ToString();
+            dtpHDB.Text = HD.Rows[0]["NgayBan"].ToString();
             txtMaHD.Text = dgvHDB.CurrentRow.Cells[0].Value.ToString();
-            txtTenKH.Text = dgvHDB.CurrentRow.Cells[1].Value.ToString();
-            txtTenNV.Text = dgvHDB.CurrentRow.Cells[2].Value.ToString();
             btnBDelete.Enabled = true;
             btnBEdit.Enabled = true;
             btnBPrint.Enabled = true;
+            MaHDB = txtMaHD.Text;
+            TenKH = txtTenKH.Text;
+            TenNV = txtTenNV.Text;
+            MaKH = cbMaKH.Text;
+            MaNV = cbMaKH.Text;
+            txtMaHD.Enabled = false;
+            txtTenKH.Enabled = false;
+            txtTenNV.Enabled = false;
+            cbMaNV.Enabled = true;
+            cbMaKH.Enabled = true;
+            dtpHDB.Enabled = true;
         }
         //cancel
         private void btnBCancel_Click(object sender, EventArgs e)
         {
+            load();
             ResetValue();
         }
         //select KH
@@ -140,7 +185,12 @@ namespace Quan_Ly_Dien_Thoai.From
             cbMaNV.Enabled = true;
             txtTenNV.Enabled = true;
             dtpHDB.Enabled = true;
-
+            btnBAdd.Enabled = true;
+            txtMaHD.Text = "";
+            txtTenKH.Text = "";
+            txtTenNV.Text = "";
+            cbMaKH.Text = "";
+            cbMaNV.Text = "";
         }
         //xoa
         private void btnBDelete_Click(object sender, EventArgs e)
@@ -155,6 +205,56 @@ namespace Quan_Ly_Dien_Thoai.From
             {
                 MessageBox.Show("loi");
             }
+        }
+
+        private void btnBEdit_Click(object sender, EventArgs e)
+        {
+            connectData.UpdateData("update HoaDonBan set MaKhachHang = '"+ cbMaKH.SelectedValue +"', MaNhanVien = '"+ cbMaNV.SelectedValue +"', NgayBan = '"+dtpHDB.Text +"' where MaHDB='"+txtMaHD.Text+"'");
+            load();
+            ResetValue();
+
+        }
+        //search
+        private void btnBSearch_Click(object sender, EventArgs e)
+        {
+            if(txtBSearch.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập dữ liệu để tìm kiếm");
+                return;
+            }
+            if (CbxBSearch.Text == "ID")
+            {
+                DataTable dataID = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and HoaDonBan.MaHDB like '%"+txtBSearch.Text.Trim()+"%'");
+                dgvHDB.DataSource = dataID;
+                if (dataID.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Không có dữ liệu");
+                }
+            }
+            if (CbxBSearch.Text == "Employee")
+            {
+                DataTable dataTenNV = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenNhanVien like '%" + txtBSearch.Text.Trim() + "%'");
+                dgvHDB.DataSource = dataTenNV;
+                if (dataTenNV.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Không có dữ liệu");
+                }
+            }
+            if (CbxBSearch.Text == "Customer")
+            {
+                DataTable dataTenKH = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenKhachHang like '%" + txtBSearch.Text.Trim() + "%'");
+                dgvHDB.DataSource = dataTenKH;
+                if (dataTenKH.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Không có dữ liệu");
+                }
+            }
+        }
+
+        private void dgvHDB_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ChiTietHDB chiTietHDB = new ChiTietHDB();
+            chiTietHDB.ShowDialog();
         }
     }
 }

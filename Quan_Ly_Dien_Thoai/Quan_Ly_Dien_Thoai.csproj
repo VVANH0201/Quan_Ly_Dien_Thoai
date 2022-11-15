@@ -164,6 +164,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTietHDB.resx">
+      <DependentUpon>ChiTietHDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHang.resx">
       <DependentUpon>frmHang.cs</DependentUpon>
     </EmbeddedResource>

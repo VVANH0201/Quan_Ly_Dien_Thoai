@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBNew = new Guna.UI2.WinForms.Guna2Button();
             this.CbxBSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -61,7 +62,6 @@
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnBNew = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,6 +82,22 @@
             this.panel1.Size = new System.Drawing.Size(1113, 82);
             this.panel1.TabIndex = 0;
             // 
+            // btnBNew
+            // 
+            this.btnBNew.BorderRadius = 10;
+            this.btnBNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBNew.ForeColor = System.Drawing.Color.White;
+            this.btnBNew.Location = new System.Drawing.Point(619, 15);
+            this.btnBNew.Name = "btnBNew";
+            this.btnBNew.Size = new System.Drawing.Size(111, 45);
+            this.btnBNew.TabIndex = 3;
+            this.btnBNew.Text = "New";
+            this.btnBNew.Click += new System.EventHandler(this.btnBNew_Click);
+            // 
             // CbxBSearch
             // 
             this.CbxBSearch.BackColor = System.Drawing.Color.Transparent;
@@ -93,16 +109,16 @@
             this.CbxBSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CbxBSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CbxBSearch.ItemHeight = 30;
-            this.CbxBSearch.Location = new System.Drawing.Point(12, 24);
+            this.CbxBSearch.Location = new System.Drawing.Point(12, 20);
             this.CbxBSearch.Name = "CbxBSearch";
-            this.CbxBSearch.Size = new System.Drawing.Size(130, 36);
+            this.CbxBSearch.Size = new System.Drawing.Size(205, 36);
             this.CbxBSearch.TabIndex = 2;
             // 
             // txtBSearch
             // 
             this.txtBSearch.BorderRadius = 10;
             this.txtBSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBSearch.DefaultText = "Type here...";
+            this.txtBSearch.DefaultText = "";
             this.txtBSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtBSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -110,7 +126,7 @@
             this.txtBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBSearch.Location = new System.Drawing.Point(148, 24);
+            this.txtBSearch.Location = new System.Drawing.Point(224, 20);
             this.txtBSearch.Name = "txtBSearch";
             this.txtBSearch.PasswordChar = '\0';
             this.txtBSearch.PlaceholderText = "";
@@ -127,11 +143,12 @@
             this.btnBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBSearch.ForeColor = System.Drawing.Color.White;
-            this.btnBSearch.Location = new System.Drawing.Point(414, 19);
+            this.btnBSearch.Location = new System.Drawing.Point(490, 15);
             this.btnBSearch.Name = "btnBSearch";
             this.btnBSearch.Size = new System.Drawing.Size(111, 45);
             this.btnBSearch.TabIndex = 0;
             this.btnBSearch.Text = "Search";
+            this.btnBSearch.Click += new System.EventHandler(this.btnBSearch_Click);
             // 
             // panel2
             // 
@@ -209,6 +226,7 @@
             this.btnBEdit.Size = new System.Drawing.Size(111, 45);
             this.btnBEdit.TabIndex = 3;
             this.btnBEdit.Text = "Edit";
+            this.btnBEdit.Click += new System.EventHandler(this.btnBEdit_Click);
             // 
             // btnBAdd
             // 
@@ -262,14 +280,14 @@
             // 
             // dgvHDB
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHDB.ColumnHeadersHeight = 30;
             this.dgvHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -286,6 +304,7 @@
             this.dgvHDB.Size = new System.Drawing.Size(1113, 211);
             this.dgvHDB.TabIndex = 24;
             this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentClick);
+            this.dgvHDB.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -509,22 +528,6 @@
             this.txtMaHD.SelectedText = "";
             this.txtMaHD.Size = new System.Drawing.Size(200, 36);
             this.txtMaHD.TabIndex = 23;
-            // 
-            // btnBNew
-            // 
-            this.btnBNew.BorderRadius = 10;
-            this.btnBNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBNew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBNew.ForeColor = System.Drawing.Color.White;
-            this.btnBNew.Location = new System.Drawing.Point(543, 19);
-            this.btnBNew.Name = "btnBNew";
-            this.btnBNew.Size = new System.Drawing.Size(111, 45);
-            this.btnBNew.TabIndex = 3;
-            this.btnBNew.Text = "New";
-            this.btnBNew.Click += new System.EventHandler(this.btnBNew_Click);
             // 
             // frmHDBan
             // 
