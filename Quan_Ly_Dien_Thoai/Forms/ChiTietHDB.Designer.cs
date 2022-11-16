@@ -39,6 +39,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CbMaSP = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -55,14 +58,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnNew = new Guna.UI2.WinForms.Guna2Button();
             this.btnBCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBExit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnBDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnBEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnBAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,9 +78,7 @@
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -208,6 +208,34 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1205, 162);
             this.panel6.TabIndex = 0;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(790, 129);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 16);
+            this.label17.TabIndex = 53;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1119, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 16);
+            this.label15.TabIndex = 52;
+            this.label15.Text = "Triệu VND";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1119, 14);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 16);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "Triệu VND";
             // 
             // label2
             // 
@@ -402,11 +430,11 @@
             // 
             this.panel4.Controls.Add(this.btnNew);
             this.panel4.Controls.Add(this.btnBCancel);
-            this.panel4.Controls.Add(this.btnBExit);
+            this.panel4.Controls.Add(this.btnNExit);
             this.panel4.Controls.Add(this.btnBDelete);
             this.panel4.Controls.Add(this.btnBEdit);
             this.panel4.Controls.Add(this.btnBAdd);
-            this.panel4.Controls.Add(this.btnBPrint);
+            this.panel4.Controls.Add(this.btnNPrint);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 297);
             this.panel4.Name = "panel4";
@@ -445,21 +473,21 @@
             this.btnBCancel.Text = "Refresh";
             this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
             // 
-            // btnBExit
+            // btnNExit
             // 
-            this.btnBExit.BorderRadius = 10;
-            this.btnBExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBExit.ForeColor = System.Drawing.Color.White;
-            this.btnBExit.Location = new System.Drawing.Point(166, 16);
-            this.btnBExit.Name = "btnBExit";
-            this.btnBExit.Size = new System.Drawing.Size(111, 45);
-            this.btnBExit.TabIndex = 7;
-            this.btnBExit.Text = "Exit";
-            this.btnBExit.Click += new System.EventHandler(this.btnBExit_Click);
+            this.btnNExit.BorderRadius = 10;
+            this.btnNExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNExit.ForeColor = System.Drawing.Color.White;
+            this.btnNExit.Location = new System.Drawing.Point(166, 16);
+            this.btnNExit.Name = "btnNExit";
+            this.btnNExit.Size = new System.Drawing.Size(111, 45);
+            this.btnNExit.TabIndex = 7;
+            this.btnNExit.Text = "Exit";
+            this.btnNExit.Click += new System.EventHandler(this.btnBExit_Click);
             // 
             // btnBDelete
             // 
@@ -509,21 +537,21 @@
             this.btnBAdd.Text = "ADD";
             this.btnBAdd.Click += new System.EventHandler(this.btnBAdd_Click);
             // 
-            // btnBPrint
+            // btnNPrint
             // 
-            this.btnBPrint.BorderRadius = 10;
-            this.btnBPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBPrint.ForeColor = System.Drawing.Color.White;
-            this.btnBPrint.Location = new System.Drawing.Point(29, 16);
-            this.btnBPrint.Name = "btnBPrint";
-            this.btnBPrint.Size = new System.Drawing.Size(111, 45);
-            this.btnBPrint.TabIndex = 6;
-            this.btnBPrint.Text = "Print";
-            this.btnBPrint.Click += new System.EventHandler(this.btnBPrint_Click);
+            this.btnNPrint.BorderRadius = 10;
+            this.btnNPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNPrint.ForeColor = System.Drawing.Color.White;
+            this.btnNPrint.Location = new System.Drawing.Point(29, 16);
+            this.btnNPrint.Name = "btnNPrint";
+            this.btnNPrint.Size = new System.Drawing.Size(111, 45);
+            this.btnNPrint.TabIndex = 6;
+            this.btnNPrint.Text = "Print";
+            this.btnNPrint.Click += new System.EventHandler(this.btnBPrint_Click);
             // 
             // panel1
             // 
@@ -545,16 +573,6 @@
             this.lbTitle.Size = new System.Drawing.Size(95, 36);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(382, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chi tiết hóa đơn";
             // 
             // panel3
             // 
@@ -750,33 +768,15 @@
             this.txtMaHD.Size = new System.Drawing.Size(200, 36);
             this.txtMaHD.TabIndex = 35;
             // 
-            // label16
+            // label1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1119, 14);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 16);
-            this.label16.TabIndex = 51;
-            this.label16.Text = "Triệu VND";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1119, 80);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 16);
-            this.label15.TabIndex = 52;
-            this.label15.Text = "Triệu VND";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(790, 129);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 16);
-            this.label17.TabIndex = 53;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(382, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chi tiết hóa đơn";
             // 
             // ChiTietHDB
             // 
@@ -810,26 +810,23 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView dgvChiTiet;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox CbMaSP;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
-        private Guna.UI2.WinForms.Guna2TextBox txtGiamGia;
         private Guna.UI2.WinForms.Guna2TextBox txtSoLuong;
         private Guna.UI2.WinForms.Guna2TextBox txtDonGia;
         private Guna.UI2.WinForms.Guna2TextBox txtTenSP;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnBCancel;
-        private Guna.UI2.WinForms.Guna2Button btnBExit;
+        private Guna.UI2.WinForms.Guna2Button btnNExit;
         private Guna.UI2.WinForms.Guna2Button btnBDelete;
         private Guna.UI2.WinForms.Guna2Button btnBEdit;
         private Guna.UI2.WinForms.Guna2Button btnBAdd;
-        private Guna.UI2.WinForms.Guna2Button btnBPrint;
+        private Guna.UI2.WinForms.Guna2Button btnNPrint;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label label1;
@@ -856,5 +853,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2TextBox txtGiamGia;
     }
 }
