@@ -169,5 +169,12 @@ namespace Quan_Ly_Dien_Thoai
             //hideSubMenu();
             labelTitle.Text = "Thông tin Nhà cung cấp";
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThongKe());
+            hideSubMenu();
+            labelTitle.Text = "Thống kê báo cáo";
+        }
     }
 }
