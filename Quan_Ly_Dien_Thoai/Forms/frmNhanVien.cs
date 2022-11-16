@@ -20,8 +20,8 @@ namespace Quan_Ly_Dien_Thoai.From
         public frmNhanVien()
         {
             InitializeComponent();
-            DataTable dtnv = data.ReadData("select * from ChucVu");
-            comn.FillComboBox(cbCV, dtnv, "TenChucVu", "MaChucVu");
+            //DataTable dtnv = connectData.ReadData("select * from NhanVien");
+            //CommonFunctions.FillComboBox(cbMaNV, dtnv, "MaNhanVien", "MaNhanVien");
         }
         void ResetValue()
         {
@@ -31,17 +31,16 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpNgaySinh.Value = DateTime.Today;
             txtDiaChi.Text = "";
             txtPhone.Text = "";
-            cbCV.Text = "";
+            txtMaCV.Text = "";
             txtTimKiem.Text = "";
             cbPhanLoai.SelectedIndex = -1;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-            txtMaNV.Enabled = true;
         }
         void LoadData()
         {
-            DataTable dt = data.ReadData("select NhanVien.MaNhanVien, TenNhanVien, GioiTinh, NgaySinh, DiaChi, SoDienThoai, TenChucVu from NhanVien inner join ChucVu on NhanVien.MaChucVu = ChucVu.MaChucVu");
+            DataTable dt = data.ReadData("Select * from NhanVien");
             dgvNhanVien.DataSource = dt;
 
         }
@@ -58,7 +57,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = Convert.ToDateTime(dtpNgaySinh.Value.ToLongDateString());
+            string theDate = dtpNgaySinh.Value.ToString("dd-mm-yyyy");
             // check null
             if (txtMaNV.Text == "")
             {
@@ -85,7 +84,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBox.Show("Bạn chưa nhập Địa Chỉ");
                 return;
             }
-            if (cbCV.SelectedValue == "")
+            if (txtMaCV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Mã Chức Vụ");
                 return;
@@ -139,10 +138,7 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
             txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString();
             txtPhone.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
-            //cbCV.SelectedValue = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-            string s = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-            DataTable dt = data.ReadData("select * from ChucVu where TenChucVu = N'" + s + "'");
-            cbCV.SelectedValue = dt.Rows[0]["MaChucVu"].ToString();
+            txtMaCV.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
             txtMaNV.Enabled = false;
             btnThem.Enabled = false;
             btnSua.Enabled = true;
@@ -172,7 +168,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBox.Show("Bạn chưa nhập Địa Chỉ");
                 return;
             }
-            if(cbCV.SelectedValue == "")
+            if(txtMaCV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Mã Chức vụ");
                 return;

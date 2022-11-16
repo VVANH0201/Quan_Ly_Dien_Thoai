@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNNew = new Guna.UI2.WinForms.Guna2Button();
             this.CbxNSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtNSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -41,15 +40,10 @@
             this.btnNDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnNEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnNAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvHDN = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,12 +56,18 @@
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvHDN = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +80,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnNNew);
             this.panel1.Controls.Add(this.CbxNSearch);
             this.panel1.Controls.Add(this.txtNSearch);
             this.panel1.Controls.Add(this.btnNSearch);
@@ -89,22 +88,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1113, 82);
             this.panel1.TabIndex = 1;
-            // 
-            // btnNNew
-            // 
-            this.btnNNew.BorderRadius = 10;
-            this.btnNNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNNew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNNew.ForeColor = System.Drawing.Color.White;
-            this.btnNNew.Location = new System.Drawing.Point(619, 19);
-            this.btnNNew.Name = "btnNNew";
-            this.btnNNew.Size = new System.Drawing.Size(111, 45);
-            this.btnNNew.TabIndex = 14;
-            this.btnNNew.Text = "New";
-            this.btnNNew.Click += new System.EventHandler(this.btnNNew_Click);
             // 
             // CbxNSearch
             // 
@@ -119,14 +102,14 @@
             this.CbxNSearch.ItemHeight = 30;
             this.CbxNSearch.Location = new System.Drawing.Point(12, 24);
             this.CbxNSearch.Name = "CbxNSearch";
-            this.CbxNSearch.Size = new System.Drawing.Size(205, 36);
-            this.CbxNSearch.TabIndex = 13;
+            this.CbxNSearch.Size = new System.Drawing.Size(130, 36);
+            this.CbxNSearch.TabIndex = 5;
             // 
             // txtNSearch
             // 
             this.txtNSearch.BorderRadius = 10;
             this.txtNSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNSearch.DefaultText = "";
+            this.txtNSearch.DefaultText = "Type here...";
             this.txtNSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -134,13 +117,13 @@
             this.txtNSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNSearch.Location = new System.Drawing.Point(224, 24);
+            this.txtNSearch.Location = new System.Drawing.Point(148, 24);
             this.txtNSearch.Name = "txtNSearch";
             this.txtNSearch.PasswordChar = '\0';
             this.txtNSearch.PlaceholderText = "";
             this.txtNSearch.SelectedText = "";
             this.txtNSearch.Size = new System.Drawing.Size(245, 40);
-            this.txtNSearch.TabIndex = 12;
+            this.txtNSearch.TabIndex = 4;
             // 
             // btnNSearch
             // 
@@ -151,12 +134,11 @@
             this.btnNSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNSearch.ForeColor = System.Drawing.Color.White;
-            this.btnNSearch.Location = new System.Drawing.Point(490, 19);
+            this.btnNSearch.Location = new System.Drawing.Point(414, 19);
             this.btnNSearch.Name = "btnNSearch";
             this.btnNSearch.Size = new System.Drawing.Size(111, 45);
-            this.btnNSearch.TabIndex = 11;
+            this.btnNSearch.TabIndex = 3;
             this.btnNSearch.Text = "Search";
-            this.btnNSearch.Click += new System.EventHandler(this.btnNSearch_Click);
             // 
             // panel2
             // 
@@ -165,6 +147,7 @@
             this.panel2.Controls.Add(this.btnNDelete);
             this.panel2.Controls.Add(this.btnNEdit);
             this.panel2.Controls.Add(this.btnNAdd);
+            this.panel2.Controls.Add(this.btnNPrint);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 500);
             this.panel2.Name = "panel2";
@@ -180,12 +163,11 @@
             this.btnNCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNCancel.ForeColor = System.Drawing.Color.White;
-            this.btnNCancel.Location = new System.Drawing.Point(22, 25);
+            this.btnNCancel.Location = new System.Drawing.Point(978, 25);
             this.btnNCancel.Name = "btnNCancel";
             this.btnNCancel.Size = new System.Drawing.Size(111, 45);
             this.btnNCancel.TabIndex = 11;
-            this.btnNCancel.Text = "Refresh";
-            this.btnNCancel.Click += new System.EventHandler(this.btnNCancel_Click);
+            this.btnNCancel.Text = "Cancel";
             // 
             // btnNExit
             // 
@@ -196,12 +178,11 @@
             this.btnNExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNExit.ForeColor = System.Drawing.Color.White;
-            this.btnNExit.Location = new System.Drawing.Point(184, 25);
+            this.btnNExit.Location = new System.Drawing.Point(160, 25);
             this.btnNExit.Name = "btnNExit";
             this.btnNExit.Size = new System.Drawing.Size(111, 45);
             this.btnNExit.TabIndex = 7;
             this.btnNExit.Text = "Exit";
-            this.btnNExit.Click += new System.EventHandler(this.btnNExit_Click);
             // 
             // btnNDelete
             // 
@@ -212,12 +193,11 @@
             this.btnNDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNDelete.ForeColor = System.Drawing.Color.White;
-            this.btnNDelete.Location = new System.Drawing.Point(966, 25);
+            this.btnNDelete.Location = new System.Drawing.Point(848, 25);
             this.btnNDelete.Name = "btnNDelete";
             this.btnNDelete.Size = new System.Drawing.Size(111, 45);
             this.btnNDelete.TabIndex = 10;
             this.btnNDelete.Text = "Delete";
-            this.btnNDelete.Click += new System.EventHandler(this.btnNDelete_Click);
             // 
             // btnNEdit
             // 
@@ -228,12 +208,11 @@
             this.btnNEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNEdit.ForeColor = System.Drawing.Color.White;
-            this.btnNEdit.Location = new System.Drawing.Point(802, 25);
+            this.btnNEdit.Location = new System.Drawing.Point(714, 25);
             this.btnNEdit.Name = "btnNEdit";
             this.btnNEdit.Size = new System.Drawing.Size(111, 45);
             this.btnNEdit.TabIndex = 9;
             this.btnNEdit.Text = "Edit";
-            this.btnNEdit.Click += new System.EventHandler(this.btnNEdit_Click);
             // 
             // btnNAdd
             // 
@@ -244,12 +223,26 @@
             this.btnNAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNAdd.ForeColor = System.Drawing.Color.White;
-            this.btnNAdd.Location = new System.Drawing.Point(637, 25);
+            this.btnNAdd.Location = new System.Drawing.Point(572, 25);
             this.btnNAdd.Name = "btnNAdd";
             this.btnNAdd.Size = new System.Drawing.Size(111, 45);
             this.btnNAdd.TabIndex = 8;
             this.btnNAdd.Text = "ADD";
-            this.btnNAdd.Click += new System.EventHandler(this.btnNAdd_Click);
+            // 
+            // btnNPrint
+            // 
+            this.btnNPrint.BorderRadius = 10;
+            this.btnNPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNPrint.ForeColor = System.Drawing.Color.White;
+            this.btnNPrint.Location = new System.Drawing.Point(23, 25);
+            this.btnNPrint.Name = "btnNPrint";
+            this.btnNPrint.Size = new System.Drawing.Size(111, 45);
+            this.btnNPrint.TabIndex = 6;
+            this.btnNPrint.Text = "Print";
             // 
             // panel3
             // 
@@ -260,83 +253,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1113, 418);
             this.panel3.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgvHDN);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 207);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1113, 211);
-            this.panel5.TabIndex = 1;
-            // 
-            // dgvHDN
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHDN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHDN.ColumnHeadersHeight = 30;
-            this.dgvHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvHDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dgvHDN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHDN.Location = new System.Drawing.Point(0, 0);
-            this.dgvHDN.Name = "dgvHDN";
-            this.dgvHDN.RowHeadersWidth = 51;
-            this.dgvHDN.RowTemplate.Height = 24;
-            this.dgvHDN.Size = new System.Drawing.Size(1113, 211);
-            this.dgvHDN.TabIndex = 25;
-            this.dgvHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_CellClick);
-            this.dgvHDN.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaHDN";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 65;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenNCC";
-            this.Column2.HeaderText = "Supplier";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 180;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TenNhanVien";
-            this.Column3.HeaderText = "Employee";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 180;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "NgayNhap";
-            this.Column4.HeaderText = "Date";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 180;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TongTienNhap";
-            this.Column5.HeaderText = "Total";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 180;
             // 
             // panel4
             // 
@@ -357,6 +273,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1113, 207);
             this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgvHDN);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 207);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1113, 211);
+            this.panel5.TabIndex = 1;
             // 
             // label6
             // 
@@ -445,7 +370,6 @@
             this.cbMaNCC.Name = "cbMaNCC";
             this.cbMaNCC.Size = new System.Drawing.Size(200, 36);
             this.cbMaNCC.TabIndex = 39;
-            this.cbMaNCC.SelectedIndexChanged += new System.EventHandler(this.cbMaNCC_SelectedIndexChanged);
             // 
             // cbMaNV
             // 
@@ -461,7 +385,6 @@
             this.cbMaNV.Name = "cbMaNV";
             this.cbMaNV.Size = new System.Drawing.Size(200, 36);
             this.cbMaNV.TabIndex = 38;
-            this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged);
             // 
             // txtTenNV
             // 
@@ -520,6 +443,72 @@
             this.txtMaHD.Size = new System.Drawing.Size(200, 36);
             this.txtMaHD.TabIndex = 35;
             // 
+            // dgvHDN
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHDN.ColumnHeadersHeight = 30;
+            this.dgvHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvHDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvHDN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHDN.Location = new System.Drawing.Point(0, 0);
+            this.dgvHDN.Name = "dgvHDN";
+            this.dgvHDN.RowHeadersWidth = 51;
+            this.dgvHDN.RowTemplate.Height = 24;
+            this.dgvHDN.Size = new System.Drawing.Size(1113, 211);
+            this.dgvHDN.TabIndex = 25;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDB";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 65;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenNhaCungCap";
+            this.Column2.HeaderText = "Supplier";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 180;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TenNhanVien";
+            this.Column3.HeaderText = "Employee";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 180;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "NgayNhap";
+            this.Column4.HeaderText = "Date";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 180;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TongTien";
+            this.Column5.HeaderText = "Total";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 180;
+            // 
             // frmHDNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -531,14 +520,13 @@
             this.Controls.Add(this.label1);
             this.Name = "frmHDNhap";
             this.Text = "frmHDNhap";
-            this.Load += new System.EventHandler(this.frmHDNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,6 +543,10 @@
         private Guna.UI2.WinForms.Guna2Button btnNDelete;
         private Guna.UI2.WinForms.Guna2Button btnNEdit;
         private Guna.UI2.WinForms.Guna2Button btnNAdd;
+        private Guna.UI2.WinForms.Guna2Button btnNPrint;
+        private Guna.UI2.WinForms.Guna2ComboBox CbxNSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtNSearch;
+        private Guna.UI2.WinForms.Guna2Button btnNSearch;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
@@ -575,9 +567,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private Guna.UI2.WinForms.Guna2Button btnNNew;
-        private Guna.UI2.WinForms.Guna2ComboBox CbxNSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtNSearch;
-        private Guna.UI2.WinForms.Guna2Button btnNSearch;
     }
 }

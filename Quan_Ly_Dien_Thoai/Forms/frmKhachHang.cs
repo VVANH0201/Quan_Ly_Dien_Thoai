@@ -75,7 +75,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 return;
             }
             //check trung ma 
-            DataTable checkMa = data.ReadData("Select * from KhachHang where MaKhachHang = '" + txtMa.Text + "'");
+            DataTable checkMa = data.ReadData("Select * from KhachHang where MaKH = '" + txtMa.Text + "'");
             if(checkMa.Rows.Count > 0)
             {
                 MessageBox.Show("Mã khách hàng " + txtMa.Text + " đã tồn tại. Vui lòng nhập lại");
@@ -107,7 +107,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 try
                 {
-                    data.UpdateData("delete KhachHang where MaKhachHang='" + txtMa.Text + "'");
+                    data.UpdateData("delete KhachHang where MaKH='" + txtMa.Text + "'");
                     LoadData();
                     ResetValue();
                     
@@ -150,7 +150,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             try
             {
-                string sqlUpdate = "update KhachHang set TenKhachHang = N'" + txtTen.Text + "', SDT = '" + txtPhone.Text + "',DiaChiKH =  N'" + txtDiaChi.Text + "' where MaKhachHang = '" + txtMa.Text + "'";
+                string sqlUpdate = "update KhachHang set TenKH = N'" + txtTen.Text + "', SDT = '" + txtPhone.Text + "',DiaChiKH =  N'" + txtDiaChi.Text + "' where MaKH = '" + txtMa.Text + "'";
                 data.UpdateData(sqlUpdate);
                 LoadData();
                 ResetValue();
@@ -176,7 +176,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
             if (cbPhanLoai.Text == "Mã Khách Hàng")
             {
-                DataTable dt = data.ReadData("Select * from KhachHang where MaKhachHang like '%" + txtTimKiem.Text.Trim() + "%'");
+                DataTable dt = data.ReadData("Select * from KhachHang where MaKH like '%" + txtTimKiem.Text.Trim() + "%'");
                 dgvKhachHang.DataSource = dt;
                 if(dt.Rows.Count <= 0)
                 {
@@ -186,7 +186,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
             if (cbPhanLoai.Text == "Tên Khách Hàng")
             {
-                DataTable dt = data.ReadData("Select * from KhachHang where TenKhachHang like N'%" + txtTimKiem.Text.Trim() + "%'");
+                DataTable dt = data.ReadData("Select * from KhachHang where TenKH like N'%" + txtTimKiem.Text.Trim() + "%'");
                 dgvKhachHang.DataSource = dt;
                 if (dt.Rows.Count <= 0)
                 {

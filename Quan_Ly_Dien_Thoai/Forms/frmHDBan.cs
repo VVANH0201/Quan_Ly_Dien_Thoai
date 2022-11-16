@@ -38,6 +38,9 @@ namespace Quan_Ly_Dien_Thoai.From
             CbxBSearch.Items.Add("ID");
             CbxBSearch.Items.Add("Customer");
             CbxBSearch.Items.Add("Employee");
+            
+
+
         }
         //load
         public void load()
@@ -249,8 +252,7 @@ namespace Quan_Ly_Dien_Thoai.From
             TenKH = txtTenKH.Text;
             TenNV = txtTenNV.Text;
             MaKH = cbMaKH.Text;
-            MaNV = cbMaNV.Text;
-            Ngay = dtpHDB.Text;
+            MaNV = cbMaKH.Text;
             txtMaHD.Enabled = false;
             txtTenKH.Enabled = false;
             txtTenNV.Enabled = false;
