@@ -12,8 +12,8 @@ namespace Quan_Ly_Dien_Thoai.Classes
     {
         //string strConnect = "Data Source=TOMMYWIN002\\SQLEXPRESS;Initial Catalog=BTL_C#;Integrated Security=True"; // Máy Thuong nha :)))
         //string strConnect = "Data Source=DESKTOP-HVO99UR\\VANH;Initial Catalog=BTL_C#;Integrated Security=True";//máy của vanh nha ae :)))
-        //string strConnect = "Data Source=DELL-FINID\\SQLEXPRESS;Initial Catalog=BTL_C#;Integrated Security=True"; // proplayer's server
-        string strConnect = "Data Source=LAPTOP-I8NHT8P4;Initial Catalog=BTL_C#;Integrated Security=True"; //Nghia's DB
+        string strConnect = "Data Source=DELL-FINID\\SQLEXPRESS;Initial Catalog=BTL_C#;Integrated Security=True"; // proplayer's server
+        //string strConnect = "Data Source=LAPTOP-I8NHT8P4;Initial Catalog=BTL_C#;Integrated Security=True"; //Nghia's DB
         SqlConnection sqlConn = null;
 
         // opening connect method
