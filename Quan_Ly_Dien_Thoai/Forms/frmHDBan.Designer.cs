@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBNew = new Guna.UI2.WinForms.Guna2Button();
             this.CbxBSearch = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -40,7 +40,6 @@
             this.btnBDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnBEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnBAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvHDB = new System.Windows.Forms.DataGridView();
@@ -157,7 +156,6 @@
             this.panel2.Controls.Add(this.btnBDelete);
             this.panel2.Controls.Add(this.btnBEdit);
             this.panel2.Controls.Add(this.btnBAdd);
-            this.panel2.Controls.Add(this.btnBPrint);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 500);
             this.panel2.Name = "panel2";
@@ -173,11 +171,11 @@
             this.btnBCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBCancel.ForeColor = System.Drawing.Color.White;
-            this.btnBCancel.Location = new System.Drawing.Point(978, 25);
+            this.btnBCancel.Location = new System.Drawing.Point(24, 25);
             this.btnBCancel.Name = "btnBCancel";
             this.btnBCancel.Size = new System.Drawing.Size(111, 45);
             this.btnBCancel.TabIndex = 5;
-            this.btnBCancel.Text = "Cancel";
+            this.btnBCancel.Text = "Refresh";
             this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
             // 
             // btnBExit
@@ -205,7 +203,7 @@
             this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
-            this.btnBDelete.Location = new System.Drawing.Point(848, 25);
+            this.btnBDelete.Location = new System.Drawing.Point(954, 25);
             this.btnBDelete.Name = "btnBDelete";
             this.btnBDelete.Size = new System.Drawing.Size(111, 45);
             this.btnBDelete.TabIndex = 4;
@@ -221,7 +219,7 @@
             this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBEdit.ForeColor = System.Drawing.Color.White;
-            this.btnBEdit.Location = new System.Drawing.Point(714, 25);
+            this.btnBEdit.Location = new System.Drawing.Point(798, 25);
             this.btnBEdit.Name = "btnBEdit";
             this.btnBEdit.Size = new System.Drawing.Size(111, 45);
             this.btnBEdit.TabIndex = 3;
@@ -237,27 +235,12 @@
             this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBAdd.ForeColor = System.Drawing.Color.White;
-            this.btnBAdd.Location = new System.Drawing.Point(572, 25);
+            this.btnBAdd.Location = new System.Drawing.Point(641, 25);
             this.btnBAdd.Name = "btnBAdd";
             this.btnBAdd.Size = new System.Drawing.Size(111, 45);
             this.btnBAdd.TabIndex = 2;
             this.btnBAdd.Text = "ADD";
             this.btnBAdd.Click += new System.EventHandler(this.btnBAdd_Click);
-            // 
-            // btnBPrint
-            // 
-            this.btnBPrint.BorderRadius = 10;
-            this.btnBPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBPrint.ForeColor = System.Drawing.Color.White;
-            this.btnBPrint.Location = new System.Drawing.Point(23, 25);
-            this.btnBPrint.Name = "btnBPrint";
-            this.btnBPrint.Size = new System.Drawing.Size(111, 45);
-            this.btnBPrint.TabIndex = 0;
-            this.btnBPrint.Text = "Print";
             // 
             // panel3
             // 
@@ -280,14 +263,14 @@
             // 
             // dgvHDB
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHDB.ColumnHeadersHeight = 30;
             this.dgvHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -303,8 +286,10 @@
             this.dgvHDB.RowTemplate.Height = 24;
             this.dgvHDB.Size = new System.Drawing.Size(1113, 211);
             this.dgvHDB.TabIndex = 24;
+            this.dgvHDB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
             this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentClick);
             this.dgvHDB.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentDoubleClick);
+            this.dgvHDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellDoubleClick);
             // 
             // Column1
             // 
@@ -563,7 +548,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBDelete;
         private Guna.UI2.WinForms.Guna2Button btnBEdit;
         private Guna.UI2.WinForms.Guna2Button btnBAdd;
-        private Guna.UI2.WinForms.Guna2Button btnBPrint;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvHDB;

@@ -32,6 +32,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CbMaSP = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -47,6 +53,7 @@
             this.txtDonGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenSP = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnNew = new Guna.UI2.WinForms.Guna2Button();
             this.btnBCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnBExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnBDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -57,6 +64,8 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,15 +76,9 @@
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnNew = new Guna.UI2.WinForms.Guna2Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -93,7 +96,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 215);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1146, 366);
+            this.panel2.Size = new System.Drawing.Size(1205, 374);
             this.panel2.TabIndex = 3;
             // 
             // panel5
@@ -103,16 +106,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1146, 289);
+            this.panel5.Size = new System.Drawing.Size(1205, 297);
             this.panel5.TabIndex = 1;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.dgvChiTiet);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 130);
+            this.panel7.Location = new System.Drawing.Point(0, 162);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1146, 159);
+            this.panel7.Size = new System.Drawing.Size(1205, 135);
             this.panel7.TabIndex = 1;
             // 
             // dgvChiTiet
@@ -130,11 +133,63 @@
             this.dgvChiTiet.Name = "dgvChiTiet";
             this.dgvChiTiet.RowHeadersWidth = 51;
             this.dgvChiTiet.RowTemplate.Height = 24;
-            this.dgvChiTiet.Size = new System.Drawing.Size(1146, 159);
+            this.dgvChiTiet.Size = new System.Drawing.Size(1205, 135);
             this.dgvChiTiet.TabIndex = 0;
+            this.dgvChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTiet_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDB";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenDienThoai";
+            this.Column2.HeaderText = "Product Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SoLuong";
+            this.Column3.HeaderText = "Amount";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "DonGiaBan";
+            this.Column4.HeaderText = "Cost";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "GiamGia";
+            this.Column5.HeaderText = "Sale";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ThanhTIen";
+            this.Column6.HeaderText = "Total";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.CbMaSP);
             this.panel6.Controls.Add(this.label14);
@@ -151,7 +206,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1146, 130);
+            this.panel6.Size = new System.Drawing.Size(1205, 162);
             this.panel6.TabIndex = 0;
             // 
             // label2
@@ -185,7 +240,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(805, 80);
+            this.label14.Location = new System.Drawing.Point(788, 80);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(105, 25);
             this.label14.TabIndex = 47;
@@ -195,7 +250,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(819, 14);
+            this.label13.Location = new System.Drawing.Point(814, 14);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 25);
             this.label13.TabIndex = 46;
@@ -253,12 +308,12 @@
             this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThanhTien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.Location = new System.Drawing.Point(913, 72);
+            this.txtThanhTien.Location = new System.Drawing.Point(899, 72);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.PasswordChar = '\0';
             this.txtThanhTien.PlaceholderText = "";
             this.txtThanhTien.SelectedText = "";
-            this.txtThanhTien.Size = new System.Drawing.Size(200, 38);
+            this.txtThanhTien.Size = new System.Drawing.Size(214, 38);
             this.txtThanhTien.TabIndex = 5;
             // 
             // txtGiamGia
@@ -280,6 +335,7 @@
             this.txtGiamGia.SelectedText = "";
             this.txtGiamGia.Size = new System.Drawing.Size(200, 38);
             this.txtGiamGia.TabIndex = 4;
+            this.txtGiamGia.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // txtSoLuong
             // 
@@ -300,6 +356,7 @@
             this.txtSoLuong.SelectedText = "";
             this.txtSoLuong.Size = new System.Drawing.Size(200, 38);
             this.txtSoLuong.TabIndex = 3;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // txtDonGia
             // 
@@ -320,7 +377,6 @@
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(200, 38);
             this.txtDonGia.TabIndex = 2;
-            /*this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);*/
             // 
             // txtTenSP
             // 
@@ -352,10 +408,26 @@
             this.panel4.Controls.Add(this.btnBAdd);
             this.panel4.Controls.Add(this.btnBPrint);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 289);
+            this.panel4.Location = new System.Drawing.Point(0, 297);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1146, 77);
+            this.panel4.Size = new System.Drawing.Size(1205, 77);
             this.panel4.TabIndex = 0;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BorderRadius = 10;
+            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(495, 16);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(111, 45);
+            this.btnNew.TabIndex = 12;
+            this.btnNew.Text = "New";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnBCancel
             // 
@@ -366,11 +438,11 @@
             this.btnBCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBCancel.ForeColor = System.Drawing.Color.White;
-            this.btnBCancel.Location = new System.Drawing.Point(984, 16);
+            this.btnBCancel.Location = new System.Drawing.Point(1047, 16);
             this.btnBCancel.Name = "btnBCancel";
             this.btnBCancel.Size = new System.Drawing.Size(111, 45);
             this.btnBCancel.TabIndex = 11;
-            this.btnBCancel.Text = "Cancel";
+            this.btnBCancel.Text = "Refresh";
             this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
             // 
             // btnBExit
@@ -398,11 +470,12 @@
             this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
-            this.btnBDelete.Location = new System.Drawing.Point(854, 16);
+            this.btnBDelete.Location = new System.Drawing.Point(917, 16);
             this.btnBDelete.Name = "btnBDelete";
             this.btnBDelete.Size = new System.Drawing.Size(111, 45);
             this.btnBDelete.TabIndex = 10;
             this.btnBDelete.Text = "Delete";
+            this.btnBDelete.Click += new System.EventHandler(this.btnBDelete_Click);
             // 
             // btnBEdit
             // 
@@ -413,11 +486,12 @@
             this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBEdit.ForeColor = System.Drawing.Color.White;
-            this.btnBEdit.Location = new System.Drawing.Point(720, 16);
+            this.btnBEdit.Location = new System.Drawing.Point(783, 16);
             this.btnBEdit.Name = "btnBEdit";
             this.btnBEdit.Size = new System.Drawing.Size(111, 45);
             this.btnBEdit.TabIndex = 9;
             this.btnBEdit.Text = "Edit";
+            this.btnBEdit.Click += new System.EventHandler(this.btnBEdit_Click);
             // 
             // btnBAdd
             // 
@@ -428,11 +502,12 @@
             this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBAdd.ForeColor = System.Drawing.Color.White;
-            this.btnBAdd.Location = new System.Drawing.Point(578, 16);
+            this.btnBAdd.Location = new System.Drawing.Point(641, 16);
             this.btnBAdd.Name = "btnBAdd";
             this.btnBAdd.Size = new System.Drawing.Size(111, 45);
             this.btnBAdd.TabIndex = 8;
             this.btnBAdd.Text = "ADD";
+            this.btnBAdd.Click += new System.EventHandler(this.btnBAdd_Click);
             // 
             // btnBPrint
             // 
@@ -448,23 +523,24 @@
             this.btnBPrint.Size = new System.Drawing.Size(111, 45);
             this.btnBPrint.TabIndex = 6;
             this.btnBPrint.Text = "Print";
+            this.btnBPrint.Click += new System.EventHandler(this.btnBPrint_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lbTitle);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1146, 215);
+            this.panel1.Size = new System.Drawing.Size(1205, 215);
             this.panel1.TabIndex = 2;
             // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(625, 9);
+            this.lbTitle.Location = new System.Drawing.Point(612, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(95, 36);
             this.lbTitle.TabIndex = 1;
@@ -474,7 +550,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(395, 9);
+            this.label1.Location = new System.Drawing.Point(382, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 36);
             this.label1.TabIndex = 0;
@@ -495,16 +571,56 @@
             this.panel3.Controls.Add(this.txtTenKH);
             this.panel3.Controls.Add(this.txtMaHD);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 24);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1146, 191);
+            this.panel3.Size = new System.Drawing.Size(1205, 184);
             this.panel3.TabIndex = 0;
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.BorderRadius = 10;
+            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.DefaultText = "";
+            this.txtMaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Location = new System.Drawing.Point(874, 46);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.PasswordChar = '\0';
+            this.txtMaNV.PlaceholderText = "";
+            this.txtMaNV.SelectedText = "";
+            this.txtMaNV.Size = new System.Drawing.Size(200, 36);
+            this.txtMaNV.TabIndex = 48;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.BorderRadius = 10;
+            this.txtMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaKH.DefaultText = "";
+            this.txtMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaKH.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaKH.Location = new System.Drawing.Point(507, 46);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.PasswordChar = '\0';
+            this.txtMaKH.PlaceholderText = "";
+            this.txtMaKH.SelectedText = "";
+            this.txtMaKH.Size = new System.Drawing.Size(200, 36);
+            this.txtMaKH.TabIndex = 47;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(814, 105);
+            this.label6.Location = new System.Drawing.Point(869, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 25);
             this.label6.TabIndex = 46;
@@ -514,7 +630,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(466, 105);
+            this.label5.Location = new System.Drawing.Point(502, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 25);
             this.label5.TabIndex = 45;
@@ -524,7 +640,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(114, 105);
+            this.label4.Location = new System.Drawing.Point(130, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 25);
             this.label4.TabIndex = 44;
@@ -534,7 +650,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(814, 27);
+            this.label3.Location = new System.Drawing.Point(869, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 25);
             this.label3.TabIndex = 43;
@@ -544,7 +660,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(466, 27);
+            this.label7.Location = new System.Drawing.Point(502, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(147, 25);
             this.label7.TabIndex = 42;
@@ -554,7 +670,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(114, 27);
+            this.label8.Location = new System.Drawing.Point(130, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 25);
             this.label8.TabIndex = 41;
@@ -566,7 +682,7 @@
             this.dtpHDB.Checked = true;
             this.dtpHDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpHDB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHDB.Location = new System.Drawing.Point(119, 135);
+            this.dtpHDB.Location = new System.Drawing.Point(135, 124);
             this.dtpHDB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpHDB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpHDB.Name = "dtpHDB";
@@ -586,7 +702,7 @@
             this.txtTenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNV.Location = new System.Drawing.Point(819, 135);
+            this.txtTenNV.Location = new System.Drawing.Point(874, 124);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.PasswordChar = '\0';
             this.txtTenNV.PlaceholderText = "";
@@ -606,7 +722,7 @@
             this.txtTenKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKH.Location = new System.Drawing.Point(471, 135);
+            this.txtTenKH.Location = new System.Drawing.Point(507, 124);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.PasswordChar = '\0';
             this.txtTenKH.PlaceholderText = "";
@@ -626,7 +742,7 @@
             this.txtMaHD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaHD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaHD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaHD.Location = new System.Drawing.Point(119, 57);
+            this.txtMaHD.Location = new System.Drawing.Point(135, 46);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.PasswordChar = '\0';
             this.txtMaHD.PlaceholderText = "";
@@ -634,115 +750,39 @@
             this.txtMaHD.Size = new System.Drawing.Size(200, 36);
             this.txtMaHD.TabIndex = 35;
             // 
-            // Column1
+            // label16
             // 
-            this.Column1.DataPropertyName = "MaHDB";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1119, 14);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 16);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "Triệu VND";
             // 
-            // Column2
+            // label15
             // 
-            this.Column2.DataPropertyName = "TenDienThoai";
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1119, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 16);
+            this.label15.TabIndex = 52;
+            this.label15.Text = "Triệu VND";
             // 
-            // Column3
+            // label17
             // 
-            this.Column3.DataPropertyName = "SoLuong";
-            this.Column3.HeaderText = "Amount";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DonGiaBan";
-            this.Column4.HeaderText = "Cost";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "GiamGia";
-            this.Column5.HeaderText = "Sale";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ThanhTIen";
-            this.Column6.HeaderText = "Total";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.BorderRadius = 10;
-            this.txtMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaKH.DefaultText = "";
-            this.txtMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaKH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaKH.Location = new System.Drawing.Point(471, 57);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.PasswordChar = '\0';
-            this.txtMaKH.PlaceholderText = "";
-            this.txtMaKH.SelectedText = "";
-            this.txtMaKH.Size = new System.Drawing.Size(200, 36);
-            this.txtMaKH.TabIndex = 47;
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.BorderRadius = 10;
-            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.DefaultText = "";
-            this.txtMaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNV.Location = new System.Drawing.Point(819, 57);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.PasswordChar = '\0';
-            this.txtMaNV.PlaceholderText = "";
-            this.txtMaNV.SelectedText = "";
-            this.txtMaNV.Size = new System.Drawing.Size(200, 36);
-            this.txtMaNV.TabIndex = 48;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BorderRadius = 10;
-            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(432, 16);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(111, 45);
-            this.btnNew.TabIndex = 12;
-            this.btnNew.Text = "New";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(790, 129);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 16);
+            this.label17.TabIndex = 53;
             // 
             // ChiTietHDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 581);
+            this.ClientSize = new System.Drawing.Size(1205, 589);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ChiTietHDB";
@@ -813,5 +853,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMaNV;
         private Guna.UI2.WinForms.Guna2TextBox txtMaKH;
         private Guna.UI2.WinForms.Guna2Button btnNew;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

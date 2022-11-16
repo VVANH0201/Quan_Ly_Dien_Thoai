@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Quan_Ly_Dien_Thoai.Forms
 {
     public partial class ChiTietHDB : Form
     {
+        float T = 0;
         Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
         Classes.ConnectData connectData = new Classes.ConnectData();
         frmHDBan frmHDBan = new frmHDBan();
@@ -36,7 +38,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
             btnBDelete.Enabled = false;
-            btnBPrint.Enabled = false;
+            btnBPrint.Enabled = true;
             CbMaSP.Enabled = false;
             txtTenSP.Enabled = false;
             txtDonGia.Enabled = false;
@@ -80,6 +82,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void ChiTietHDB_Load(object sender, EventArgs e)
         {
             load();
+            label17.Text = "Tổng tiền:" + T.ToString();
         }
 
         private void btnBExit_Click(object sender, EventArgs e)
@@ -90,13 +93,22 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void btnBCancel_Click(object sender, EventArgs e)
         {
             Reset();
+            txtSoLuong.Focus();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            CbMaSP.Text = "";
+            txtTenSP.Text = "";
+            txtDonGia.Text = "";
+            txtSoLuong.Text = "";
+            txtGiamGia.Text = "";
+            txtThanhTien.Text = "";
             CbMaSP.Enabled = true;
             txtSoLuong.Enabled = true;
             txtGiamGia.Enabled = true;
+            btnBAdd.Enabled = true;
+            
         }
 
         private void CbMaSP_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,6 +125,169 @@ namespace Quan_Ly_Dien_Thoai.Forms
             }
         }
 
-       
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            float sl, dg, gg, tt;
+            try
+            {
+                if (txtGiamGia.Text.Trim() == "")
+                    gg = 0;
+                else
+                    gg = float.Parse(txtGiamGia.Text);
+                if (txtSoLuong.Text.Trim() == "")
+                    sl = 0;
+                else
+                    sl = float.Parse(txtSoLuong.Text);
+                dg = float.Parse(txtDonGia.Text);
+                tt = dg * sl * (1 - gg / 100);
+                txtThanhTien.Text = tt.ToString();
+            }
+            catch { }
+        }
+
+        private void btnBAdd_Click(object sender, EventArgs e)
+        {
+            int slcon, soluong;
+            float tongtien = 0;
+            if (CbMaSP.SelectedValue == "")
+            {
+                MessageBox.Show("Bạn chưa chọn mã sản phẩm");
+                return;
+            }
+            if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Bạn cần nhập số lượng");
+
+            }
+            DataTable dt = connectData.ReadData("select * from DienThoai where MaDienThoai='" + CbMaSP.SelectedValue + "'");
+            slcon = int.Parse(dt.Rows[0]["SoLuong"].ToString());
+            soluong = int.Parse(txtSoLuong.Text);
+            if (slcon < soluong)
+            {
+                MessageBox.Show("ko con hang" + txtTenSP);
+                txtSoLuong.Focus();
+                return;
+            }
+            connectData.UpdateData("insert into ChiTietHDB values('" + txtMaHD.Text + "','" + CbMaSP.SelectedValue + "'," + (int)soluong + ",'" +txtDonGia.Text+ "','"+ txtGiamGia.Text + "','" + txtThanhTien.Text + "')");
+            DataTable tableT = connectData.ReadData("select * from ChiTietHDB where MaHDB = '" + txtMaHD.Text + "'");
+            for (int i = 0; i < tableT.Rows.Count; i++)
+            {
+                T = T + float.Parse(tableT.Rows[i]["ThanhTien"].ToString());
+
+            }
+            label17.Text = "Tổng Tiền: " + T.ToString();
+            load();
+            frmHDBan.load();
+        }
+
+        private void dgvChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnBEdit.Enabled = true;
+            btnBDelete.Enabled = true;
+            btnBAdd.Enabled = false;
+            btnNew.Enabled = false;
+            CbMaSP.Enabled = true;
+            txtSoLuong.Enabled = true;
+            txtGiamGia.Enabled = true;
+            string tenSp = dgvChiTiet.CurrentRow.Cells[1].Value.ToString();
+            string mahdb = dgvChiTiet.CurrentRow.Cells[0].Value.ToString();
+            DataTable dataTable = connectData.ReadData("select MaHDB, ChiTietHDB.MaDienThoai, ChiTietHDB.SoLuong, DonGiaBan, GiamGia,ThanhTien from ChiTietHDB, DienThoai where ChiTietHDB.MaDienThoai = DienThoai.MaDienThoai and TenDienThoai = '"+tenSp+"' and MaHDB = '" + mahdb + "'");
+            CbMaSP.SelectedValue = dataTable.Rows[0]["MaDienThoai"].ToString();
+            txtSoLuong.Text = dgvChiTiet.CurrentRow.Cells[2].Value.ToString();
+            txtGiamGia.Text = dgvChiTiet.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void btnBDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connectData.UpdateData("delete from ChiTietHDB where MaDienThoai = '" + CbMaSP.SelectedValue + "'");
+                load();
+                Reset();
+            }
+            catch
+            {
+                MessageBox.Show("loi");
+            }
+        }
+
+        private void btnBEdit_Click(object sender, EventArgs e)
+        {
+            connectData.UpdateData("update ChiTietHDB set SoLuong = " + txtSoLuong.Text + ", GiamGia = '" + txtGiamGia.Text + "', ThanhTien = '" +txtThanhTien.Text+ "' where MaHDB='" + txtMaHD.Text + "' and MaDienThoai='"+CbMaSP.Text+"'");
+            load();
+            Reset();
+        }
+
+        private void btnBPrint_Click(object sender, EventArgs e)
+        {
+            Excel.Application exAp = new Excel.Application();
+            Excel.Workbook exBook = exAp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+            Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1]; 
+
+            exRange.Font.Size = 15; 
+            
+            exRange.Font.Bold = true; 
+            exRange.Font.Color = Color.Blue; 
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            // dia chi
+            Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
+            dcCuaHang.Font.Size = 12;
+            dcCuaHang.Font.Bold = true;
+            dcCuaHang.Font.Color = Color.Blue;
+            dcCuaHang.Value = "Địa chỉ: Số 3 - Cầu Giấy - Đống Đa - Hà Nội";
+            // dien thoai
+            Excel.Range dtCuaHang = (Excel.Range)exSheet.Cells[3, 1];
+            dtCuaHang.Font.Size = 12;
+            dtCuaHang.Font.Bold = true;
+            dtCuaHang.Font.Color = Color.Blue;
+            dtCuaHang.Value = "Điện thoại: 0398866666";
+
+            exSheet.Range["D3"].Font.Size = 20;
+            exSheet.Range["D3"].Font.Bold = true;
+            exSheet.Range["D3"].Font.Color = Color.Red;
+            exSheet.Range["D3"].Value = "DANH SÁCH CHI TIẾT HDB";
+
+            
+
+            exSheet.Range["A5"].Value = "Mã Hóa Đơn Bán: " + txtMaHD.Text;
+            exSheet.Range["A6"].Value = "Khách hàng: " + txtMaKH.Text + "-" + txtTenKH.Text;
+
+
+            exSheet.Range["A10:F10"].Font.Size = 10;
+            exSheet.Range["A10:F10"].ColumnWidth = 10;
+            exSheet.Range["A10:F10"].Font.Bold = true;
+            exSheet.Range["A10"].Value = "STT";
+            exSheet.Range["B10"].Value = "Tên Điện Thoại";
+            exSheet.Range["C10"].Value = "Số lượng";
+            exSheet.Range["D10"].Value = "Đơn giá bán";
+            exSheet.Range["E10"].Value = "Giảm giá";
+            exSheet.Range["F10"].Value = "Thành tiền";
+
+
+            
+
+            int dong = 11;
+            for (int i = 0; i < dgvChiTiet.Rows.Count - 1; i++)
+            {
+                exSheet.Range["A" + (dong + i).ToString()].Value = (i + 1).ToString();
+                exSheet.Range["B" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[0].Value.ToString();
+                exSheet.Range["C" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[1].Value.ToString();
+                exSheet.Range["D" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[2].Value.ToString();
+                exSheet.Range["E" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[3].Value.ToString();
+            }
+
+            exSheet.Name = "Danh sach KH";
+            exBook.Activate();
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel 97-2002 Workbook|*.xls|Excel Workbook|*.xlsx|All File|*.*";
+            save.FilterIndex = 2;
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                exBook.SaveAs(save.FileName.ToLower());
+            }
+            exAp.Quit();
+        }
     }
 }

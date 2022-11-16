@@ -43,7 +43,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
         }
         //load
-        void load()
+        public void load()
         {
             DataTable dataTable = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien");
             dgvHDB.DataSource = dataTable;
@@ -55,7 +55,7 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpHDB.Enabled = false;
             btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
-            btnBPrint.Enabled = false;
+            //btnBPrint.Enabled = false;
             btnBDelete.Enabled = false;
         }
         private void frmHDBan_Load(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpHDB.Enabled = false;
             btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
-            btnBPrint.Enabled = false;
+            //btnBPrint.Enabled = false;
             btnBDelete.Enabled = false;
         }
         //exit
@@ -127,26 +127,7 @@ namespace Quan_Ly_Dien_Thoai.From
         //click data
         private void dgvHDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string MaHD = dgvHDB.CurrentRow.Cells[0].Value.ToString();
-            DataTable HD = connectData.ReadData("select * from HoaDonBan where MaHDB = '"+ MaHD +"'");
-            cbMaKH.SelectedValue = HD.Rows[0]["MaKhachHang"].ToString() ;
-            cbMaNV.SelectedValue = HD.Rows[0]["MaNhanVien"].ToString();
-            dtpHDB.Text = HD.Rows[0]["NgayBan"].ToString();
-            txtMaHD.Text = dgvHDB.CurrentRow.Cells[0].Value.ToString();
-            btnBDelete.Enabled = true;
-            btnBEdit.Enabled = true;
-            btnBPrint.Enabled = true;
-            MaHDB = txtMaHD.Text;
-            TenKH = txtTenKH.Text;
-            TenNV = txtTenNV.Text;
-            MaKH = cbMaKH.Text;
-            MaNV = cbMaKH.Text;
-            txtMaHD.Enabled = false;
-            txtTenKH.Enabled = false;
-            txtTenNV.Enabled = false;
-            cbMaNV.Enabled = true;
-            cbMaKH.Enabled = true;
-            dtpHDB.Enabled = true;
+            
         }
         //cancel
         private void btnBCancel_Click(object sender, EventArgs e)
@@ -224,7 +205,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             if (CbxBSearch.Text == "ID")
             {
-                DataTable dataID = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and HoaDonBan.MaHDB like '%"+txtBSearch.Text.Trim()+"%'");
+                DataTable dataID = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and HoaDonBan.MaHDB like N'%"+txtBSearch.Text.Trim()+"%'");
                 dgvHDB.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -233,7 +214,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             if (CbxBSearch.Text == "Employee")
             {
-                DataTable dataTenNV = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenNhanVien like '%" + txtBSearch.Text.Trim() + "%'");
+                DataTable dataTenNV = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenNhanVien like N'%" + txtBSearch.Text.Trim() + "%'");
                 dgvHDB.DataSource = dataTenNV;
                 if (dataTenNV.Rows.Count <= 0)
                 {
@@ -242,7 +223,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             if (CbxBSearch.Text == "Customer")
             {
-                DataTable dataTenKH = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenKhachHang like '%" + txtBSearch.Text.Trim() + "%'");
+                DataTable dataTenKH = connectData.ReadData("select HoaDonBan.MaHDB, TenKhachHang, TenNhanVien,NgayBan, TongTien from HoaDonBan, KhachHang, NhanVien\r\nwhere HoaDonBan.MaKhachHang = KhachHang.MaKhachHang and  HoaDonBan.MaNhanVien = NhanVien.MaNhanVien and TenKhachHang like N'%" + txtBSearch.Text.Trim() + "%'");
                 dgvHDB.DataSource = dataTenKH;
                 if (dataTenKH.Rows.Count <= 0)
                 {
@@ -252,6 +233,35 @@ namespace Quan_Ly_Dien_Thoai.From
         }
 
         private void dgvHDB_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvHDB_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string MaHD = dgvHDB.CurrentRow.Cells[0].Value.ToString();
+            DataTable HD = connectData.ReadData("select * from HoaDonBan where MaHDB = '" + MaHD + "'");
+            cbMaKH.SelectedValue = HD.Rows[0]["MaKhachHang"].ToString();
+            cbMaNV.SelectedValue = HD.Rows[0]["MaNhanVien"].ToString();
+            dtpHDB.Text = HD.Rows[0]["NgayBan"].ToString();
+            txtMaHD.Text = dgvHDB.CurrentRow.Cells[0].Value.ToString();
+            btnBDelete.Enabled = true;
+            btnBEdit.Enabled = true;
+            //btnBPrint.Enabled = true;
+            MaHDB = txtMaHD.Text;
+            TenKH = txtTenKH.Text;
+            TenNV = txtTenNV.Text;
+            MaKH = cbMaKH.Text;
+            MaNV = cbMaKH.Text;
+            txtMaHD.Enabled = false;
+            txtTenKH.Enabled = false;
+            txtTenNV.Enabled = false;
+            cbMaNV.Enabled = true;
+            cbMaKH.Enabled = true;
+            dtpHDB.Enabled = true;
+        }
+
+        private void dgvHDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ChiTietHDB chiTietHDB = new ChiTietHDB();
             chiTietHDB.ShowDialog();
