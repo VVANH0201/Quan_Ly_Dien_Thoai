@@ -14,7 +14,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
 {
     public partial class ChiTietHDB : Form
     {
-        double T = 0;
+        float T = 0;
         Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
         Classes.ConnectData connectData = new Classes.ConnectData();
         frmHDBan frmHDBan = new frmHDBan();
@@ -32,14 +32,13 @@ namespace Quan_Ly_Dien_Thoai.Forms
             txtTenNV.Text = frmHDBan.TenNV;
             txtMaKH.Text = frmHDBan.MaKH;
             txtMaNV.Text = frmHDBan.MaNV;
-            dtpHDB.Text = frmHDBan.Ngay;
             DataTable data = connectData.ReadData("select MaHDB, TenDienThoai, ChiTietHDB.SoLuong, DonGiaBan, GiamGia, ThanhTien from ChiTietHDB, DienThoai where ChiTietHDB.MaDienThoai = DienThoai.MaDienThoai and MaHDB = '" + txtMaHD.Text + "'");
             dgvChiTiet.DataSource = data;
             btnNew.Enabled = true;
             btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
             btnBDelete.Enabled = false;
-            btnNPrint.Enabled = true;
+            btnBPrint.Enabled = true;
             CbMaSP.Enabled = false;
             txtTenSP.Enabled = false;
             txtDonGia.Enabled = false;
@@ -66,7 +65,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             btnBAdd.Enabled = false;
             btnBEdit.Enabled = false;
             btnBDelete.Enabled = false;
-            btnNPrint.Enabled = false;
+            btnBPrint.Enabled = false;
             CbMaSP.Enabled = false;
             txtTenSP.Enabled = false;
             txtDonGia.Enabled = false;
@@ -128,18 +127,18 @@ namespace Quan_Ly_Dien_Thoai.Forms
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-            double sl, dg, gg, tt;
+            float sl, dg, gg, tt;
             try
             {
                 if (txtGiamGia.Text.Trim() == "")
                     gg = 0;
                 else
-                    gg = double.Parse(txtGiamGia.Text);
+                    gg = float.Parse(txtGiamGia.Text);
                 if (txtSoLuong.Text.Trim() == "")
                     sl = 0;
                 else
-                    sl = double.Parse(txtSoLuong.Text);
-                dg = double.Parse(txtDonGia.Text);
+                    sl = float.Parse(txtSoLuong.Text);
+                dg = float.Parse(txtDonGia.Text);
                 tt = dg * sl * (1 - gg / 100);
                 txtThanhTien.Text = tt.ToString();
             }
@@ -149,7 +148,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void btnBAdd_Click(object sender, EventArgs e)
         {
             int slcon, soluong;
-            double tongtien = 0;
+            float tongtien = 0;
             if (CbMaSP.SelectedValue == "")
             {
                 MessageBox.Show("Bạn chưa chọn mã sản phẩm");
@@ -173,7 +172,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             DataTable tableT = connectData.ReadData("select * from ChiTietHDB where MaHDB = '" + txtMaHD.Text + "'");
             for (int i = 0; i < tableT.Rows.Count; i++)
             {
-                T = T + double.Parse(tableT.Rows[i]["ThanhTien"].ToString());
+                T = T + float.Parse(tableT.Rows[i]["ThanhTien"].ToString());
 
             }
             label17.Text = "Tổng Tiền: " + T.ToString();

@@ -20,8 +20,8 @@ namespace Quan_Ly_Dien_Thoai.From
         public frmNhanVien()
         {
             InitializeComponent();
-            DataTable dtnv = data.ReadData("select * from ChucVu");
-            comn.FillComboBox(cbCV, dtnv, "TenChucVu", "MaChucVu");
+            //DataTable dtnv = connectData.ReadData("select * from NhanVien");
+            //CommonFunctions.FillComboBox(cbMaNV, dtnv, "MaNhanVien", "MaNhanVien");
         }
         void ResetValue()
         {
@@ -31,17 +31,16 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpNgaySinh.Value = DateTime.Today;
             txtDiaChi.Text = "";
             txtPhone.Text = "";
-            cbCV.Text = "";
+            txtMaCV.Text = "";
             txtTimKiem.Text = "";
             cbPhanLoai.SelectedIndex = -1;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-            txtMaNV.Enabled = true;
         }
         void LoadData()
         {
-            DataTable dt = data.ReadData("select NhanVien.MaNhanVien, TenNhanVien, GioiTinh, NgaySinh, DiaChi, SoDienThoai, TenChucVu from NhanVien inner join ChucVu on NhanVien.MaChucVu = ChucVu.MaChucVu");
+            DataTable dt = data.ReadData("Select * from NhanVien");
             dgvNhanVien.DataSource = dt;
 
         }
@@ -58,7 +57,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = Convert.ToDateTime(dtpNgaySinh.Value.ToLongDateString());
+            string theDate = dtpNgaySinh.Value.ToString("dd-mm-yyyy");
             // check null
             if (txtMaNV.Text == "")
             {
@@ -85,7 +84,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBox.Show("Bạn chưa nhập Địa Chỉ");
                 return;
             }
-            if (cbCV.SelectedValue == "")
+            if (txtMaCV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Mã Chức Vụ");
                 return;
@@ -99,7 +98,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 return;
             }
             // insert dl
-            string sqlInsert = "insert into NhanVien values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + String.Format("{0:MM/dd/yyyy}", dateTime) + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + cbCV.SelectedValue + "')";
+            string sqlInsert = "insert into NhanVien values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + dtpNgaySinh.Text + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + txtMaCV.Text + "')";
             data.UpdateData(sqlInsert);
             LoadData();
             ResetValue();
@@ -139,10 +138,7 @@ namespace Quan_Ly_Dien_Thoai.From
             dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
             txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString();
             txtPhone.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
-            //cbCV.SelectedValue = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-            string s = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
-            DataTable dt = data.ReadData("select * from ChucVu where TenChucVu = N'" + s + "'");
-            cbCV.SelectedValue = dt.Rows[0]["MaChucVu"].ToString();
+            txtMaCV.Text = dgvNhanVien.CurrentRow.Cells[6].Value.ToString();
             txtMaNV.Enabled = false;
             btnThem.Enabled = false;
             btnSua.Enabled = true;
@@ -151,8 +147,6 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = Convert.ToDateTime(dtpNgaySinh.Value.ToLongDateString());
-
             //check null
             if (txtTen.Text == "")
             {
@@ -174,14 +168,14 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBox.Show("Bạn chưa nhập Địa Chỉ");
                 return;
             }
-            if(cbCV.SelectedValue == "")
+            if(txtMaCV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Mã Chức vụ");
                 return;
             }
             try
             {
-                string sqlUpdate = "update NhanVien set TenNhanVien = N'" + txtTen.Text + "', GioiTinh = N'" + cbGioiTinh.Text + "', NgaySinh = '" + String.Format("{0:MM/dd/yyyy}", dateTime) + "', DiaChi = N'" + txtDiaChi.Text + "', SoDienThoai = '" + txtPhone.Text + "', MaChucVu = '" + cbCV.SelectedValue + "' where MaNhanVien = '" + txtMaNV.Text + "'";
+                string sqlUpdate = "update NhanVien set TenNhanVien = '" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + dtpNgaySinh.Text + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + txtMaCV.Text;
                 data.UpdateData(sqlUpdate);
                 LoadData();
                 ResetValue();
@@ -277,18 +271,15 @@ namespace Quan_Ly_Dien_Thoai.From
             exSheet.Range["B6"].ColumnWidth = 25;
             exSheet.Range["D6"].ColumnWidth = 25;
             exSheet.Range["E6"].ColumnWidth = 25;
-            exSheet.Range["F6"].ColumnWidth = 25;
-            exSheet.Range["G6"].ColumnWidth = 25;
-            exSheet.Range["H6"].ColumnWidth = 25;
 
 
             exSheet.Range["B6"].Value = "Mã Nhân viên";
             exSheet.Range["C6"].Value = "Tên Nhân Viên";
-            exSheet.Range["D6"].Value = "Giới Tính";
-            exSheet.Range["E6"].Value = "Ngày Sinh";
-            exSheet.Range["F6"].Value = "Địa chỉ";
-            exSheet.Range["G6"].Value = "Số Điện Thoại";
-            exSheet.Range["H6"].Value = "Chức Vụ";
+            exSheet.Range["E6"].Value = "Giới Tính";
+            exSheet.Range["F6"].Value = "Ngày Sinh";
+            exSheet.Range["G6"].Value = "Địa chỉ";
+            exSheet.Range["H6"].Value = "Số Điện Thoại";
+            exSheet.Range["I6"].Value = "Mã Chức Vụ";
 
 
             int dong = 7;

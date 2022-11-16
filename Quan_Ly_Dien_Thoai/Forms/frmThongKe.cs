@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quan_Ly_Dien_Thoai.From
+namespace Quan_Ly_Dien_Thoai.Forms
 {
-    public partial class frmHDNhap : Form
+    public partial class frmThongKe : Form
     {
-        public frmHDNhap()
+        public frmThongKe()
         {
             InitializeComponent();
         }
