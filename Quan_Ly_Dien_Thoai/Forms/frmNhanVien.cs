@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quan_Ly_Dien_Thoai.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,12 @@ namespace Quan_Ly_Dien_Thoai.From
     public partial class frmNhanVien : Form
     {
         Classes.ConnectData data = new Classes.ConnectData();
+        Classes.CommonFunctions comn = new Classes.CommonFunctions();
         public frmNhanVien()
         {
             InitializeComponent();
+            //DataTable dtnv = connectData.ReadData("select * from NhanVien");
+            //CommonFunctions.FillComboBox(cbMaNV, dtnv, "MaNhanVien", "MaNhanVien");
         }
         void ResetValue()
         {
@@ -170,7 +174,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             try
             {
-                string sqlUpdate = "update NhanVien set TenNhanVien = '" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + dtpNgaySinh.Text + "', N'" + txtDiaChi.Text + "')" + txtPhone.Text + "', N'" + txtMaCV.Text;
+                string sqlUpdate = "update NhanVien set TenNhanVien = '" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + dtpNgaySinh.Text + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + txtMaCV.Text;
                 data.UpdateData(sqlUpdate);
                 LoadData();
                 ResetValue();
@@ -271,8 +275,12 @@ namespace Quan_Ly_Dien_Thoai.From
 
             exSheet.Range["B6"].Value = "Mã Nhân viên";
             exSheet.Range["C6"].Value = "Tên Nhân Viên";
-            exSheet.Range["D6"].Value = "Số Điện Thoại";
-            exSheet.Range["E6"].Value = "Địa chỉ";
+            exSheet.Range["E6"].Value = "Giới Tính";
+            exSheet.Range["F6"].Value = "Ngày Sinh";
+            exSheet.Range["G6"].Value = "Địa chỉ";
+            exSheet.Range["H6"].Value = "Số Điện Thoại";
+            exSheet.Range["I6"].Value = "Mã Chức Vụ";
+
 
             int dong = 7;
             for (int i = 0; i < dgvNhanVien.Rows.Count - 1; i++)
@@ -282,6 +290,10 @@ namespace Quan_Ly_Dien_Thoai.From
                 exSheet.Range["C" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[1].Value.ToString();
                 exSheet.Range["D" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[2].Value.ToString();
                 exSheet.Range["E" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[3].Value.ToString();
+                exSheet.Range["F" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[4].Value.ToString();
+                exSheet.Range["G" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[5].Value.ToString();
+                exSheet.Range["H" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[6].Value.ToString();
+                exSheet.Range["I" + (dong + i).ToString()].Value = dgvNhanVien.Rows[i].Cells[7].Value.ToString();            
             }
 
             exSheet.Name = "Danh sach NV";
