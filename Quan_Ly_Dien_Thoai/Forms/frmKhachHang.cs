@@ -35,8 +35,8 @@ namespace Quan_Ly_Dien_Thoai.From
         private void btnExit_Click(object sender, EventArgs e)
         {
             //if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
-             // MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                this.Close();
+            // MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            this.Close();
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
@@ -48,35 +48,35 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             DataTable dt = data.ReadData("Select * from KhachHang");
             dgvKhachHang.DataSource = dt;
-            
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             // check null
-            if(txtMa.Text == "")
+            if (txtMa.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Mã Khách Hàng");
                 return;
             }
-            if(txtTen.Text == "")
+            if (txtTen.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Tên Khách Hàng");
                 return;
-            } 
-            if(txtPhone.Text == "")
+            }
+            if (txtPhone.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Số Điện Thoại");
                 return;
             }
-            if(txtDiaChi.Text == "")
+            if (txtDiaChi.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Địa Chỉ");
                 return;
             }
             //check trung ma 
-            DataTable checkMa = data.ReadData("Select * from KhachHang where MaKH = '" + txtMa.Text + "'");
-            if(checkMa.Rows.Count > 0)
+            DataTable checkMa = data.ReadData("Select * from KhachHang where MaKhachHang = '" + txtMa.Text + "'");
+            if (checkMa.Rows.Count > 0)
             {
                 MessageBox.Show("Mã khách hàng " + txtMa.Text + " đã tồn tại. Vui lòng nhập lại");
                 txtMa.Focus();
@@ -88,7 +88,7 @@ namespace Quan_Ly_Dien_Thoai.From
             LoadData();
             ResetValue();
 
-            
+
 
         }
 
@@ -107,10 +107,10 @@ namespace Quan_Ly_Dien_Thoai.From
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 try
                 {
-                    data.UpdateData("delete KhachHang where MaKH='" + txtMa.Text + "'");
+                    data.UpdateData("delete KhachHang where MaKhachHang='" + txtMa.Text + "'");
                     LoadData();
                     ResetValue();
-                    
+
                 }
                 catch
                 {
@@ -150,7 +150,7 @@ namespace Quan_Ly_Dien_Thoai.From
             }
             try
             {
-                string sqlUpdate = "update KhachHang set TenKH = N'" + txtTen.Text + "', SDT = '" + txtPhone.Text + "',DiaChiKH =  N'" + txtDiaChi.Text + "' where MaKH = '" + txtMa.Text + "'";
+                string sqlUpdate = "update KhachHang set TenKhachHang = N'" + txtTen.Text + "', SDT = '" + txtPhone.Text + "',DiaChiKH =  N'" + txtDiaChi.Text + "' where MaKhachHang = '" + txtMa.Text + "'";
                 data.UpdateData(sqlUpdate);
                 LoadData();
                 ResetValue();
@@ -159,26 +159,26 @@ namespace Quan_Ly_Dien_Thoai.From
             {
                 MessageBox.Show("Lỗi");
             }
-            
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(txtTimKiem.Text == "")
+            if (txtTimKiem.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập dữ liệu để tìm kiếm");
                 return;
             }
-            if(cbPhanLoai.SelectedIndex == -1)
+            if (cbPhanLoai.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn cách tìm");
             }
 
             if (cbPhanLoai.Text == "Mã Khách Hàng")
             {
-                DataTable dt = data.ReadData("Select * from KhachHang where MaKH like '%" + txtTimKiem.Text.Trim() + "%'");
+                DataTable dt = data.ReadData("Select * from KhachHang where MaKhachHang like '%" + txtTimKiem.Text.Trim() + "%'");
                 dgvKhachHang.DataSource = dt;
-                if(dt.Rows.Count <= 0)
+                if (dt.Rows.Count <= 0)
                 {
                     MessageBox.Show("Không có dữ liệu");
                 }
@@ -186,7 +186,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
             if (cbPhanLoai.Text == "Tên Khách Hàng")
             {
-                DataTable dt = data.ReadData("Select * from KhachHang where TenKH like N'%" + txtTimKiem.Text.Trim() + "%'");
+                DataTable dt = data.ReadData("Select * from KhachHang where TenKhachHang like N'%" + txtTimKiem.Text.Trim() + "%'");
                 dgvKhachHang.DataSource = dt;
                 if (dt.Rows.Count <= 0)
                 {
