@@ -103,45 +103,7 @@ namespace Quan_Ly_Dien_Thoai.From
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if(txtUserName.Text == "" || txtUserName.Text == "Nhập tên tài khoản")
-            {
-                MessageBox.Show("Bạn hãy nhập tên tài khoản");
-                return;
-            }
-            if(txtPass.Text== "" || txtPass.Text == "Mật khẩu")
-            {
-                MessageBox.Show("Bạn hãy nhập mật khẩu");
-                return;
-            }
-            DataTable dataTablecheckmk = new DataTable();
-            dataTablecheckmk = data.ReadData("Select * from Login where PassWord = N'" + txtPass.Text + "'");
-            if(dataTablecheckmk.Rows.Count == 0)
-            {
-                MessageBox.Show("Nhập mật khẩu sai");
-                return;
-            }
-
-            DataTable dataTable = new DataTable();
-            dataTable = data.ReadData("Select * from Login where UserName = N'" + txtUserName.Text + "' and PassWord = N'" + txtPass.Text + "'");
-
-            if(dataTable.Rows.Count > 0)
-            {
-                tk.Tentk1 = dataTable.Rows[0][0].ToString();
-                tk.Mk = dataTable.Rows[0][1].ToString();
-                tk.Quyen = dataTable.Rows[0][3].ToString();
-                Classes.StaticClass._tk = new Classes.TaiKhoan(tk.Tentk1,tk.Mk,tk.Quyen);
-                Form1 form = new Form1();
-                this.Hide();
-                form.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa có tài khoản");
-                
-                
-            }
+        {           
 
         }
 
@@ -152,6 +114,48 @@ namespace Quan_Ly_Dien_Thoai.From
             frmSignUp.ShowDialog();
             //this.Hide();
             this.Show();
+        }
+
+        private void logIn_Click(object sender, EventArgs e)
+        {
+            if (txtUserName.Text == "" || txtUserName.Text == "Nhập tên tài khoản")
+            {
+                MessageBox.Show("Bạn hãy nhập tên tài khoản");
+                return;
+            }
+            if (txtPass.Text == "" || txtPass.Text == "Mật khẩu")
+            {
+                MessageBox.Show("Bạn hãy nhập mật khẩu");
+                return;
+            }
+            DataTable dataTablecheckmk = new DataTable();
+            dataTablecheckmk = data.ReadData("Select * from Login where PassWord = N'" + txtPass.Text + "'");
+            if (dataTablecheckmk.Rows.Count == 0)
+            {
+                MessageBox.Show("Nhập mật khẩu sai");
+                return;
+            }
+
+            DataTable dataTable = new DataTable();
+            dataTable = data.ReadData("Select * from Login where UserName = N'" + txtUserName.Text + "' and PassWord = N'" + txtPass.Text + "'");
+
+            if (dataTable.Rows.Count > 0)
+            {
+                tk.Tentk1 = dataTable.Rows[0][0].ToString();
+                tk.Mk = dataTable.Rows[0][1].ToString();
+                tk.Quyen = dataTable.Rows[0][3].ToString();
+                Classes.StaticClass._tk = new Classes.TaiKhoan(tk.Tentk1, tk.Mk, tk.Quyen);
+                Form1 form = new Form1();
+                this.Hide();
+                form.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa có tài khoản");
+
+
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         {
             InitializeComponent();
             DataTable dtSP = connectData.ReadData("Select * from HangSanXuat");
-            CommonFunctions.FillComboBox(cbMaHSX, dtSP, "MaHSX", "MaHSX");
+            CommonFunctions.FillComboBox(cbMaHSX, dtSP, "TenHSX", "MaHSX");
         }
 
         private void btnCF_Click(object sender, EventArgs e)

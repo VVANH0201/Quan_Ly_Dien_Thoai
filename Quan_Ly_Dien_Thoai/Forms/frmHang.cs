@@ -29,6 +29,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtMa.Text = "";
             txtTen.Text = "";
             txtTimKiem.Text = "";
+            txtMa.Enabled = true;
             bntAdd.Enabled = true;
             bntChange.Enabled = false;
             btnDelete.Enabled = false;
@@ -122,7 +123,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi Kết Nối");
+                    MessageBox.Show("Bạn không được xóa vì có liên quan đến điện thoại");
                 }
             }
         }
@@ -174,7 +175,7 @@ namespace Quan_Ly_Dien_Thoai.From
 
             exRange.Font.Bold = true;
             exRange.Font.Color = Color.Blue;
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;
@@ -282,6 +283,11 @@ namespace Quan_Ly_Dien_Thoai.From
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvHangSX_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

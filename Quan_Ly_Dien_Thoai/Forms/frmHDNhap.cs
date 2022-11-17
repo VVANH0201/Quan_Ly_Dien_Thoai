@@ -88,16 +88,23 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void btnNDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                connectData.UpdateData("delete from HoaDonNhap where MaHDN = '" + txtMaHD.Text + "'");
-                load();
-                ResetValue();
+                try
+                {
+
+                    connectData.UpdateData("delete from HoaDonNhap where MaHDN = '" + txtMaHD.Text + "'");
+                    load();
+                    ResetValue();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Không được xóa do ảnh hưởng đến dữ liệu");
+                }
             }
-            catch
-            {
-                MessageBox.Show("loi");
-            }
+                
         }
 
         private void btnNCancel_Click(object sender, EventArgs e)
@@ -132,9 +139,9 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             txtMaHD.Enabled = true;
             cbMaNCC.Enabled = true;
-            txtTenNCC.Enabled = true;
+            //txtTenNCC.Enabled = true;
             cbMaNV.Enabled = true;
-            txtTenNV.Enabled = true;
+            //txtTenNV.Enabled = true;
             dtpHDN.Enabled = true;
             btnNAdd.Enabled = true;
             txtMaHD.Text = "";
@@ -249,6 +256,12 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             ChiTietHDN chiTietHDN = new ChiTietHDN();
             chiTietHDN.ShowDialog();
+            load();
+        }
+
+        private void dgvHDN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

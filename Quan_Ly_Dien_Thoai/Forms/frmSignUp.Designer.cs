@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btncomBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -86,6 +87,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btncomBack);
             this.panel2.Controls.Add(this.btnSignUp);
             this.panel2.Controls.Add(this.pictureBox8);
@@ -111,34 +113,49 @@
             this.panel2.Size = new System.Drawing.Size(545, 543);
             this.panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(240, 420);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 31);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "hoặc";
+            // 
             // btncomBack
             // 
+            this.btncomBack.BorderRadius = 10;
             this.btncomBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btncomBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btncomBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btncomBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btncomBack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btncomBack.ForeColor = System.Drawing.Color.White;
-            this.btncomBack.Location = new System.Drawing.Point(214, 469);
+            this.btncomBack.Location = new System.Drawing.Point(321, 414);
             this.btncomBack.Name = "btncomBack";
-            this.btncomBack.Size = new System.Drawing.Size(180, 45);
-            this.btncomBack.TabIndex = 42;
-            this.btncomBack.Text = "Come back Login";
+            this.btncomBack.Size = new System.Drawing.Size(148, 45);
+            this.btncomBack.TabIndex = 5;
+            this.btncomBack.Text = "&Login";
+            this.btncomBack.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btncomBack.Click += new System.EventHandler(this.btncomBack_Click);
             // 
             // btnSignUp
             // 
+            this.btnSignUp.BorderRadius = 10;
             this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignUp.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(214, 391);
+            this.btnSignUp.Location = new System.Drawing.Point(88, 414);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(180, 45);
-            this.btnSignUp.TabIndex = 41;
-            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Size = new System.Drawing.Size(148, 45);
+            this.btnSignUp.TabIndex = 4;
+            this.btnSignUp.Text = "&Sign Up";
+            this.btnSignUp.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // pictureBox8
@@ -222,7 +239,7 @@
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.PasswordChar = '*';
             this.txtRePass.Size = new System.Drawing.Size(278, 27);
-            this.txtRePass.TabIndex = 31;
+            this.txtRePass.TabIndex = 3;
             this.txtRePass.Text = "Re-enter Password";
             this.txtRePass.Click += new System.EventHandler(this.txtRePass_Click);
             this.txtRePass.Leave += new System.EventHandler(this.txtRePass_Leave);
@@ -244,7 +261,7 @@
             this.txtEmail.Location = new System.Drawing.Point(147, 162);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(278, 27);
-            this.txtEmail.TabIndex = 26;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
@@ -289,7 +306,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(278, 27);
-            this.txtPass.TabIndex = 25;
+            this.txtPass.TabIndex = 2;
             this.txtPass.Text = "Password";
             this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
@@ -311,7 +328,7 @@
             this.txtUserName.Location = new System.Drawing.Point(147, 92);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(278, 27);
-            this.txtUserName.TabIndex = 23;
+            this.txtUserName.TabIndex = 0;
             this.txtUserName.Text = "Username";
             this.txtUserName.Click += new System.EventHandler(this.txtUserName_Click);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
@@ -333,8 +350,10 @@
             this.ClientSize = new System.Drawing.Size(932, 543);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSignUp";
-            this.Text = "frmSignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SIGN UP";
             this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -376,5 +395,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private Guna.UI2.WinForms.Guna2Button btncomBack;
         private Guna.UI2.WinForms.Guna2Button btnSignUp;
+        private System.Windows.Forms.Label label1;
     }
 }

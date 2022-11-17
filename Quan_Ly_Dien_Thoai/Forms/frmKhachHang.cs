@@ -26,6 +26,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtDiaChi.Text = "";
             txtPhone.Text = "";
             txtTimKiem.Text = "";
+            txtMa.Enabled = true;
             cbPhanLoai.SelectedIndex = 0;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
@@ -223,7 +224,7 @@ namespace Quan_Ly_Dien_Thoai.From
             //tenTruong.Font.Name = "Times new roman"; //Chọn font Times new roman
             exRange.Font.Bold = true; //Định dạng kiểu font chữ là in đậm
             exRange.Font.Color = Color.Blue; //Màu xanh da trời
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;

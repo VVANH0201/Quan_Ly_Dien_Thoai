@@ -99,7 +99,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 return;
             }
             // insert dl
-            string sqlInsert = "insert into NhanVien values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', '" + cbGioiTinh.Text + "', N'" + String.Format("{0:MM/dd/yyyy}", dateTime) + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + cbCV.SelectedValue + "')";
+            string sqlInsert = "insert into NhanVien values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', N'" + cbGioiTinh.Text + "', N'" + String.Format("{0:MM/dd/yyyy}", dateTime) + "', N'" + txtDiaChi.Text + "', N'" + txtPhone.Text + "', N'" + cbCV.SelectedValue + "')";
             data.UpdateData(sqlInsert);
             LoadData();
             ResetValue();
@@ -251,7 +251,7 @@ namespace Quan_Ly_Dien_Thoai.From
             //tenTruong.Font.Name = "Times new roman"; //Chọn font Times new roman
             exRange.Font.Bold = true; //Định dạng kiểu font chữ là in đậm
             exRange.Font.Color = Color.Blue; //Màu xanh da trời
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;

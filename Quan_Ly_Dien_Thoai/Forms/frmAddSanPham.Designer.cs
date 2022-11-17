@@ -91,6 +91,7 @@
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(906, 19);
@@ -108,6 +109,7 @@
             this.btnCF.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCF.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
             this.btnCF.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCF.ForeColor = System.Drawing.Color.White;
             this.btnCF.Location = new System.Drawing.Point(750, 19);
@@ -375,7 +377,7 @@
             this.btnImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImage.FillColor = System.Drawing.Color.LightGreen;
+            this.btnImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(163)))), ((int)(((byte)(102)))));
             this.btnImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnImage.ForeColor = System.Drawing.Color.White;
             this.btnImage.Location = new System.Drawing.Point(365, 460);
@@ -422,9 +424,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 345);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 20);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Giá nhập (Received price):";
+            this.label1.Text = "Giá nhập:";
             // 
             // txtBaoHanh
             // 
@@ -443,7 +445,7 @@
             this.txtBaoHanh.PasswordChar = '\0';
             this.txtBaoHanh.PlaceholderText = "";
             this.txtBaoHanh.SelectedText = "";
-            this.txtBaoHanh.Size = new System.Drawing.Size(272, 36);
+            this.txtBaoHanh.Size = new System.Drawing.Size(254, 36);
             this.txtBaoHanh.TabIndex = 53;
             // 
             // label5
@@ -452,9 +454,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(258, 20);
+            this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 51;
-            this.label5.Text = "Mã hãng sản xuất (Brand ID):";
+            this.label5.Text = "Hãng sản xuất:";
             // 
             // lbMaDT
             // 
@@ -472,19 +474,19 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(321, 173);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 20);
+            this.label7.Size = new System.Drawing.Size(88, 20);
             this.label7.TabIndex = 54;
-            this.label7.Text = "Số lượng (Amount):";
+            this.label7.Text = "Số lượng:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(384, 254);
+            this.label8.Location = new System.Drawing.Point(411, 254);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 20);
+            this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 57;
-            this.label8.Text = "Ảnh (Image):";
+            this.label8.Text = "Ảnh:";
             // 
             // label6
             // 
@@ -492,9 +494,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(17, 434);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(276, 20);
+            this.label6.Size = new System.Drawing.Size(174, 20);
             this.label6.TabIndex = 52;
-            this.label6.Text = "Thời gian bảo hành (Insurance):";
+            this.label6.Text = "Thời gian bảo hành:";
             // 
             // txtGiaNhap
             // 
@@ -583,7 +585,7 @@
             this.txtGiaban.PasswordChar = '\0';
             this.txtGiaban.PlaceholderText = "";
             this.txtGiaban.SelectedText = "";
-            this.txtGiaban.Size = new System.Drawing.Size(242, 36);
+            this.txtGiaban.Size = new System.Drawing.Size(254, 36);
             this.txtGiaban.TabIndex = 50;
             // 
             // label3
@@ -592,9 +594,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(17, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 20);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 49;
-            this.label3.Text = "Giá bán (Sell price):";
+            this.label3.Text = "Giá bán:";
             // 
             // label2
             // 
@@ -602,9 +604,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(321, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 20);
+            this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Tên Điện thoại (Name):";
+            this.label2.Text = "Tên Điện thoại:";
             // 
             // cbMaHSX
             // 

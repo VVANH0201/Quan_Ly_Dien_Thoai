@@ -276,7 +276,7 @@
             this.CbMaSP.Location = new System.Drawing.Point(151, 15);
             this.CbMaSP.Name = "CbMaSP";
             this.CbMaSP.Size = new System.Drawing.Size(200, 29);
-            this.CbMaSP.TabIndex = 48;
+            this.CbMaSP.TabIndex = 0;
             this.CbMaSP.SelectedIndexChanged += new System.EventHandler(this.CbMaSP_SelectedIndexChanged);
             // 
             // label14
@@ -468,7 +468,7 @@
             this.btnNew.Location = new System.Drawing.Point(545, 16);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(111, 45);
-            this.btnNew.TabIndex = 12;
+            this.btnNew.TabIndex = 8;
             this.btnNew.Text = "New";
             this.btnNew.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -485,7 +485,7 @@
             this.btnBCancel.Location = new System.Drawing.Point(1082, 16);
             this.btnBCancel.Name = "btnBCancel";
             this.btnBCancel.Size = new System.Drawing.Size(111, 45);
-            this.btnBCancel.TabIndex = 11;
+            this.btnBCancel.TabIndex = 12;
             this.btnBCancel.Text = "Refresh";
             this.btnBCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
@@ -497,6 +497,7 @@
             this.btnBExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
             this.btnBExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBExit.ForeColor = System.Drawing.Color.White;
             this.btnBExit.Location = new System.Drawing.Point(151, 16);
@@ -514,12 +515,13 @@
             this.btnBDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
             this.btnBDelete.Location = new System.Drawing.Point(948, 16);
             this.btnBDelete.Name = "btnBDelete";
             this.btnBDelete.Size = new System.Drawing.Size(111, 45);
-            this.btnBDelete.TabIndex = 10;
+            this.btnBDelete.TabIndex = 11;
             this.btnBDelete.Text = "Delete";
             this.btnBDelete.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBDelete.Click += new System.EventHandler(this.btnBDelete_Click);
@@ -531,12 +533,13 @@
             this.btnBEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBEdit.ForeColor = System.Drawing.Color.White;
             this.btnBEdit.Location = new System.Drawing.Point(813, 16);
             this.btnBEdit.Name = "btnBEdit";
             this.btnBEdit.Size = new System.Drawing.Size(111, 45);
-            this.btnBEdit.TabIndex = 9;
+            this.btnBEdit.TabIndex = 10;
             this.btnBEdit.Text = "Edit";
             this.btnBEdit.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBEdit.Click += new System.EventHandler(this.btnBEdit_Click);
@@ -548,12 +551,13 @@
             this.btnBAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
             this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBAdd.ForeColor = System.Drawing.Color.White;
             this.btnBAdd.Location = new System.Drawing.Point(679, 16);
             this.btnBAdd.Name = "btnBAdd";
             this.btnBAdd.Size = new System.Drawing.Size(111, 45);
-            this.btnBAdd.TabIndex = 8;
+            this.btnBAdd.TabIndex = 9;
             this.btnBAdd.Text = "ADD";
             this.btnBAdd.Click += new System.EventHandler(this.btnBAdd_Click);
             // 
@@ -564,6 +568,7 @@
             this.btnBPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(163)))), ((int)(((byte)(102)))));
             this.btnBPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBPrint.ForeColor = System.Drawing.Color.White;
             this.btnBPrint.Location = new System.Drawing.Point(17, 16);

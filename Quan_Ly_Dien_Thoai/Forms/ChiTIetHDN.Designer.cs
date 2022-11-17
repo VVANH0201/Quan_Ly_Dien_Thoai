@@ -96,6 +96,7 @@
             this.btnNEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnNEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNEdit.ForeColor = System.Drawing.Color.White;
             this.btnNEdit.Location = new System.Drawing.Point(782, 16);
@@ -113,6 +114,7 @@
             this.btnNPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(163)))), ((int)(((byte)(102)))));
             this.btnNPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNPrint.ForeColor = System.Drawing.Color.White;
             this.btnNPrint.Location = new System.Drawing.Point(29, 16);
@@ -356,6 +358,7 @@
             this.btnNAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
             this.btnNAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNAdd.ForeColor = System.Drawing.Color.White;
             this.btnNAdd.Location = new System.Drawing.Point(641, 16);
@@ -686,6 +689,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1205, 77);
             this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnNew
             // 
@@ -728,6 +732,7 @@
             this.btnNExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
             this.btnNExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNExit.ForeColor = System.Drawing.Color.White;
             this.btnNExit.Location = new System.Drawing.Point(166, 16);
@@ -745,6 +750,7 @@
             this.btnNDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnNDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNDelete.ForeColor = System.Drawing.Color.White;
             this.btnNDelete.Location = new System.Drawing.Point(917, 16);

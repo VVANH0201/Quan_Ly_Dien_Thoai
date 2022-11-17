@@ -31,6 +31,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             btnAdd.Enabled = true;
             cbPhanLoai.SelectedIndex = 0;
             txtTimKiem.Text = "";
+          
         }
 
         private void LoadData()
@@ -56,25 +57,32 @@ namespace Quan_Ly_Dien_Thoai.Forms
         {
             frmAddSanPham frmAddSP = new frmAddSanPham();
             frmAddSP.ShowDialog();
+            LoadData();
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
             frmChiTietSanPham chitietSanPham = new frmChiTietSanPham();
             chitietSanPham.ShowDialog();
+            LoadData();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có thực sự muốn xóa không?", "Có hay không",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                data.UpdateData("delete from DienThoai where MaDienThoai = '" + MaSP + "'");
-                LoadData();
+                try
+                {
+                    data.UpdateData("delete from DienThoai where MaDienThoai = '" + MaSP + "'");
+                    LoadData();
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn không được xóa vì có liên quan đến dữ liệu khác");
+                }
             }
-            catch
-            {
-                MessageBox.Show("loi");
-            }
+                
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -246,7 +254,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             //tenTruong.Font.Name = "Times new roman"; //Chọn font Times new roman
             exRange.Font.Bold = true; //Định dạng kiểu font chữ là in đậm
             exRange.Font.Color = Color.Blue; //Màu xanh da trời
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;

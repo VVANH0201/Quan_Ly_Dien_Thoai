@@ -200,16 +200,21 @@ namespace Quan_Ly_Dien_Thoai.Forms
 
         private void btnBDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                connectData.UpdateData("delete from ChiTietHDB where MaDienThoai = '" + CbMaSP.SelectedValue + "'");
-                load();
-                Reset();
+                try
+                {
+                    connectData.UpdateData("delete from ChiTietHDB where MaDienThoai = '" + CbMaSP.SelectedValue + "'");
+                    load();
+                    Reset();
+                }
+                catch
+                {
+                    MessageBox.Show("Không được xóa do ảnh hưởng đến dữ liệu");
+                }
             }
-            catch
-            {
-                MessageBox.Show("loi");
-            }
+                
         }
 
         private void btnBEdit_Click(object sender, EventArgs e)
@@ -230,7 +235,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             
             exRange.Font.Bold = true; 
             exRange.Font.Color = Color.Blue; 
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;

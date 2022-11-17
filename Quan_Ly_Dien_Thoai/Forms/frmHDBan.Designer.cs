@@ -160,6 +160,7 @@
             this.btnBSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
             this.btnBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBSearch.ForeColor = System.Drawing.Color.White;
             this.btnBSearch.Location = new System.Drawing.Point(512, 19);
@@ -189,6 +190,7 @@
             this.btnBExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
             this.btnBExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBExit.ForeColor = System.Drawing.Color.White;
             this.btnBExit.Location = new System.Drawing.Point(21, 25);
@@ -206,6 +208,7 @@
             this.btnBDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
             this.btnBDelete.Location = new System.Drawing.Point(990, 25);
@@ -223,6 +226,7 @@
             this.btnBEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(78)))), ((int)(((byte)(184)))));
             this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBEdit.ForeColor = System.Drawing.Color.White;
             this.btnBEdit.Location = new System.Drawing.Point(860, 25);
@@ -240,6 +244,7 @@
             this.btnBAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
             this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBAdd.ForeColor = System.Drawing.Color.White;
             this.btnBAdd.Location = new System.Drawing.Point(728, 25);

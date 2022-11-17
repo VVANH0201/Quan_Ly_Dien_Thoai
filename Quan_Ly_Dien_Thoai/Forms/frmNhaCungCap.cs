@@ -32,6 +32,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             txtDiaChi.Text = "";
             txtSDT.Text = "";
             txtTimKiem.Text = "";
+            txtMa.Enabled = true;
             cbPhanLoai.SelectedIndex = 0;
             bntAdd.Enabled = true;
             bntChange.Enabled = false;
@@ -111,6 +112,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
                 e.Handled = true;
             }
         }
+
         // xóa 1 dl khỏi bảng
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -239,7 +241,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             
             exRange.Font.Bold = true; 
             exRange.Font.Color = Color.Blue; 
-            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI TEAM04";
             // dia chi
             Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
             dcCuaHang.Font.Size = 12;
@@ -256,7 +258,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             exSheet.Range["D4"].Font.Size = 18;
             exSheet.Range["D4"].Font.Bold = true;
             exSheet.Range["D4"].Font.Color = Color.Red;
-            exSheet.Range["D4"].Value = "DANH SÁCH  NHÀ CUNG CẤP";
+            exSheet.Range["D4"].Value = "DANH SÁCH NHÀ CUNG CẤP";
 
             exSheet.Range["A6:E6"].Font.Size = 12;
             exSheet.Range["A6:E6"].Font.Bold = true;

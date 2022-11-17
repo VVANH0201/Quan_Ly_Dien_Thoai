@@ -159,9 +159,9 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             txtMaHD.Enabled = true;
             cbMaKH.Enabled = true;
-            txtTenKH.Enabled = true;
+            //txtTenKH.Enabled = true;
             cbMaNV.Enabled = true;
-            txtTenNV.Enabled = true;
+            //txtTenNV.Enabled = true;
             dtpHDB.Enabled = true;
             btnBAdd.Enabled = true;
             txtMaHD.Text = "";
@@ -173,16 +173,22 @@ namespace Quan_Ly_Dien_Thoai.From
         //xoa
         private void btnBDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa không ?", "Cảnh báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                connectData.UpdateData("delete from HoaDonBan where MaHDB = '" + txtMaHD.Text + "'");
-                load();
-                ResetValue();
+                try
+                {
+                    connectData.UpdateData("delete from HoaDonBan where MaHDB = '" + txtMaHD.Text + "'");
+                    load();
+                    ResetValue();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Không được xóa do ảnh hưởng đến dữ liệu");
+                }
             }
-            catch
-            {
-                MessageBox.Show("loi");
-            }
+               
         }
 
         private void btnBEdit_Click(object sender, EventArgs e)
@@ -263,6 +269,7 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             ChiTietHDB chiTietHDB = new ChiTietHDB();
             chiTietHDB.ShowDialog();
+            load();
         }
     }
 }

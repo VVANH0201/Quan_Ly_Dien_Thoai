@@ -405,6 +405,7 @@
             this.dgvHangSX.Size = new System.Drawing.Size(910, 428);
             this.dgvHangSX.TabIndex = 0;
             this.dgvHangSX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangSX_CellClick);
+            this.dgvHangSX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangSX_CellContentClick);
             // 
             // columnMaHangSX
             // 
