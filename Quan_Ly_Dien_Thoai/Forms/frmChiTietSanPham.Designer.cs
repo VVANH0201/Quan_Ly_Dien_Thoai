@@ -113,7 +113,7 @@
             this.txtSL.PlaceholderText = "";
             this.txtSL.SelectedText = "";
             this.txtSL.Size = new System.Drawing.Size(220, 36);
-            this.txtSL.TabIndex = 36;
+            this.txtSL.TabIndex = 3;
             // 
             // label7
             // 
@@ -143,7 +143,7 @@
             this.txtBaoHanh.PlaceholderText = "";
             this.txtBaoHanh.SelectedText = "";
             this.txtBaoHanh.Size = new System.Drawing.Size(272, 36);
-            this.txtBaoHanh.TabIndex = 34;
+            this.txtBaoHanh.TabIndex = 6;
             // 
             // label5
             // 
@@ -183,7 +183,7 @@
             this.txtTenDT.PlaceholderText = "";
             this.txtTenDT.SelectedText = "";
             this.txtTenDT.Size = new System.Drawing.Size(220, 36);
-            this.txtTenDT.TabIndex = 28;
+            this.txtTenDT.TabIndex = 1;
             // 
             // txtGiaban
             // 
@@ -203,7 +203,7 @@
             this.txtGiaban.PlaceholderText = "";
             this.txtGiaban.SelectedText = "";
             this.txtGiaban.Size = new System.Drawing.Size(242, 36);
-            this.txtGiaban.TabIndex = 30;
+            this.txtGiaban.TabIndex = 4;
             // 
             // label2
             // 
@@ -244,7 +244,7 @@
             this.txtMaDT.PlaceholderText = "";
             this.txtMaDT.SelectedText = "";
             this.txtMaDT.Size = new System.Drawing.Size(254, 36);
-            this.txtMaDT.TabIndex = 23;
+            this.txtMaDT.TabIndex = 0;
             // 
             // txtGiaNhap
             // 
@@ -264,7 +264,7 @@
             this.txtGiaNhap.PlaceholderText = "";
             this.txtGiaNhap.SelectedText = "";
             this.txtGiaNhap.Size = new System.Drawing.Size(254, 36);
-            this.txtGiaNhap.TabIndex = 25;
+            this.txtGiaNhap.TabIndex = 5;
             // 
             // lbMaDT
             // 
@@ -300,7 +300,7 @@
             this.cbMaHSX.Location = new System.Drawing.Point(21, 200);
             this.cbMaHSX.Name = "cbMaHSX";
             this.cbMaHSX.Size = new System.Drawing.Size(254, 29);
-            this.cbMaHSX.TabIndex = 40;
+            this.cbMaHSX.TabIndex = 2;
             // 
             // txtPin
             // 
@@ -320,7 +320,7 @@
             this.txtPin.PlaceholderText = "";
             this.txtPin.SelectedText = "";
             this.txtPin.Size = new System.Drawing.Size(211, 36);
-            this.txtPin.TabIndex = 44;
+            this.txtPin.TabIndex = 9;
             // 
             // btnPin
             // 
@@ -350,7 +350,7 @@
             this.txtRAM.PlaceholderText = "";
             this.txtRAM.SelectedText = "";
             this.txtRAM.Size = new System.Drawing.Size(211, 36);
-            this.txtRAM.TabIndex = 42;
+            this.txtRAM.TabIndex = 8;
             // 
             // btnRAM
             // 
@@ -386,7 +386,7 @@
             this.btnCancel.Location = new System.Drawing.Point(895, 18);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 45);
-            this.btnCancel.TabIndex = 28;
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "cancel";
             this.btnCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnCancel.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -404,7 +404,7 @@
             this.btnCf.Location = new System.Drawing.Point(739, 18);
             this.btnCf.Name = "btnCf";
             this.btnCf.Size = new System.Drawing.Size(134, 45);
-            this.btnCf.TabIndex = 27;
+            this.btnCf.TabIndex = 14;
             this.btnCf.Text = "confirm";
             this.btnCf.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnCf.Click += new System.EventHandler(this.btnAdd_Click);
@@ -450,7 +450,7 @@
             this.txtInch.PlaceholderText = "";
             this.txtInch.SelectedText = "";
             this.txtInch.Size = new System.Drawing.Size(211, 36);
-            this.txtInch.TabIndex = 54;
+            this.txtInch.TabIndex = 13;
             // 
             // label12
             // 
@@ -480,7 +480,7 @@
             this.txtManHinh.PlaceholderText = "";
             this.txtManHinh.SelectedText = "";
             this.txtManHinh.Size = new System.Drawing.Size(211, 36);
-            this.txtManHinh.TabIndex = 52;
+            this.txtManHinh.TabIndex = 12;
             // 
             // label13
             // 
@@ -510,7 +510,7 @@
             this.txtOS.PlaceholderText = "";
             this.txtOS.SelectedText = "";
             this.txtOS.Size = new System.Drawing.Size(211, 36);
-            this.txtOS.TabIndex = 50;
+            this.txtOS.TabIndex = 11;
             // 
             // label9
             // 
@@ -540,7 +540,7 @@
             this.txtMau.PlaceholderText = "";
             this.txtMau.SelectedText = "";
             this.txtMau.Size = new System.Drawing.Size(211, 36);
-            this.txtMau.TabIndex = 48;
+            this.txtMau.TabIndex = 10;
             // 
             // label10
             // 
@@ -612,7 +612,7 @@
             this.btnImage.Location = new System.Drawing.Point(365, 464);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(145, 33);
-            this.btnImage.TabIndex = 41;
+            this.btnImage.TabIndex = 7;
             this.btnImage.Text = "Image";
             this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
