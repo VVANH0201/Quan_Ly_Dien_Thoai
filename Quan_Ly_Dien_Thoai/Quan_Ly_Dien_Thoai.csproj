@@ -82,6 +82,12 @@
     <Compile Include="Forms\ChiTietHDB.Designer.cs">
       <DependentUpon>ChiTietHDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ChiTIetHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTIetHDN.Designer.cs">
+      <DependentUpon>ChiTIetHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAddSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChiTietHDB.resx">
       <DependentUpon>ChiTietHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTIetHDN.resx">
+      <DependentUpon>ChiTIetHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddSanPham.resx">
       <DependentUpon>frmAddSanPham.cs</DependentUpon>
