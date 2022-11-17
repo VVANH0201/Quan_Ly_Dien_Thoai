@@ -85,5 +85,10 @@ namespace Quan_Ly_Dien_Thoai.Forms
                 lbsohdb.Text = "0";
             }
         }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

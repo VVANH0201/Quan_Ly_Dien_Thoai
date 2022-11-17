@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddSanPham));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnCF = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtInch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtManHinh = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,6 +47,7 @@
             this.btnRAM = new System.Windows.Forms.Label();
             this.txtRAM = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPin = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.picBoxImage = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -68,13 +68,14 @@
             this.cbMaHSX = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnCF);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -82,54 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1052, 85);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtInch);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.txtManHinh);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.txtOS);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txtMau);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtPin);
-            this.panel2.Controls.Add(this.btnRAM);
-            this.panel2.Controls.Add(this.txtRAM);
-            this.panel2.Controls.Add(this.btnPin);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(562, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 508);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnImage);
-            this.panel3.Controls.Add(this.txtMaDT);
-            this.panel3.Controls.Add(this.picBoxImage);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txtBaoHanh);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lbMaDT);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txtGiaNhap);
-            this.panel3.Controls.Add(this.txtSL);
-            this.panel3.Controls.Add(this.txtTenDT);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtGiaban);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.cbMaHSX);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(562, 508);
-            this.panel3.TabIndex = 2;
             // 
             // btnCancel
             // 
@@ -165,6 +118,29 @@
             this.btnCF.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnCF.Click += new System.EventHandler(this.btnCF_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtInch);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txtManHinh);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.txtOS);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.txtMau);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.txtPin);
+            this.panel2.Controls.Add(this.btnRAM);
+            this.panel2.Controls.Add(this.txtRAM);
+            this.panel2.Controls.Add(this.btnPin);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(562, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(490, 508);
+            this.panel2.TabIndex = 1;
+            // 
             // txtInch
             // 
             this.txtInch.BorderRadius = 10;
@@ -177,7 +153,7 @@
             this.txtInch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtInch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInch.Location = new System.Drawing.Point(257, 278);
+            this.txtInch.Location = new System.Drawing.Point(257, 277);
             this.txtInch.Name = "txtInch";
             this.txtInch.PasswordChar = '\0';
             this.txtInch.PlaceholderText = "";
@@ -189,7 +165,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(14, 255);
+            this.label12.Location = new System.Drawing.Point(14, 254);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(170, 20);
             this.label12.TabIndex = 65;
@@ -207,7 +183,7 @@
             this.txtManHinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtManHinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtManHinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManHinh.Location = new System.Drawing.Point(18, 278);
+            this.txtManHinh.Location = new System.Drawing.Point(18, 277);
             this.txtManHinh.Name = "txtManHinh";
             this.txtManHinh.PasswordChar = '\0';
             this.txtManHinh.PlaceholderText = "";
@@ -219,7 +195,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(253, 255);
+            this.label13.Location = new System.Drawing.Point(253, 254);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(215, 20);
             this.label13.TabIndex = 67;
@@ -237,7 +213,7 @@
             this.txtOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOS.Location = new System.Drawing.Point(257, 197);
+            this.txtOS.Location = new System.Drawing.Point(257, 196);
             this.txtOS.Name = "txtOS";
             this.txtOS.PasswordChar = '\0';
             this.txtOS.PlaceholderText = "";
@@ -249,7 +225,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 174);
+            this.label9.Location = new System.Drawing.Point(14, 173);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 20);
             this.label9.TabIndex = 61;
@@ -267,7 +243,7 @@
             this.txtMau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMau.Location = new System.Drawing.Point(18, 197);
+            this.txtMau.Location = new System.Drawing.Point(18, 196);
             this.txtMau.Name = "txtMau";
             this.txtMau.PasswordChar = '\0';
             this.txtMau.PlaceholderText = "";
@@ -279,7 +255,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(253, 174);
+            this.label10.Location = new System.Drawing.Point(253, 173);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(172, 20);
             this.label10.TabIndex = 63;
@@ -317,7 +293,7 @@
             this.txtPin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPin.Location = new System.Drawing.Point(257, 111);
+            this.txtPin.Location = new System.Drawing.Point(257, 110);
             this.txtPin.Name = "txtPin";
             this.txtPin.PasswordChar = '\0';
             this.txtPin.PlaceholderText = "";
@@ -329,7 +305,7 @@
             // 
             this.btnRAM.AutoSize = true;
             this.btnRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRAM.Location = new System.Drawing.Point(14, 88);
+            this.btnRAM.Location = new System.Drawing.Point(14, 87);
             this.btnRAM.Name = "btnRAM";
             this.btnRAM.Size = new System.Drawing.Size(49, 20);
             this.btnRAM.TabIndex = 55;
@@ -347,7 +323,7 @@
             this.txtRAM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRAM.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRAM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRAM.Location = new System.Drawing.Point(18, 111);
+            this.txtRAM.Location = new System.Drawing.Point(18, 110);
             this.txtRAM.Name = "txtRAM";
             this.txtRAM.PasswordChar = '\0';
             this.txtRAM.PlaceholderText = "";
@@ -359,11 +335,38 @@
             // 
             this.btnPin.AutoSize = true;
             this.btnPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPin.Location = new System.Drawing.Point(253, 88);
+            this.btnPin.Location = new System.Drawing.Point(253, 87);
             this.btnPin.Name = "btnPin";
             this.btnPin.Size = new System.Drawing.Size(123, 20);
             this.btnPin.TabIndex = 57;
             this.btnPin.Text = "Pin (Battery):";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnImage);
+            this.panel3.Controls.Add(this.txtMaDT);
+            this.panel3.Controls.Add(this.picBoxImage);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txtBaoHanh);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lbMaDT);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtGiaNhap);
+            this.panel3.Controls.Add(this.txtSL);
+            this.panel3.Controls.Add(this.txtTenDT);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtGiaban);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.cbMaHSX);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(562, 508);
+            this.panel3.TabIndex = 2;
             // 
             // btnImage
             // 
@@ -557,7 +560,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(163, 15);
+            this.label4.Location = new System.Drawing.Point(176, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 29);
             this.label4.TabIndex = 46;
@@ -627,16 +630,17 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddSanPham";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddSanPham";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
             this.ResumeLayout(false);
 

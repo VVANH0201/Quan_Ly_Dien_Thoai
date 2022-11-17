@@ -33,7 +33,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtPhone.Text = "";
             cbCV.Text = "";
             txtTimKiem.Text = "";
-            cbPhanLoai.SelectedIndex = -1;
+            cbPhanLoai.SelectedIndex = 0;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;

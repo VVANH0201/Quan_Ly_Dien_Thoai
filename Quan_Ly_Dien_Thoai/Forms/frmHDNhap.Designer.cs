@@ -80,6 +80,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnNCancel);
             this.panel1.Controls.Add(this.btnNNew);
             this.panel1.Controls.Add(this.CbxNSearch);
             this.panel1.Controls.Add(this.txtNSearch);
@@ -99,11 +100,12 @@
             this.btnNNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNNew.ForeColor = System.Drawing.Color.White;
-            this.btnNNew.Location = new System.Drawing.Point(619, 19);
+            this.btnNNew.Location = new System.Drawing.Point(661, 22);
             this.btnNNew.Name = "btnNNew";
             this.btnNNew.Size = new System.Drawing.Size(111, 45);
             this.btnNNew.TabIndex = 14;
             this.btnNNew.Text = "New";
+            this.btnNNew.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNNew.Click += new System.EventHandler(this.btnNNew_Click);
             // 
             // CbxNSearch
@@ -116,10 +118,10 @@
             this.CbxNSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CbxNSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CbxNSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CbxNSearch.ItemHeight = 30;
-            this.CbxNSearch.Location = new System.Drawing.Point(12, 24);
+            this.CbxNSearch.ItemHeight = 23;
+            this.CbxNSearch.Location = new System.Drawing.Point(22, 24);
             this.CbxNSearch.Name = "CbxNSearch";
-            this.CbxNSearch.Size = new System.Drawing.Size(205, 36);
+            this.CbxNSearch.Size = new System.Drawing.Size(224, 29);
             this.CbxNSearch.TabIndex = 13;
             // 
             // txtNSearch
@@ -134,7 +136,7 @@
             this.txtNSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNSearch.Location = new System.Drawing.Point(224, 24);
+            this.txtNSearch.Location = new System.Drawing.Point(267, 24);
             this.txtNSearch.Name = "txtNSearch";
             this.txtNSearch.PasswordChar = '\0';
             this.txtNSearch.PlaceholderText = "";
@@ -151,16 +153,16 @@
             this.btnNSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNSearch.ForeColor = System.Drawing.Color.White;
-            this.btnNSearch.Location = new System.Drawing.Point(490, 19);
+            this.btnNSearch.Location = new System.Drawing.Point(532, 22);
             this.btnNSearch.Name = "btnNSearch";
             this.btnNSearch.Size = new System.Drawing.Size(111, 45);
             this.btnNSearch.TabIndex = 11;
             this.btnNSearch.Text = "Search";
+            this.btnNSearch.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNSearch.Click += new System.EventHandler(this.btnNSearch_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnNCancel);
             this.panel2.Controls.Add(this.btnNExit);
             this.panel2.Controls.Add(this.btnNDelete);
             this.panel2.Controls.Add(this.btnNEdit);
@@ -180,11 +182,12 @@
             this.btnNCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNCancel.ForeColor = System.Drawing.Color.White;
-            this.btnNCancel.Location = new System.Drawing.Point(22, 25);
+            this.btnNCancel.Location = new System.Drawing.Point(791, 22);
             this.btnNCancel.Name = "btnNCancel";
             this.btnNCancel.Size = new System.Drawing.Size(111, 45);
             this.btnNCancel.TabIndex = 11;
             this.btnNCancel.Text = "Refresh";
+            this.btnNCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNCancel.Click += new System.EventHandler(this.btnNCancel_Click);
             // 
             // btnNExit
@@ -196,11 +199,12 @@
             this.btnNExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNExit.ForeColor = System.Drawing.Color.White;
-            this.btnNExit.Location = new System.Drawing.Point(184, 25);
+            this.btnNExit.Location = new System.Drawing.Point(22, 25);
             this.btnNExit.Name = "btnNExit";
             this.btnNExit.Size = new System.Drawing.Size(111, 45);
             this.btnNExit.TabIndex = 7;
             this.btnNExit.Text = "Exit";
+            this.btnNExit.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNExit.Click += new System.EventHandler(this.btnNExit_Click);
             // 
             // btnNDelete
@@ -212,11 +216,12 @@
             this.btnNDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNDelete.ForeColor = System.Drawing.Color.White;
-            this.btnNDelete.Location = new System.Drawing.Point(966, 25);
+            this.btnNDelete.Location = new System.Drawing.Point(990, 25);
             this.btnNDelete.Name = "btnNDelete";
             this.btnNDelete.Size = new System.Drawing.Size(111, 45);
             this.btnNDelete.TabIndex = 10;
             this.btnNDelete.Text = "Delete";
+            this.btnNDelete.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNDelete.Click += new System.EventHandler(this.btnNDelete_Click);
             // 
             // btnNEdit
@@ -228,11 +233,12 @@
             this.btnNEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNEdit.ForeColor = System.Drawing.Color.White;
-            this.btnNEdit.Location = new System.Drawing.Point(802, 25);
+            this.btnNEdit.Location = new System.Drawing.Point(857, 25);
             this.btnNEdit.Name = "btnNEdit";
             this.btnNEdit.Size = new System.Drawing.Size(111, 45);
             this.btnNEdit.TabIndex = 9;
             this.btnNEdit.Text = "Edit";
+            this.btnNEdit.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnNEdit.Click += new System.EventHandler(this.btnNEdit_Click);
             // 
             // btnNAdd
@@ -244,7 +250,7 @@
             this.btnNAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNAdd.ForeColor = System.Drawing.Color.White;
-            this.btnNAdd.Location = new System.Drawing.Point(637, 25);
+            this.btnNAdd.Location = new System.Drawing.Point(724, 25);
             this.btnNAdd.Name = "btnNAdd";
             this.btnNAdd.Size = new System.Drawing.Size(111, 45);
             this.btnNAdd.TabIndex = 8;
@@ -364,9 +370,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(807, 117);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.Size = new System.Drawing.Size(143, 25);
             this.label6.TabIndex = 46;
-            this.label6.Text = "Tên nhân viên";
+            this.label6.Text = "Tên nhân viên:";
             // 
             // label5
             // 
@@ -374,9 +380,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(458, 117);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 25);
+            this.label5.Size = new System.Drawing.Size(176, 25);
             this.label5.TabIndex = 45;
-            this.label5.Text = "Tên nhà cung cấp";
+            this.label5.Text = "Tên nhà cung cấp:";
             // 
             // label4
             // 
@@ -384,43 +390,45 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(101, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.Size = new System.Drawing.Size(102, 25);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Ngày bán";
+            this.label4.Text = "Ngày bán:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(807, 9);
+            this.label3.Location = new System.Drawing.Point(807, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 25);
+            this.label3.Size = new System.Drawing.Size(136, 25);
             this.label3.TabIndex = 43;
-            this.label3.Text = "Mã nhân viên";
+            this.label3.Text = "Mã nhân viên:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(458, 9);
+            this.label2.Location = new System.Drawing.Point(458, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 25);
+            this.label2.Size = new System.Drawing.Size(175, 25);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Mã nhà cung cấp";
+            this.label2.Text = "Mã nhà cung cấp::";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(101, 9);
+            this.label7.Location = new System.Drawing.Point(101, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 25);
+            this.label7.Size = new System.Drawing.Size(122, 25);
             this.label7.TabIndex = 41;
-            this.label7.Text = "Mã hóa đơn";
+            this.label7.Text = "Mã hóa đơn:";
             // 
             // dtpHDN
             // 
+            this.dtpHDN.BorderRadius = 10;
             this.dtpHDN.Checked = true;
+            this.dtpHDN.FillColor = System.Drawing.Color.DarkGray;
             this.dtpHDN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpHDN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHDN.Location = new System.Drawing.Point(106, 145);
@@ -434,37 +442,40 @@
             // cbMaNCC
             // 
             this.cbMaNCC.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaNCC.BorderRadius = 10;
             this.cbMaNCC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMaNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNCC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNCC.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbMaNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMaNCC.ItemHeight = 30;
+            this.cbMaNCC.ItemHeight = 23;
             this.cbMaNCC.Location = new System.Drawing.Point(463, 46);
             this.cbMaNCC.Name = "cbMaNCC";
-            this.cbMaNCC.Size = new System.Drawing.Size(200, 36);
+            this.cbMaNCC.Size = new System.Drawing.Size(200, 29);
             this.cbMaNCC.TabIndex = 39;
             this.cbMaNCC.SelectedIndexChanged += new System.EventHandler(this.cbMaNCC_SelectedIndexChanged);
             // 
             // cbMaNV
             // 
             this.cbMaNV.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaNV.BorderRadius = 10;
             this.cbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNV.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMaNV.ItemHeight = 30;
+            this.cbMaNV.ItemHeight = 23;
             this.cbMaNV.Location = new System.Drawing.Point(812, 46);
             this.cbMaNV.Name = "cbMaNV";
-            this.cbMaNV.Size = new System.Drawing.Size(200, 36);
+            this.cbMaNV.Size = new System.Drawing.Size(200, 29);
             this.cbMaNV.TabIndex = 38;
             this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged);
             // 
             // txtTenNV
             // 
+            this.txtTenNV.BorderRadius = 10;
             this.txtTenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenNV.DefaultText = "";
             this.txtTenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -484,6 +495,7 @@
             // 
             // txtTenNCC
             // 
+            this.txtTenNCC.BorderRadius = 10;
             this.txtTenNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenNCC.DefaultText = "";
             this.txtTenNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -503,6 +515,7 @@
             // 
             // txtMaHD
             // 
+            this.txtMaHD.BorderRadius = 10;
             this.txtMaHD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaHD.DefaultText = "";
             this.txtMaHD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));

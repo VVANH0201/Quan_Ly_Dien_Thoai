@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbThang = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbNam = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbsoluongspban = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbdoanhthu = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbhangnhap = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbNam = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbThang = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbsohdb = new System.Windows.Forms.Label();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbhangnhap = new System.Windows.Forms.Label();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbdoanhthu = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbsoluongspban = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel8 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -83,28 +83,56 @@
             this.panel1.Size = new System.Drawing.Size(1212, 59);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label2
             // 
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 59);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1212, 149);
-            this.panel2.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Chọn Năm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Chọn Tháng";
+            // 
+            // cbNam
+            // 
+            this.cbNam.BackColor = System.Drawing.Color.Transparent;
+            this.cbNam.BorderRadius = 10;
+            this.cbNam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNam.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNam.ItemHeight = 23;
+            this.cbNam.Items.AddRange(new object[] {
+            "2022"});
+            this.cbNam.Location = new System.Drawing.Point(438, 13);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(140, 29);
+            this.cbNam.TabIndex = 1;
+            this.cbNam.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
             // 
             // cbThang
             // 
             this.cbThang.BackColor = System.Drawing.Color.Transparent;
+            this.cbThang.BorderRadius = 10;
             this.cbThang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbThang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbThang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbThang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbThang.ItemHeight = 30;
+            this.cbThang.ItemHeight = 23;
             this.cbThang.Items.AddRange(new object[] {
             "1",
             "2",
@@ -118,83 +146,87 @@
             "10",
             "11",
             "12"});
-            this.cbThang.Location = new System.Drawing.Point(29, 13);
+            this.cbThang.Location = new System.Drawing.Point(140, 13);
             this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(140, 36);
+            this.cbThang.Size = new System.Drawing.Size(140, 29);
             this.cbThang.TabIndex = 0;
             this.cbThang.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
             // 
-            // cbNam
+            // panel2
             // 
-            this.cbNam.BackColor = System.Drawing.Color.Transparent;
-            this.cbNam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNam.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNam.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbNam.ItemHeight = 30;
-            this.cbNam.Items.AddRange(new object[] {
-            "2022"});
-            this.cbNam.Location = new System.Drawing.Point(330, 13);
-            this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(140, 36);
-            this.cbNam.TabIndex = 1;
-            this.cbNam.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1212, 149);
+            this.panel2.TabIndex = 2;
             // 
-            // label1
+            // panel6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(175, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Chọn Tháng";
+            this.panel6.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel6.Controls.Add(this.lbsohdb);
+            this.panel6.Controls.Add(this.richTextBox4);
+            this.panel6.Location = new System.Drawing.Point(927, 13);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(234, 123);
+            this.panel6.TabIndex = 3;
             // 
-            // label2
+            // lbsohdb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(476, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Chọn Năm";
+            this.lbsohdb.AutoSize = true;
+            this.lbsohdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsohdb.Location = new System.Drawing.Point(9, 81);
+            this.lbsohdb.Name = "lbsohdb";
+            this.lbsohdb.Size = new System.Drawing.Size(0, 25);
+            this.lbsohdb.TabIndex = 1;
             // 
-            // panel4
+            // richTextBox4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel4.Controls.Add(this.lbsoluongspban);
-            this.panel4.Controls.Add(this.richTextBox2);
-            this.panel4.Location = new System.Drawing.Point(12, 13);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(234, 123);
-            this.panel4.TabIndex = 2;
+            this.richTextBox4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox4.Location = new System.Drawing.Point(15, 12);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(234, 53);
+            this.richTextBox4.TabIndex = 0;
+            this.richTextBox4.Text = "Tổng số hóa đơn trong tháng:";
             // 
-            // lbsoluongspban
+            // panel5
             // 
-            this.lbsoluongspban.AutoSize = true;
-            this.lbsoluongspban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbsoluongspban.Location = new System.Drawing.Point(9, 81);
-            this.lbsoluongspban.Name = "lbsoluongspban";
-            this.lbsoluongspban.Size = new System.Drawing.Size(0, 25);
-            this.lbsoluongspban.TabIndex = 1;
+            this.panel5.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel5.Controls.Add(this.lbhangnhap);
+            this.panel5.Controls.Add(this.richTextBox3);
+            this.panel5.Location = new System.Drawing.Point(626, 13);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(234, 123);
+            this.panel5.TabIndex = 3;
             // 
-            // richTextBox2
+            // lbhangnhap
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(0, 12);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(234, 53);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "Tổng số sản phẩm bán được trong tháng";
+            this.lbhangnhap.AutoSize = true;
+            this.lbhangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhangnhap.Location = new System.Drawing.Point(9, 81);
+            this.lbhangnhap.Name = "lbhangnhap";
+            this.lbhangnhap.Size = new System.Drawing.Size(0, 25);
+            this.lbhangnhap.TabIndex = 1;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.LimeGreen;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.Location = new System.Drawing.Point(14, 12);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(234, 53);
+            this.richTextBox3.TabIndex = 0;
+            this.richTextBox3.Text = "Tổng hàng nhập trong tháng:";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.BackColor = System.Drawing.Color.Tomato;
             this.panel3.Controls.Add(this.lbdoanhthu);
             this.panel3.Controls.Add(this.richTextBox1);
             this.panel3.Location = new System.Drawing.Point(321, 13);
@@ -213,74 +245,44 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.richTextBox1.BackColor = System.Drawing.Color.Tomato;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(14, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(234, 53);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "Tổng doanh thu trong tháng";
+            this.richTextBox1.Text = "Tổng doanh thu trong tháng:";
             // 
-            // panel5
+            // panel4
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel5.Controls.Add(this.lbhangnhap);
-            this.panel5.Controls.Add(this.richTextBox3);
-            this.panel5.Location = new System.Drawing.Point(642, 13);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(234, 123);
-            this.panel5.TabIndex = 3;
+            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel4.Controls.Add(this.lbsoluongspban);
+            this.panel4.Controls.Add(this.richTextBox2);
+            this.panel4.Location = new System.Drawing.Point(12, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(234, 123);
+            this.panel4.TabIndex = 2;
             // 
-            // lbhangnhap
+            // lbsoluongspban
             // 
-            this.lbhangnhap.AutoSize = true;
-            this.lbhangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhangnhap.Location = new System.Drawing.Point(9, 81);
-            this.lbhangnhap.Name = "lbhangnhap";
-            this.lbhangnhap.Size = new System.Drawing.Size(0, 25);
-            this.lbhangnhap.TabIndex = 1;
+            this.lbsoluongspban.AutoSize = true;
+            this.lbsoluongspban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsoluongspban.Location = new System.Drawing.Point(9, 81);
+            this.lbsoluongspban.Name = "lbsoluongspban";
+            this.lbsoluongspban.Size = new System.Drawing.Size(0, 25);
+            this.lbsoluongspban.TabIndex = 1;
             // 
-            // richTextBox3
+            // richTextBox2
             // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(0, 12);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(234, 53);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "Tổng hàng nhập trong tháng";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel6.Controls.Add(this.lbsohdb);
-            this.panel6.Controls.Add(this.richTextBox4);
-            this.panel6.Location = new System.Drawing.Point(951, 13);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(234, 123);
-            this.panel6.TabIndex = 3;
-            // 
-            // lbsohdb
-            // 
-            this.lbsohdb.AutoSize = true;
-            this.lbsohdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbsohdb.Location = new System.Drawing.Point(9, 81);
-            this.lbsohdb.Name = "lbsohdb";
-            this.lbsohdb.Size = new System.Drawing.Size(0, 25);
-            this.lbsohdb.TabIndex = 1;
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(0, 12);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(234, 53);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "Tổng số hóa đơn trong tháng";
+            this.richTextBox2.BackColor = System.Drawing.Color.Goldenrod;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(5, 12);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(226, 53);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "Tổng số sản phẩm bán được trong tháng:";
             // 
             // panel7
             // 
@@ -293,26 +295,26 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(3, 6);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(467, 487);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chartthsp";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Top 5 sản phẩm ";
-            this.chart1.Titles.Add(title1);
+            title7.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title7.Name = "Title1";
+            title7.Text = "Top 5 sản phẩm ";
+            this.chart1.Titles.Add(title7);
             // 
             // panel8
             // 
@@ -325,25 +327,26 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea8);
+            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend8.Name = "Legend1";
+            this.chart2.Legends.Add(legend8);
             this.chart2.Location = new System.Drawing.Point(3, 6);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh thu";
-            this.chart2.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "Doanh thu";
+            this.chart2.Series.Add(series8);
             this.chart2.Size = new System.Drawing.Size(734, 487);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Doanh thu ";
-            this.chart2.Titles.Add(title2);
+            title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title8.Name = "Title1";
+            title8.Text = "Doanh thu ";
+            this.chart2.Titles.Add(title8);
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // frmThongKe
             // 
@@ -360,14 +363,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel8.ResumeLayout(false);

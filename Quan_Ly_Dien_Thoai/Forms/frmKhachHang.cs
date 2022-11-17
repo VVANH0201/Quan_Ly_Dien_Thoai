@@ -26,7 +26,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtDiaChi.Text = "";
             txtPhone.Text = "";
             txtTimKiem.Text = "";
-            cbPhanLoai.SelectedIndex = -1;
+            cbPhanLoai.SelectedIndex = 0;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;

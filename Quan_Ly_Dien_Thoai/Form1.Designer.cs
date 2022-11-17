@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.panelHoaDon = new System.Windows.Forms.Panel();
@@ -57,7 +58,6 @@
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.panelSideBar.SuspendLayout();
             this.panelHoaDon.SuspendLayout();
             this.panelSanPham.SuspendLayout();
@@ -91,6 +91,20 @@
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.ShadowDecoration.BorderRadius = 0;
             this.panelSideBar.ShadowDecoration.Color = System.Drawing.Color.DimGray;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnThongKe, "btnThongKe");
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnLogOut
             // 
@@ -357,20 +371,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 28;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnThongKe, "btnThongKe");
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // Form1
             // 

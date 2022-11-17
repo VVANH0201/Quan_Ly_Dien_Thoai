@@ -71,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBCancel);
             this.panel1.Controls.Add(this.btnBNew);
             this.panel1.Controls.Add(this.CbxBSearch);
             this.panel1.Controls.Add(this.txtBSearch);
@@ -90,11 +91,12 @@
             this.btnBNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBNew.ForeColor = System.Drawing.Color.White;
-            this.btnBNew.Location = new System.Drawing.Point(619, 15);
+            this.btnBNew.Location = new System.Drawing.Point(641, 19);
             this.btnBNew.Name = "btnBNew";
             this.btnBNew.Size = new System.Drawing.Size(111, 45);
             this.btnBNew.TabIndex = 3;
             this.btnBNew.Text = "New";
+            this.btnBNew.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBNew.Click += new System.EventHandler(this.btnBNew_Click);
             // 
             // CbxBSearch
@@ -107,10 +109,10 @@
             this.CbxBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CbxBSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CbxBSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CbxBSearch.ItemHeight = 30;
-            this.CbxBSearch.Location = new System.Drawing.Point(12, 20);
+            this.CbxBSearch.ItemHeight = 23;
+            this.CbxBSearch.Location = new System.Drawing.Point(21, 21);
             this.CbxBSearch.Name = "CbxBSearch";
-            this.CbxBSearch.Size = new System.Drawing.Size(205, 36);
+            this.CbxBSearch.Size = new System.Drawing.Size(205, 29);
             this.CbxBSearch.TabIndex = 2;
             // 
             // txtBSearch
@@ -125,7 +127,7 @@
             this.txtBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBSearch.Location = new System.Drawing.Point(224, 20);
+            this.txtBSearch.Location = new System.Drawing.Point(246, 21);
             this.txtBSearch.Name = "txtBSearch";
             this.txtBSearch.PasswordChar = '\0';
             this.txtBSearch.PlaceholderText = "";
@@ -142,16 +144,16 @@
             this.btnBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBSearch.ForeColor = System.Drawing.Color.White;
-            this.btnBSearch.Location = new System.Drawing.Point(490, 15);
+            this.btnBSearch.Location = new System.Drawing.Point(512, 19);
             this.btnBSearch.Name = "btnBSearch";
             this.btnBSearch.Size = new System.Drawing.Size(111, 45);
             this.btnBSearch.TabIndex = 0;
             this.btnBSearch.Text = "Search";
+            this.btnBSearch.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBSearch.Click += new System.EventHandler(this.btnBSearch_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnBCancel);
             this.panel2.Controls.Add(this.btnBExit);
             this.panel2.Controls.Add(this.btnBDelete);
             this.panel2.Controls.Add(this.btnBEdit);
@@ -171,11 +173,12 @@
             this.btnBCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBCancel.ForeColor = System.Drawing.Color.White;
-            this.btnBCancel.Location = new System.Drawing.Point(24, 25);
+            this.btnBCancel.Location = new System.Drawing.Point(771, 19);
             this.btnBCancel.Name = "btnBCancel";
             this.btnBCancel.Size = new System.Drawing.Size(111, 45);
             this.btnBCancel.TabIndex = 5;
             this.btnBCancel.Text = "Refresh";
+            this.btnBCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBCancel.Click += new System.EventHandler(this.btnBCancel_Click);
             // 
             // btnBExit
@@ -187,11 +190,12 @@
             this.btnBExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBExit.ForeColor = System.Drawing.Color.White;
-            this.btnBExit.Location = new System.Drawing.Point(160, 25);
+            this.btnBExit.Location = new System.Drawing.Point(21, 25);
             this.btnBExit.Name = "btnBExit";
             this.btnBExit.Size = new System.Drawing.Size(111, 45);
             this.btnBExit.TabIndex = 1;
             this.btnBExit.Text = "Exit";
+            this.btnBExit.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnBDelete
@@ -203,11 +207,12 @@
             this.btnBDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
-            this.btnBDelete.Location = new System.Drawing.Point(954, 25);
+            this.btnBDelete.Location = new System.Drawing.Point(990, 25);
             this.btnBDelete.Name = "btnBDelete";
             this.btnBDelete.Size = new System.Drawing.Size(111, 45);
             this.btnBDelete.TabIndex = 4;
             this.btnBDelete.Text = "Delete";
+            this.btnBDelete.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBDelete.Click += new System.EventHandler(this.btnBDelete_Click);
             // 
             // btnBEdit
@@ -219,11 +224,12 @@
             this.btnBEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBEdit.ForeColor = System.Drawing.Color.White;
-            this.btnBEdit.Location = new System.Drawing.Point(798, 25);
+            this.btnBEdit.Location = new System.Drawing.Point(860, 25);
             this.btnBEdit.Name = "btnBEdit";
             this.btnBEdit.Size = new System.Drawing.Size(111, 45);
             this.btnBEdit.TabIndex = 3;
             this.btnBEdit.Text = "Edit";
+            this.btnBEdit.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.btnBEdit.Click += new System.EventHandler(this.btnBEdit_Click);
             // 
             // btnBAdd
@@ -235,7 +241,7 @@
             this.btnBAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBAdd.ForeColor = System.Drawing.Color.White;
-            this.btnBAdd.Location = new System.Drawing.Point(641, 25);
+            this.btnBAdd.Location = new System.Drawing.Point(728, 25);
             this.btnBAdd.Name = "btnBAdd";
             this.btnBAdd.Size = new System.Drawing.Size(111, 45);
             this.btnBAdd.TabIndex = 2;
@@ -287,7 +293,6 @@
             this.dgvHDB.Size = new System.Drawing.Size(1113, 211);
             this.dgvHDB.TabIndex = 24;
             this.dgvHDB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
-            this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentClick);
             this.dgvHDB.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellContentDoubleClick);
             this.dgvHDB.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellDoubleClick);
             // 
@@ -385,7 +390,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(807, 9);
+            this.label3.Location = new System.Drawing.Point(807, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 25);
             this.label3.TabIndex = 31;
@@ -395,7 +400,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(458, 9);
+            this.label2.Location = new System.Drawing.Point(458, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 25);
             this.label2.TabIndex = 30;
@@ -405,7 +410,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 9);
+            this.label1.Location = new System.Drawing.Point(101, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 29;
@@ -413,7 +418,9 @@
             // 
             // dtpHDB
             // 
+            this.dtpHDB.BorderRadius = 10;
             this.dtpHDB.Checked = true;
+            this.dtpHDB.FillColor = System.Drawing.Color.DarkGray;
             this.dtpHDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpHDB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHDB.Location = new System.Drawing.Point(106, 145);
@@ -427,16 +434,17 @@
             // cbMaKH
             // 
             this.cbMaKH.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaKH.BorderRadius = 10;
             this.cbMaKH.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaKH.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaKH.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbMaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMaKH.ItemHeight = 30;
+            this.cbMaKH.ItemHeight = 23;
             this.cbMaKH.Location = new System.Drawing.Point(463, 46);
             this.cbMaKH.Name = "cbMaKH";
-            this.cbMaKH.Size = new System.Drawing.Size(200, 36);
+            this.cbMaKH.Size = new System.Drawing.Size(200, 29);
             this.cbMaKH.TabIndex = 27;
             this.cbMaKH.SelectedIndexChanged += new System.EventHandler(this.cbMaKH_SelectedIndexChanged);
             // 
@@ -444,21 +452,23 @@
             // 
             this.cbMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMaNV.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaNV.BorderRadius = 10;
             this.cbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMaNV.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMaNV.ItemHeight = 30;
+            this.cbMaNV.ItemHeight = 23;
             this.cbMaNV.Location = new System.Drawing.Point(812, 46);
             this.cbMaNV.Name = "cbMaNV";
-            this.cbMaNV.Size = new System.Drawing.Size(200, 36);
+            this.cbMaNV.Size = new System.Drawing.Size(200, 29);
             this.cbMaNV.TabIndex = 26;
             this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged_1);
             // 
             // txtTenNV
             // 
+            this.txtTenNV.BorderRadius = 10;
             this.txtTenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenNV.DefaultText = "";
             this.txtTenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -478,6 +488,7 @@
             // 
             // txtTenKH
             // 
+            this.txtTenKH.BorderRadius = 10;
             this.txtTenKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenKH.DefaultText = "";
             this.txtTenKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -497,6 +508,7 @@
             // 
             // txtMaHD
             // 
+            this.txtMaHD.BorderRadius = 10;
             this.txtMaHD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaHD.DefaultText = "";
             this.txtMaHD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));

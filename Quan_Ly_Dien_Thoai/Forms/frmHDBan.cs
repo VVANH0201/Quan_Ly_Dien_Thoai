@@ -62,6 +62,7 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             load();
             AddComboBox();
+            ResetValue();
 
         }
         //reset
@@ -74,7 +75,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtBSearch.Text = "";
             cbMaKH.Text = "";
             cbMaNV.Text = "";
-            CbxBSearch.Text = "";
+            CbxBSearch.SelectedIndex = 0;
             txtMaHD.Enabled = false;
             cbMaKH.Enabled = false;
             txtTenKH.Enabled = false;
@@ -123,12 +124,7 @@ namespace Quan_Ly_Dien_Thoai.From
             load();
             ResetValue();
         }
-        
-        //click data
-        private void dgvHDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+
         //cancel
         private void btnBCancel_Click(object sender, EventArgs e)
         {

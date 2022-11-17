@@ -281,6 +281,9 @@ namespace Quan_Ly_Dien_Thoai.From
 
         }
 
-        
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

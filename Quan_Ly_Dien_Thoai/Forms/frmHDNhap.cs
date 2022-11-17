@@ -45,19 +45,8 @@ namespace Quan_Ly_Dien_Thoai.From
             //btnBPrint.Enabled = false;
             btnNDelete.Enabled = false;
         }
-        private void AddComboBox()
-        {
-            CbxNSearch.Items.Add("ID");
-            CbxNSearch.Items.Add("Supplier");
-            CbxNSearch.Items.Add("Employee");
-        }
-        private void frmHDNhap_Load(object sender, EventArgs e)
-        {
-            load();
-            AddComboBox();
-        }
-        void ResetValue()
 
+        void ResetValue()
         {
             txtMaHD.Text = "";
             txtTenNCC.Text = "";
@@ -65,7 +54,7 @@ namespace Quan_Ly_Dien_Thoai.From
             txtNSearch.Text = "";
             cbMaNCC.Text = "";
             cbMaNV.Text = "";
-            CbxNSearch.Text = "";
+            CbxNSearch.SelectedIndex = 0;
             txtMaHD.Enabled = false;
             cbMaNCC.Enabled = false;
             txtTenNCC.Enabled = false;
@@ -76,6 +65,19 @@ namespace Quan_Ly_Dien_Thoai.From
             btnNEdit.Enabled = false;
             //btnBPrint.Enabled = false;
             btnNDelete.Enabled = false;
+        }
+
+        private void AddComboBox()
+        {
+            CbxNSearch.Items.Add("ID");
+            CbxNSearch.Items.Add("Supplier");
+            CbxNSearch.Items.Add("Employee");
+        }
+        private void frmHDNhap_Load(object sender, EventArgs e)
+        {
+            load();
+            AddComboBox();
+            ResetValue();
         }
 
         private void btnNExit_Click(object sender, EventArgs e)
