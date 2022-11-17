@@ -120,7 +120,7 @@ namespace Quan_Ly_Dien_Thoai.From
                 return;
             }
             dateTime = Convert.ToDateTime(dtpHDB.Value.ToLongDateString());
-            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang, NgayBan) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"','"+ String.Format("{0:MM/dd/yyyy}", dateTime) + "')";
+            string Insert = "insert into HoaDonBan(MaHDB, MaNhanVien, MaKhachHang, NgayBan,TongTien) values('"+txtMaHD.Text+"','"+cbMaNV.Text+"','"+cbMaKH.Text+"','"+ String.Format("{0:MM/dd/yyyy}", dateTime) + "', 0.0)";
             connectData.UpdateData(Insert);
             load();
             ResetValue();
