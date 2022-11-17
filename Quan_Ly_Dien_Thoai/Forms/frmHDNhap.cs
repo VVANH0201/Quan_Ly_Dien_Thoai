@@ -22,6 +22,7 @@ namespace Quan_Ly_Dien_Thoai.From
         public static string TenNCC = "";
         public static string TenNV = "";
         public static string Ngay = "";
+        public static string TongTien = "";
         public frmHDNhap()
         {
             InitializeComponent();
@@ -198,6 +199,7 @@ namespace Quan_Ly_Dien_Thoai.From
             cbMaNV.Enabled = true;
             cbMaNCC.Enabled = true;
             dtpHDN.Enabled = true;
+            TongTien = HD.Rows[0]["TongTienNhap"].ToString();
         }
 
         private void btnNEdit_Click(object sender, EventArgs e)

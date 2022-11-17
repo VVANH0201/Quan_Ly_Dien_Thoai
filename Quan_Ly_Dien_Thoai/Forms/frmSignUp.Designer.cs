@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btncomBack = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.lb2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtRePass = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -51,8 +51,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lb1 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -62,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,17 +73,27 @@
             this.panel1.Size = new System.Drawing.Size(387, 543);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(387, 543);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btncomBack);
+            this.panel2.Controls.Add(this.btnSignUp);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.lb2);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.txtRePass);
             this.panel2.Controls.Add(this.panel5);
@@ -101,6 +110,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(545, 543);
             this.panel2.TabIndex = 1;
+            // 
+            // btncomBack
+            // 
+            this.btncomBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncomBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncomBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncomBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncomBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btncomBack.ForeColor = System.Drawing.Color.White;
+            this.btncomBack.Location = new System.Drawing.Point(214, 469);
+            this.btncomBack.Name = "btncomBack";
+            this.btncomBack.Size = new System.Drawing.Size(180, 45);
+            this.btncomBack.TabIndex = 42;
+            this.btncomBack.Text = "Come back Login";
+            this.btncomBack.Click += new System.EventHandler(this.btncomBack_Click);
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSignUp.ForeColor = System.Drawing.Color.White;
+            this.btnSignUp.Location = new System.Drawing.Point(214, 391);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(180, 45);
+            this.btnSignUp.TabIndex = 41;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // pictureBox8
             // 
@@ -165,38 +204,6 @@
             this.pictureBox4.TabIndex = 35;
             this.pictureBox4.TabStop = false;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(381, 472);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(44, 18);
-            this.linkLabel1.TabIndex = 34;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Login";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // lb2
-            // 
-            this.lb2.AutoSize = true;
-            this.lb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(109, 472);
-            this.lb2.Name = "lb2";
-            this.lb2.Size = new System.Drawing.Size(273, 20);
-            this.lb2.TabIndex = 33;
-            this.lb2.Text = "If you alrealy have an account, click";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(236, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 37);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Sign up";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
@@ -218,6 +225,7 @@
             this.txtRePass.TabIndex = 31;
             this.txtRePass.Text = "Re-enter Password";
             this.txtRePass.Click += new System.EventHandler(this.txtRePass_Click);
+            this.txtRePass.Leave += new System.EventHandler(this.txtRePass_Leave);
             // 
             // panel5
             // 
@@ -318,17 +326,6 @@
             this.lb1.TabIndex = 21;
             this.lb1.Text = "Sign Up";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(387, 543);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,6 +337,7 @@
             this.Text = "frmSignUp";
             this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -350,7 +348,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,7 +356,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtRePass;
         private System.Windows.Forms.Panel panel5;
@@ -371,8 +367,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lb1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -380,5 +374,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private Guna.UI2.WinForms.Guna2Button btncomBack;
+        private Guna.UI2.WinForms.Guna2Button btnSignUp;
     }
 }

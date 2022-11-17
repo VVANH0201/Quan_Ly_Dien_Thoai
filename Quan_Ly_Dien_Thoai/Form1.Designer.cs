@@ -118,6 +118,7 @@
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(36, 36);
             this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnNhanVien
             // 
@@ -333,6 +334,7 @@
             this.controlBoxClose.IconColor = System.Drawing.Color.Black;
             this.controlBoxClose.Name = "controlBoxClose";
             this.controlBoxClose.ShadowDecoration.BorderRadius = 0;
+            this.controlBoxClose.Click += new System.EventHandler(this.controlBoxClose_Click);
             // 
             // panelChildForm
             // 
@@ -385,6 +387,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSideBar.ResumeLayout(false);
             this.panelHoaDon.ResumeLayout(false);
             this.panelSanPham.ResumeLayout(false);

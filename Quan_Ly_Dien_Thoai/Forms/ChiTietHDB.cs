@@ -14,7 +14,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
 {
     public partial class ChiTietHDB : Form
     {
-        float T = 0;
+        double T = 0, S = 0;
         Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
         Classes.ConnectData connectData = new Classes.ConnectData();
         frmHDBan frmHDBan = new frmHDBan();
@@ -32,6 +32,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             txtTenNV.Text = frmHDBan.TenNV;
             txtMaKH.Text = frmHDBan.MaKH;
             txtMaNV.Text = frmHDBan.MaNV;
+            T = Double.Parse(frmHDBan.TongTien);
             DataTable data = connectData.ReadData("select MaHDB, TenDienThoai, ChiTietHDB.SoLuong, DonGiaBan, GiamGia, ThanhTien from ChiTietHDB, DienThoai where ChiTietHDB.MaDienThoai = DienThoai.MaDienThoai and MaHDB = '" + txtMaHD.Text + "'");
             dgvChiTiet.DataSource = data;
             btnNew.Enabled = true;
@@ -82,7 +83,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void ChiTietHDB_Load(object sender, EventArgs e)
         {
             load();
-            label17.Text = "Tổng tiền:" + T.ToString();
+            label17.Text = "Tổng tiền: " + frmHDBan.TongTien;
         }
 
         private void btnBExit_Click(object sender, EventArgs e)
@@ -127,18 +128,18 @@ namespace Quan_Ly_Dien_Thoai.Forms
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-            float sl, dg, gg, tt;
+            double sl, dg, gg, tt;
             try
             {
                 if (txtGiamGia.Text.Trim() == "")
                     gg = 0;
                 else
-                    gg = float.Parse(txtGiamGia.Text);
+                    gg = double.Parse(txtGiamGia.Text);
                 if (txtSoLuong.Text.Trim() == "")
                     sl = 0;
                 else
-                    sl = float.Parse(txtSoLuong.Text);
-                dg = float.Parse(txtDonGia.Text);
+                    sl = double.Parse(txtSoLuong.Text);
+                dg = double.Parse(txtDonGia.Text);
                 tt = dg * sl * (1 - gg / 100);
                 txtThanhTien.Text = tt.ToString();
             }
@@ -148,7 +149,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void btnBAdd_Click(object sender, EventArgs e)
         {
             int slcon, soluong;
-            float tongtien = 0;
+            double tongtien = 0;
             if (CbMaSP.SelectedValue == "")
             {
                 MessageBox.Show("Bạn chưa chọn mã sản phẩm");
@@ -172,10 +173,10 @@ namespace Quan_Ly_Dien_Thoai.Forms
             DataTable tableT = connectData.ReadData("select * from ChiTietHDB where MaHDB = '" + txtMaHD.Text + "'");
             for (int i = 0; i < tableT.Rows.Count; i++)
             {
-                T = T + float.Parse(tableT.Rows[i]["ThanhTien"].ToString());
+                tongtien = tongtien + double.Parse(tableT.Rows[i]["ThanhTien"].ToString());
 
             }
-            label17.Text = "Tổng Tiền: " + T.ToString();
+            label17.Text = "Tổng Tiền: " + tongtien.ToString();
             load();
             frmHDBan.load();
         }
@@ -243,12 +244,12 @@ namespace Quan_Ly_Dien_Thoai.Forms
             dtCuaHang.Font.Color = Color.Blue;
             dtCuaHang.Value = "Điện thoại: 0398866666";
 
-            exSheet.Range["D3"].Font.Size = 20;
-            exSheet.Range["D3"].Font.Bold = true;
-            exSheet.Range["D3"].Font.Color = Color.Red;
-            exSheet.Range["D3"].Value = "DANH SÁCH CHI TIẾT HDB";
+            exSheet.Range["D4"].Font.Size = 20;
+            exSheet.Range["D4"].Font.Bold = true;
+            exSheet.Range["D4"].Font.Color = Color.Red;
+            exSheet.Range["D4"].Value = "DANH SÁCH CHI TIẾT HDB";
 
-            
+
 
             exSheet.Range["A5"].Value = "Mã Hóa Đơn Bán: " + txtMaHD.Text;
             exSheet.Range["A6"].Value = "Khách hàng: " + txtMaKH.Text + "-" + txtTenKH.Text;
@@ -263,20 +264,23 @@ namespace Quan_Ly_Dien_Thoai.Forms
             exSheet.Range["D10"].Value = "Đơn giá bán";
             exSheet.Range["E10"].Value = "Giảm giá";
             exSheet.Range["F10"].Value = "Thành tiền";
-
-
-            
+            exSheet.Range["B10"].ColumnWidth = 25;
 
             int dong = 11;
             for (int i = 0; i < dgvChiTiet.Rows.Count - 1; i++)
             {
                 exSheet.Range["A" + (dong + i).ToString()].Value = (i + 1).ToString();
-                exSheet.Range["B" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[0].Value.ToString();
-                exSheet.Range["C" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[1].Value.ToString();
-                exSheet.Range["D" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[2].Value.ToString();
-                exSheet.Range["E" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[3].Value.ToString();
+                exSheet.Range["B" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[1].Value.ToString();
+                exSheet.Range["C" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[2].Value.ToString();
+                exSheet.Range["D" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[3].Value.ToString();
+                exSheet.Range["E" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[4].Value.ToString();
+                exSheet.Range["F" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[5].Value.ToString();
             }
 
+            dong = dong + dgvChiTiet.Rows.Count;
+            exSheet.Range["F" + dong.ToString()].Value = label17.Text + " đồng";
+
+            exSheet.Range["F16"].Value = "Nhân viên lập phiếu: " + txtTenNV.Text;
             exSheet.Name = "Danh sach KH";
             exBook.Activate();
 

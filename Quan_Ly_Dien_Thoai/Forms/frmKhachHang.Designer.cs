@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
@@ -440,6 +441,7 @@
             // 
             // dgvKhachHang
             // 
+            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,6 +457,14 @@
             this.colTenKH,
             this.colSDT,
             this.colDiaChi});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 0);
             this.dgvKhachHang.Name = "dgvKhachHang";
@@ -471,7 +481,6 @@
             this.colMaKH.HeaderText = "ID";
             this.colMaKH.MinimumWidth = 6;
             this.colMaKH.Name = "colMaKH";
-            this.colMaKH.Width = 60;
             // 
             // colTenKH
             // 
@@ -479,7 +488,6 @@
             this.colTenKH.HeaderText = "Full Name";
             this.colTenKH.MinimumWidth = 6;
             this.colTenKH.Name = "colTenKH";
-            this.colTenKH.Width = 200;
             // 
             // colSDT
             // 
@@ -487,7 +495,6 @@
             this.colSDT.HeaderText = "Phone Number";
             this.colSDT.MinimumWidth = 6;
             this.colSDT.Name = "colSDT";
-            this.colSDT.Width = 180;
             // 
             // colDiaChi
             // 
@@ -495,7 +502,6 @@
             this.colDiaChi.HeaderText = "Address";
             this.colDiaChi.MinimumWidth = 6;
             this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.Width = 234;
             // 
             // frmKhachHang
             // 

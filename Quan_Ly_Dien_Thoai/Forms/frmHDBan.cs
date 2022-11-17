@@ -23,6 +23,7 @@ namespace Quan_Ly_Dien_Thoai.From
         public static string TenKH = "";
         public static string TenNV = "";
         public static string Ngay = "";
+        public static string TongTien = "";
         DateTime dateTime;
         public frmHDBan()
         {
@@ -255,6 +256,7 @@ namespace Quan_Ly_Dien_Thoai.From
             cbMaNV.Enabled = true;
             cbMaKH.Enabled = true;
             dtpHDB.Enabled = true;
+            TongTien = HD.Rows[0]["TongTien"].ToString();
         }
 
         private void dgvHDB_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

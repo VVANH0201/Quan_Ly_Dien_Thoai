@@ -24,13 +24,16 @@ namespace Quan_Ly_Dien_Thoai
         }
         private void PhanQuyen()
         {
-            if(tk.Quyen == "1")
+            if (tk.Quyen == "1")
             {
-                //bn
+                btnNhanVien.Enabled = true;
+
             }
             else
             {
-                //pq
+                btnNhanVien.Enabled = false;
+                btnNhanVien.Hide();
+                btnThongKe.Hide();
             }
         }
 
@@ -147,6 +150,23 @@ namespace Quan_Ly_Dien_Thoai
             openChildForm(new frmThongKe());
             hideSubMenu();
             labelTitle.Text = "Thống kê báo cáo";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            labelUsername.Text = tk.Tentk1;
+            PhanQuyen();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
+
+        private void controlBoxClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

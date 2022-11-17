@@ -38,20 +38,16 @@ namespace Quan_Ly_Dien_Thoai.From
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            //bo
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            From.frmLogin frmLogin = new From.frmLogin();
-            frmLogin.ShowDialog();
-            this.Hide();
-            this.Close();
+            // bo
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (!checkAccount(txtUserName.Text))
+            if(!checkAccount(txtUserName.Text))
             {
                 MessageBox.Show("Vui long nhap ten tai khoan dai tu 6-24, voi cac ky tu so, chu hoa va chu thuong");
                 return;
@@ -73,8 +69,8 @@ namespace Quan_Ly_Dien_Thoai.From
             }
 
             DataTable dataTable = new DataTable();
-            dataTable = data.ReadData("Select * from Login where Email =  '" +txtEmail.Text + "'");
-            if(dataTable.Rows.Count > 0)
+            dataTable = data.ReadData("Select * from Login where Email =  '" + txtEmail.Text + "'");
+            if (dataTable.Rows.Count > 0)
             {
                 MessageBox.Show("Email này đã được sử dụng");
                 return;
@@ -89,6 +85,11 @@ namespace Quan_Ly_Dien_Thoai.From
             {
                 MessageBox.Show("Đã có tên tài khoản. Vui lòng nhập lại");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //bo
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -135,7 +136,7 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             if (txtUserName.Text == "")
             {
-                txtUserName.Text = "Nhập tên tài khoản";
+                txtUserName.Text = "Username";
             }
         }
 
@@ -143,16 +144,16 @@ namespace Quan_Ly_Dien_Thoai.From
         {
             if (txtEmail.Text == "")
             {
-                txtEmail.Text = "Nhập tên tài khoản";
+                txtEmail.Text = "Email";
             }
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            if (txtRePass.Text == "")
+            if (txtPass.Text == "")
             {
-                txtRePass.Text = "Mật khẩu";
-                txtRePass.PasswordChar = '\0';
+                txtPass.Text = "Password";
+                txtPass.PasswordChar = '\0';
             }
         }
 
@@ -171,6 +172,20 @@ namespace Quan_Ly_Dien_Thoai.From
             {
                 pictureBox8.BringToFront();
                 txtRePass.PasswordChar = '*';
+            }
+        }
+
+        private void btncomBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtRePass_Leave(object sender, EventArgs e)
+        {
+            if (txtRePass.Text == "")
+            {
+                txtRePass.Text = "Re-enter Password";
+                txtRePass.PasswordChar = '\0';
             }
         }
     }

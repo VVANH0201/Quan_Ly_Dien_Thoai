@@ -34,8 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.lb2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBoxView = new System.Windows.Forms.PictureBox();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
@@ -44,6 +42,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lb1 = new System.Windows.Forms.Label();
+            this.signup = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,10 +74,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.signup);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.pictureBoxView);
             this.panel2.Controls.Add(this.pictureBoxHide);
@@ -113,35 +111,13 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(363, 470);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(60, 18);
-            this.linkLabel1.TabIndex = 19;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign Up";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // lb2
-            // 
-            this.lb2.AutoSize = true;
-            this.lb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(97, 469);
-            this.lb2.Name = "lb2";
-            this.lb2.Size = new System.Drawing.Size(268, 20);
-            this.lb2.TabIndex = 18;
-            this.lb2.Text = "If you don\'t have any account, click";
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(207, 379);
+            this.btnLogin.Location = new System.Drawing.Point(194, 379);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(144, 44);
+            this.btnLogin.Size = new System.Drawing.Size(180, 44);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -227,6 +203,21 @@
             this.lb1.TabIndex = 12;
             this.lb1.Text = "Login";
             // 
+            // signup
+            // 
+            this.signup.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.signup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.signup.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.signup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.signup.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.signup.ForeColor = System.Drawing.Color.White;
+            this.signup.Location = new System.Drawing.Point(194, 460);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(180, 45);
+            this.signup.TabIndex = 23;
+            this.signup.Text = "Sign Up";
+            this.signup.Click += new System.EventHandler(this.signup_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,8 +244,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBoxView;
         private System.Windows.Forms.PictureBox pictureBoxHide;
@@ -266,5 +255,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2Button signup;
     }
 }

@@ -21,7 +21,7 @@ namespace Quan_Ly_Dien_Thoai
             //Application.Run(new frmNhanVien());
             //Application.Run(new Form1());
             //Application.Run(new frmNhanVien());
-            Application.Run(new Form1());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnNNew = new Guna.UI2.WinForms.Guna2Button();
             this.CbxNSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtNSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnNCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnNExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnNDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnNEdit = new Guna.UI2.WinForms.Guna2Button();
@@ -90,6 +91,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1113, 82);
             this.panel1.TabIndex = 1;
+            // 
+            // btnNCancel
+            // 
+            this.btnNCancel.BorderRadius = 10;
+            this.btnNCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNCancel.ForeColor = System.Drawing.Color.White;
+            this.btnNCancel.Location = new System.Drawing.Point(791, 22);
+            this.btnNCancel.Name = "btnNCancel";
+            this.btnNCancel.Size = new System.Drawing.Size(111, 45);
+            this.btnNCancel.TabIndex = 11;
+            this.btnNCancel.Text = "Refresh";
+            this.btnNCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btnNCancel.Click += new System.EventHandler(this.btnNCancel_Click);
             // 
             // btnNNew
             // 
@@ -172,23 +190,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1113, 94);
             this.panel2.TabIndex = 2;
-            // 
-            // btnNCancel
-            // 
-            this.btnNCancel.BorderRadius = 10;
-            this.btnNCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNCancel.ForeColor = System.Drawing.Color.White;
-            this.btnNCancel.Location = new System.Drawing.Point(791, 22);
-            this.btnNCancel.Name = "btnNCancel";
-            this.btnNCancel.Size = new System.Drawing.Size(111, 45);
-            this.btnNCancel.TabIndex = 11;
-            this.btnNCancel.Text = "Refresh";
-            this.btnNCancel.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            this.btnNCancel.Click += new System.EventHandler(this.btnNCancel_Click);
             // 
             // btnNExit
             // 
@@ -278,14 +279,15 @@
             // 
             // dgvHDN
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHDN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHDN.ColumnHeadersHeight = 30;
             this.dgvHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -294,9 +296,18 @@
             this.Column3,
             this.Column4,
             this.Column5});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHDN.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHDN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHDN.Location = new System.Drawing.Point(0, 0);
             this.dgvHDN.Name = "dgvHDN";
+            this.dgvHDN.RowHeadersVisible = false;
             this.dgvHDN.RowHeadersWidth = 51;
             this.dgvHDN.RowTemplate.Height = 24;
             this.dgvHDN.Size = new System.Drawing.Size(1113, 211);
@@ -310,7 +321,6 @@
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 65;
             // 
             // Column2
             // 
@@ -318,7 +328,6 @@
             this.Column2.HeaderText = "Supplier";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 180;
             // 
             // Column3
             // 
@@ -326,7 +335,6 @@
             this.Column3.HeaderText = "Employee";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 180;
             // 
             // Column4
             // 
@@ -334,7 +342,6 @@
             this.Column4.HeaderText = "Date";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 180;
             // 
             // Column5
             // 
@@ -342,7 +349,6 @@
             this.Column5.HeaderText = "Total";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 180;
             // 
             // panel4
             // 

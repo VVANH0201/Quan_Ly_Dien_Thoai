@@ -129,25 +129,29 @@ namespace Quan_Ly_Dien_Thoai.From
             {
                 tk.Tentk1 = dataTable.Rows[0][0].ToString();
                 tk.Mk = dataTable.Rows[0][1].ToString();
-                tk.Quyen = dataTable.Rows[0][2].ToString();
+                tk.Quyen = dataTable.Rows[0][3].ToString();
                 Classes.StaticClass._tk = new Classes.TaiKhoan(tk.Tentk1,tk.Mk,tk.Quyen);
                 Form1 form = new Form1();
-                form.ShowDialog();
                 this.Hide();
+                form.ShowDialog();
+                this.Show();
             }
             else
             {
-                if (MessageBox.Show("Chưa có tài khoản. Bạn có muốn đăng ký không?", "Thông báo", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    frmSignUp frmSignUp = new frmSignUp();
-
-                    frmSignUp.ShowDialog();
-                    this.Hide();
-                }
+                MessageBox.Show("Bạn chưa có tài khoản");
+                
                 
             }
 
+        }
+
+        private void signup_Click(object sender, EventArgs e)
+        {
+            frmSignUp frmSignUp = new frmSignUp();
+            this.Hide();
+            frmSignUp.ShowDialog();
+            //this.Hide();
+            this.Show();
         }
     }
 }

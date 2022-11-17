@@ -9,12 +9,14 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace Quan_Ly_Dien_Thoai.Forms
 {
     public partial class ChiTietHDN : Form
     {
-        double T = 0;
+        double T = 0, S = 0;
         Classes.CommonFunctions CommonFunctions = new Classes.CommonFunctions();
         Classes.ConnectData connectData = new Classes.ConnectData();
         frmHDNhap frmHDNhap = new frmHDNhap();
@@ -80,7 +82,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
         private void ChiTietHDN_Load(object sender, EventArgs e)
         {
             load();
-            label2.Text = "Tổng tiền:" + T.ToString();
+            label2.Text = "Tổng tiền: " + frmHDNhap.TongTien + "VND";
         }
 
         private void btnNExit_Click(object sender, EventArgs e)
@@ -141,10 +143,10 @@ namespace Quan_Ly_Dien_Thoai.Forms
             DataTable tableT = connectData.ReadData("select * from ChiTietHDN where MaHDN = '" + txtMaHD.Text + "'");
             for (int i = 0; i < tableT.Rows.Count; i++)
             {
-                T = T + double.Parse(tableT.Rows[i]["ThanhTien"].ToString());
+                tongtien = tongtien + double.Parse(tableT.Rows[i]["ThanhTien"].ToString());
 
             }
-            label2.Text = "Tổng Tiền: " + T.ToString();
+            label2.Text = "Tổng Tiền: " + tongtien.ToString();
             load();
             frmHDNhap.load();
         }
@@ -192,6 +194,79 @@ namespace Quan_Ly_Dien_Thoai.Forms
             {
                 MessageBox.Show("loi");
             }
+        }
+
+        private void btnNPrint_Click(object sender, EventArgs e)
+        {
+            Excel.Application exAp = new Excel.Application();
+            Excel.Workbook exBook = exAp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+            Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1];
+
+            exRange.Font.Size = 15;
+
+            exRange.Font.Bold = true;
+            exRange.Font.Color = Color.Blue;
+            exRange.Value = "CỬA HÀNG BÁN ĐIỆN THOẠI ...";
+            // dia chi
+            Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 1];
+            dcCuaHang.Font.Size = 12;
+            dcCuaHang.Font.Bold = true;
+            dcCuaHang.Font.Color = Color.Blue;
+            dcCuaHang.Value = "Địa chỉ: Số 3 - Cầu Giấy - Đống Đa - Hà Nội";
+            // dien thoai
+            Excel.Range dtCuaHang = (Excel.Range)exSheet.Cells[3, 1];
+            dtCuaHang.Font.Size = 12;
+            dtCuaHang.Font.Bold = true;
+            dtCuaHang.Font.Color = Color.Blue;
+            dtCuaHang.Value = "Điện thoại: 0398866666";
+
+            exSheet.Range["D4"].Font.Size = 20;
+            exSheet.Range["D4"].Font.Bold = true;
+            exSheet.Range["D4"].Font.Color = Color.Red;
+            exSheet.Range["D4"].Value = "DANH SÁCH CHI TIẾT";
+
+
+
+            exSheet.Range["A5"].Value = "Mã Hóa Đơn Nhập: " + txtMaHD.Text;
+            exSheet.Range["A6"].Value = "Nhà Cung Cấp: " + txtMaNCC.Text + "-" + txtTenNCC.Text;
+
+            exSheet.Range["A10:F10"].Font.Size = 10;
+            exSheet.Range["A10:F10"].ColumnWidth = 10;
+            exSheet.Range["A10:F10"].Font.Bold = true;
+            exSheet.Range["A10"].Value = "STT";
+            exSheet.Range["B10"].Value = "Tên Điện Thoại";
+            exSheet.Range["C10"].Value = "Số lượng";
+            exSheet.Range["D10"].Value = "Đơn giá Nhập";
+            exSheet.Range["E10"].Value = "Thành tiền";
+            exSheet.Range["B10"].ColumnWidth = 25;
+
+            int dong = 11;
+            for (int i = 0; i < dgvChiTiet.Rows.Count - 1; i++)
+            {
+                exSheet.Range["A" + (dong + i).ToString()].Value = (i + 1).ToString();
+                exSheet.Range["B" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[1].Value.ToString();
+                exSheet.Range["C" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[2].Value.ToString();
+                exSheet.Range["D" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[3].Value.ToString();
+                exSheet.Range["E" + (dong + i).ToString()].Value = dgvChiTiet.Rows[i].Cells[4].Value.ToString();
+               
+            }
+
+            dong = dong + dgvChiTiet.Rows.Count;
+            exSheet.Range["F" + dong.ToString()].Value = label2.Text + " đồng";
+
+            exSheet.Range["F16"].Value = "Nhân viên lập phiếu: " + txtTenNV.Text;
+            exSheet.Name = txtMaHD.Text;
+            exBook.Activate();
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel 97-2002 Workbook|*.xls|Excel Workbook|*.xlsx|All File|*.*";
+            save.FilterIndex = 2;
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                exBook.SaveAs(save.FileName.ToLower());
+            }
+            exAp.Quit();
         }
 
         private void btnNEdit_Click(object sender, EventArgs e)
