@@ -114,7 +114,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if(cbPhanLoai.Text == "Mã Điện thoại")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where MaDienThoai = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where MaDienThoai like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if(dataID.Rows.Count <= 0)
                 {
@@ -124,7 +124,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if(cbPhanLoai.Text == "Tên Điện thoại")
             {
                 DataTable dataName = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where TenDienThoai = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where TenDienThoai like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataName;
                 if (dataName.Rows.Count <= 0)
                 {
@@ -134,7 +134,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if(cbPhanLoai.Text == "Mã HSX")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where MaHSX = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where MaHSX like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -144,7 +144,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "RAM")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Ram = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Ram like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -154,7 +154,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "Pin")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Pin = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Pin like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -164,7 +164,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "Màu")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Mau = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where Mau like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -174,7 +174,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "Hệ Điều hành")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where HeDieuHanh = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where HeDieuHanh like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -184,7 +184,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "Màn hình")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where ManHinh = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where ManHinh like N%'" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
@@ -194,7 +194,7 @@ namespace Quan_Ly_Dien_Thoai.Forms
             if (cbPhanLoai.Text == "Kích thước chung")
             {
                 DataTable dataID = data.ReadData("Select MaDienThoai, TenDienThoai, MaHSX, GiaNhap, " +
-                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where KichThuocChung = N'" + txtTimKiem.Text + "'");
+                    "GiaBan, SoLuong, TGBaohanh, Anh from DienThoai where KichThuocChung like N'%" + txtTimKiem.Text + "%'");
                 dgvSanPham.DataSource = dataID;
                 if (dataID.Rows.Count <= 0)
                 {
